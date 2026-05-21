@@ -320,6 +320,34 @@ section.active { display: block; animation: fadeIn 0.15s ease; }
 
 .wk-intro { font-size: 12.5px; color: #444; margin-bottom: 10px; line-height: 1.55; }
 h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--text); }
+/* Logic chain */
+.lc-era { font-size: 10px; font-weight: 700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-2); margin:12px 0 4px; }
+.lc-row { display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin:4px 0; }
+.lc-box { background:#F2F2EE; border:1px solid var(--border); border-radius:4px; padding:5px 9px; font-size:11px; font-weight:600; line-height:1.3; }
+.lc-box small { font-size:9px; color:#888; font-weight:400; display:block; margin-top:1px; }
+.lc-box.red { background:#FEE2E2; border-color:#FCA5A5; }
+.lc-box.gold { background:#FEF9C3; border-color:#FDE047; }
+.lc-box.blue { background:#DBEAFE; border-color:#93C5FD; }
+.lc-box.green { background:#DCFCE7; border-color:#86EFAC; }
+.lc-arr { color:#AAA; font-size:14px; flex-shrink:0; }
+.lc-down { color:#AAA; font-size:12px; padding-left:14px; margin:2px 0; display:block; }
+/* FILP diagram */
+.filp-flow { display:flex; align-items:center; gap:14px; padding:8px 0; flex-wrap:wrap; }
+.filp-col { display:flex; flex-direction:column; gap:7px; }
+.filp-hub { background:#14532D; color:white; padding:14px 18px; border-radius:6px; font-weight:700; font-size:12px; text-align:center; }
+.filp-hub small { font-weight:400; font-size:10px; color:#D1FAE5; display:block; margin-top:2px; }
+.filp-box { border:1px solid var(--border); border-radius:4px; padding:7px 12px; font-size:11.5px; font-weight:600; }
+.filp-src { background:#F0FDF4; border-color:#86EFAC; color:#14532D; }
+.filp-int { background:#F0FDF4; border-color:#86EFAC; color:#166534; }
+.filp-int small { color:#555; font-weight:400; font-size:10.5px; display:block; margin-top:2px; }
+.filp-arr { font-size:24px; color:#9CA3AF; text-align:center; }
+.filp-arr small { font-size:9px; display:block; color:#AAA; line-height:1.4; }
+/* S&D SVG */
+.viz-caption { font-size:11px; color:var(--text-2); margin-top:10px; text-align:center; }
+/* comparison tables */
+.comp-wrap { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0; }
+.comp-col { background:#F8F8F6; border:1px solid var(--border); border-radius:4px; padding:12px; }
+.comp-col h5 { font-size:11.5px; font-weight:700; margin-bottom:7px; padding-bottom:5px; border-bottom:2px solid var(--border); }
 </style>
 </head>
 <body>
@@ -493,6 +521,115 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </svg>
   </div>
 
+  <div class="sec-label">FILP Money Flow</div>
+  <div class="viz-box">
+    <div style="font-size:11px;font-weight:700;color:#14532D;margin-bottom:10px;">Fiscal Investment &amp; Loan Program (FILP) — Directed Credit System</div>
+    <div class="filp-flow">
+      <div class="filp-col">
+        <div class="filp-box filp-src">Postal Savings<br><small>~30% of household deposits</small></div>
+        <div class="filp-box filp-src">Postal Life Insurance<br><small>Large premium pool</small></div>
+        <div class="filp-box filp-src">Pension Funds<br><small>Mandatory contributions</small></div>
+      </div>
+      <div class="filp-arr">→<small>deposited to</small></div>
+      <div class="filp-hub">Trust Fund Bureau<br><small>(Ministry of Finance)</small></div>
+      <div class="filp-arr">→<small>allocated to</small></div>
+      <div class="filp-col">
+        <div class="filp-box filp-int">Japan Development Bank<br><small>Heavy industry, infrastructure</small></div>
+        <div class="filp-box filp-int">Small Business Finance Corp.<br><small>SME loans below market rate</small></div>
+        <div class="filp-box filp-int">Housing Loan Corp.<br><small>Below-market mortgages</small></div>
+        <div class="filp-box filp-int">Japan Export-Import Bank<br><small>Trade finance</small></div>
+      </div>
+    </div>
+    <div class="callout" style="margin-top:10px;">Key function: <strong>off-budget allocation</strong> of private savings to national priority sectors — circumvented bond markets, allowed industrial policy without direct government spending. At its 1970s peak, FILP budget ≈ 1/3 the size of general government budget.</div>
+  </div>
+
+  <div class="sec-label">Master Logic Chain — 1945 to 1998</div>
+  <div class="viz-box">
+    <div class="lc-era">Phase 1 · Post-War Stabilization (1945–1949)</div>
+    <div class="lc-row">
+      <div class="lc-box red">GHQ Reforms<small>Zaibatsu dissolved, land redistributed</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">RFC Bonds → Hyperinflation<small>BoJ printed to finance wartime debt</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Dodge Line (1949)<small>Balanced budget; cut subsidies</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box gold">Korean War Demand<small>Saved Toyota; kick-started industry</small></div>
+    </div>
+    <div class="lc-era">Phase 2 · High Growth Era (1950–1973)</div>
+    <div class="lc-row">
+      <div class="lc-box green">BW Fixed Rate: 360¥/$<small>Export competitiveness locked in</small></div>
+      <span class="lc-arr">+</span>
+      <div class="lc-box green">Capital Controls<small>FX Act: foreign earnings to govt</small></div>
+      <span class="lc-arr">+</span>
+      <div class="lc-box green">Convoy System<small>Banks segmented; MOF protection</small></div>
+      <span class="lc-arr">+</span>
+      <div class="lc-box green">FILP Directed Credit<small>Strategic industry funding</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box green">Y=A·F(K,H) ~10%/yr<small>Mfg-led balanced growth</small></div>
+    </div>
+    <div class="lc-era">Phase 3 · Bretton Woods Collapse &amp; Oil Shocks (1971–1979)</div>
+    <div class="lc-row">
+      <div class="lc-box gold">US Twin Deficits<small>Vietnam + social spending; CA deficit</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box gold">Nixon Shock Aug 1971<small>USD–gold convertibility suspended</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box gold">Floating Rates 1973<small>JPY appreciates; exports cool</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">1st Oil Shock (1973)<small>OPEC embargo; oil price ×4</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Stagflation + AD↓<small>Inflation + output contraction</small></div>
+    </div>
+    <div class="lc-row" style="margin-top:4px;">
+      <div class="lc-box blue">BOJ Tightening (1974)<small>Raised rates aggressively</small></div>
+      <span class="lc-arr">+</span>
+      <div class="lc-box blue">Fiscal Expansion (↑G)<small>Gov't debt origin: 1973</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box green">Inflation controlled by 1975<small>Earlier than other G7 nations</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box gold">2nd Oil Shock (1979)<small>Iran Revolution; oil price ×2</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box green">Better handled<small>Preemptive BOJ + energy efficiency</small></div>
+    </div>
+    <div class="lc-era">Phase 4 · Financial Liberalization &amp; Bubble (1980–1990)</div>
+    <div class="lc-row">
+      <div class="lc-box blue">Volcker Shock (1979–82)<small>US rates to 20% → strong USD</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box blue">Plaza Accord 1985<small>G5 coordinated USD depreciation</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box blue">Yen Appreciation ↑<small>240→120 ¥/$ in 2 years</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Manufacturing Recession<small>Export competitiveness lost</small></div>
+    </div>
+    <div class="lc-row" style="margin-top:4px;">
+      <div class="lc-box gold">Financial Disintermediation<small>Large firms bypass banks for bonds</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box gold">Banks → Real Estate Loans<small>Inexperienced; land as collateral</small></div>
+      <span class="lc-arr">+</span>
+      <div class="lc-box gold">BOJ Low Rates (1987–89)<small>No CPI inflation signal to act</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Asset Price Bubble<small>P = E[d+P']/(1+r); r↓ → P∞</small></div>
+    </div>
+    <div class="lc-era">Phase 5 · Bubble Collapse &amp; Lost Decade (1990–1998)</div>
+    <div class="lc-row">
+      <div class="lc-box red">BOJ Rate Hikes (1989–90)<small>Discount rate: 2.5% → 6%</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Asset Price Collapse<small>Nikkei 38K→15K; land −50%</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">NPL Crisis<small>Collateral worth less than loans</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Jyu-sen Crisis 1995<small>JA banks loophole; loss: ¥6.4T</small></div>
+    </div>
+    <div class="lc-row" style="margin-top:4px;">
+      <div class="lc-box gold">1996: Big Bang Reforms<small>DICJ tools; but gap: no pre-failure recap</small></div>
+      <span class="lc-arr">+</span>
+      <div class="lc-box red">1997: Tax hike 3%→5%<small>Premature fiscal tightening</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">1997–98 Banking Crisis<small>Hokkaido Takushoku, Yamaichi fail</small></div>
+      <span class="lc-arr">→</span>
+      <div class="lc-box red">Credit Crunch + Japan Premium<small>LTCB/NCB nationalized; ¥7.45T injection</small></div>
+    </div>
+  </div>
+
   <div class="sec-label">Weekly Drill-Down</div>
   <div class="weeks">
 
@@ -562,29 +699,52 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
-        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W3</span>Collapse of Bretton Woods &amp; Oil Shocks (1971–1979)</div>
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W3</span>Bretton Woods Collapse &amp; Oil Shocks (1971–1979)</div>
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <p class="wk-intro">The fixed exchange rate system collapsed under US fiscal strain, ending Japan's high-growth era and exposing it to oil price shocks.</p>
-        <h4 class="sub">Twin Deficit Mechanism (US)</h4>
-        <div class="formula">(Y − T − C) − I = (X − M) − (G − T)</div>
+        <p class="wk-intro">The US fiscal-external imbalance destroyed the gold peg. Japan then absorbed two oil shocks in very different ways — the contrast reveals how macroeconomic learning works.</p>
+
+        <h4 class="sub">Why Bretton Woods Collapsed — Twin Deficit Mechanism</h4>
+        <div class="formula">National Savings Identity: (Y − T − C) − I = CA surplus = (X − M) + Net Transfers</div>
         <ul class="kp">
-          <li>US fiscal deficit (Vietnam War + social programs) exceeded domestic savings</li>
-          <li>Must be filled by <strong>current account deficit</strong> → USD accumulated abroad → pressure on gold peg</li>
+          <li>Vietnam War + Great Society social programs → <strong>US fiscal deficit</strong> (G &gt; T)</li>
+          <li>Fiscal deficit must be financed: either crowds out private investment or draws in foreign savings (= CA deficit)</li>
+          <li><strong>CA deficit</strong> → dollars piling up in foreign central banks → too many dollars relative to US gold reserves</li>
+          <li>Confidence in $35/oz gold peg erodes → speculative outflows → the peg becomes unsustainable</li>
         </ul>
-        <h4 class="sub">Nixon Shock → Floating Rates</h4>
+
+        <h4 class="sub">Nixon Shock (August 15, 1971)</h4>
         <div class="cchain">
-          <span class="cnode">Aug 1971: US suspends USD–gold convertibility</span><span class="carr">→</span>
-          <span class="cnode">Smithsonian Agreement (failed)</span><span class="carr">→</span>
-          <span class="cnode">1973: Major currencies float</span><span class="carr">→</span>
-          <span class="cnode">JPY appreciates → exports cool</span>
+          <span class="cnode">Nixon announces: USD–gold convertibility suspended</span><span class="carr">→</span>
+          <span class="cnode">Smithsonian Agreement Dec 1971: dollar devalued, bands widened (failed within 15 months)</span><span class="carr">→</span>
+          <span class="cnode">Feb–Mar 1973: major currencies move to free float</span><span class="carr">→</span>
+          <span class="cnode">JPY: 360 → ~270 ¥/$ by late 1973</span>
         </div>
-        <h4 class="sub">Japan's Policy Response (IS-LM)</h4>
+        <div class="callout">For Japan, floating immediately became painful: export competitiveness fell. The government's response — BOJ rate cuts + fiscal expansion — was the IS-LM textbook playbook, but mistimed.</div>
+
+        <h4 class="sub">1st Oil Shock (October 1973) — How Japan Was Hit</h4>
         <ul class="kp">
-          <li>BOJ cut policy interest rate → encourage private investment</li>
-          <li>Government expanded expenditure (↑G) → boost aggregate demand</li>
-          <li>Unintended result: <strong>land price boom</strong> (first post-war bubble, early 1970s)</li>
+          <li>OPEC oil embargo raised oil price from ~$3 → ~$12/barrel (×4 in 3 months)</li>
+          <li>Japan imports ~99% of its oil → direct cost pass-through: input prices surge</li>
+          <li><strong>AS-AD effect</strong>: negative supply shock → AD curve shifts left (lower output) AND AS curve shifts left (higher prices) → <strong>stagflation</strong></li>
+          <li>1974 CPI inflation: <strong>~23%</strong> — highest in post-war Japan</li>
+        </ul>
+        <div class="concept-row">
+          <div class="cbox"><h4>BOJ Response (1974)</h4><p>Aggressive rate hikes — discount rate raised to 9%. Broke inflationary expectations. Inflation fell to ~3% by 1975.</p></div>
+          <div class="cbox"><h4>Fiscal Expansion</h4><p>Gov't issued bonds (↑G) to cushion demand. Origin of Japan's government debt accumulation — 1973 was the turning point.</p></div>
+          <div class="cbox"><h4>FX Recovery</h4><p>Tight monetary policy attracted capital inflows → yen stabilized. Current account improved as import demand fell and efficiency gains took hold.</p></div>
+        </div>
+        <div class="callout"><strong>Debt origin:</strong> Before 1973, Japan ran near-balanced budgets. The 1973 shock forced bond issuance that was never fully reversed — laying the foundation for later debt problems.</div>
+
+        <h4 class="sub">2nd Oil Shock (1979) — Why Japan Did Better</h4>
+        <ul class="kp">
+          <li>Iran Revolution → oil price doubles again (~$13 → $35/barrel)</li>
+          <li>Japan's response was qualitatively different from 1973:</li>
+          <li><strong>Pre-emptive BOJ tightening</strong> before inflation expectations could become entrenched (learned from 1974)</li>
+          <li><strong>Energy efficiency investments</strong> from mid-1970s: Japan had already restructured away from oil-intensive heavy industry</li>
+          <li>CPI peak in 1980: ~8% vs. 23% in 1974 — controlled at roughly 1/3 of 1st shock impact</li>
+          <li><strong>"Japan as No. 1" (1979)</strong>: US academic Ezra Vogel's book celebrated Japan's management style and growth model — but this overconfidence planted seeds of complacency going into the bubble years</li>
         </ul>
       </div>
     </div>
@@ -595,47 +755,222 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <p class="wk-intro">Post-Bretton Woods floating rates made capital controls obsolete. Deregulation redirected bank lending toward real estate — the fuel for the bubble.</p>
-        <h4 class="sub">Key Causal Chain (exam-critical)</h4>
+        <p class="wk-intro">Floating exchange rates made capital controls self-defeating. Deregulation stripped banks of their core corporate clients, forcing a dangerous pivot to real estate — the fuel for the bubble.</p>
+
+        <h4 class="sub">Financial Disintermediation — The Core Structural Shock</h4>
         <div class="cchain">
-          <span class="cnode">1980: Capital flow liberalization</span><span class="carr">→</span>
-          <span class="cnode">1984: FX futures deregulated</span><span class="carr">→</span>
-          <span class="cnode">Bond market opens (domestic+foreign)</span><span class="carr">→</span>
-          <span class="cnode">Large firms bypass banks (disintermediation)</span><span class="carr">→</span>
-          <span class="cnode">Banks shift to real estate / SME loans</span><span class="carr">→</span>
-          <span class="cnode">Over-collateralization on land</span><span class="carr">→</span>
-          <span class="cnode">Bubble Economy</span>
+          <span class="cnode">1980: Capital flow liberalization (Foreign Exchange Act revised)</span><span class="carr">→</span>
+          <span class="cnode">1984: Euro-yen market opened; FX futures deregulated</span><span class="carr">→</span>
+          <span class="cnode">Domestic CP + bond markets deregulated</span><span class="carr">→</span>
+          <span class="cnode">Toyota, Sony, Panasonic issue bonds directly at lower cost</span><span class="carr">→</span>
+          <span class="cnode">Bank loan demand from large firms collapses</span>
         </div>
-        <h4 class="sub">Financial Disintermediation</h4>
         <ul class="kp">
-          <li>Large firms issued bonds directly (cheaper than bank loans) → demand for bank loans collapsed</li>
-          <li>City banks and long-term credit banks lost their core customers</li>
-          <li>Shifted to <strong>real estate developers, construction, home buyers, non-bank institutions</strong></li>
-          <li>Inexperienced with new clients → relied on land as collateral → dangerous when land prices fell</li>
+          <li>City banks and long-term credit banks had been built to serve these firms — they had no alternative revenue</li>
+          <li>Pivoted to <strong>real estate developers, construction companies, non-bank lenders (jūsen)</strong></li>
+          <li>These clients had no bond-market alternative → banks had pricing power → higher margins</li>
+          <li>But banks were <strong>inexperienced</strong> at assessing these borrowers → substituted land appraisals for credit analysis</li>
+          <li>Fatal assumption: <strong>"land prices in Japan never fall"</strong> — based on post-war experience only</li>
         </ul>
-        <h4 class="sub">Plaza Accord (1985)</h4>
+
+        <h4 class="sub">External Pressure: Volcker Shock → Plaza Accord</h4>
         <ul class="kp">
-          <li>G5 agreed to depreciate the USD → JPY appreciated sharply (~240→120 ¥/$)</li>
-          <li>BOJ cut rates to counter export slowdown → cheap money flooded into asset markets</li>
+          <li><strong>Volcker Shock (1979–82)</strong>: Fed Funds Rate raised to ~20% to break US inflation → global capital flows to USD → dollar surged ~50% vs major currencies</li>
+          <li>Strong USD hurt US exporters and widened US CA deficit — political pressure built for G5 coordination</li>
+          <li><strong>Plaza Accord (September 22, 1985)</strong>: G5 finance ministers agreed to <em>jointly</em> intervene in FX markets to depreciate the dollar</li>
+          <li>UIP (Uncovered Interest Parity) channel: market anticipated future yen appreciation → yen rose even faster than intervention alone could explain</li>
+          <li>Result: JPY moved from ~240 ¥/$ (1985) to ~120 ¥/$ by 1988 — a <strong>50% appreciation in 3 years</strong></li>
+        </ul>
+
+        <h4 class="sub">UIP: Why Markets Moved Faster Than Policy</h4>
+        <div class="formula">UIP: i_JP = i_US + E[Δe] &nbsp;&nbsp; → if yen expected to rise, JP rates can be lower</div>
+        <ul class="kp">
+          <li>Once Plaza Accord was announced, agents expected yen to appreciate → they bought yen now → yen appreciated immediately</li>
+          <li>Rational expectations caused overshoot: by 1987–88 yen was arguably over-appreciated</li>
+          <li>Japan's <strong>manufacturing recession</strong> (endaka fukyo — "high-yen recession") of 1986 followed</li>
+        </ul>
+
+        <h4 class="sub">The BOJ's Paradox (1987–1989)</h4>
+        <ul class="kp">
+          <li>BOJ was under dual pressure: counter export slowdown (cut rates) AND maintain G7 coordination (keep rates low after Black Monday, Oct 1987)</li>
+          <li>Consumer price inflation remained low — oil prices had fallen and the yen appreciation was making imports cheap</li>
+          <li><strong>No CPI signal to tighten</strong> — but asset prices (land, equities) were rising 20–30%/yr</li>
+          <li>BOJ kept discount rate at 2.5% from Feb 1987 to May 1989 — <strong>longest low-rate period in post-war history</strong></li>
+        </ul>
+
+        <h4 class="sub">Asset Pricing Bubble — The Formal Model</h4>
+        <div class="formula">P_t = E[d_{t+1} + P_{t+1}] / (1 + r_t)</div>
+        <div class="concept-row">
+          <div class="cbox"><h4>Channel 1: r↓</h4><p>Lower discount rate raises the present value of all future dividends and prices. With r at historic lows, even modest expected returns justify very high current prices.</p></div>
+          <div class="cbox"><h4>Channel 2: E[P↑]</h4><p>If everyone expects prices to keep rising, rational agents bid up today's price. Self-fulfilling — until the expectation reverses.</p></div>
+          <div class="cbox"><h4>Bubble Condition</h4><p>When E[P_{t+1}] grows faster than (1+r), price diverges from fundamentals (d). Bubble = the portion of P not backed by d.</p></div>
+        </div>
+        <div class="callout">By 1989 the Nikkei implied a P/E ratio of ~60×. Tokyo land prices implied it would cost more than the entire US real estate market to buy all of metropolitan Tokyo. Both were pure bubble components in the pricing formula.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5a</span>Bubble Collapse (1989–1991)</div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Three simultaneous policy levers punctured the bubble. The asset pricing formula worked in reverse — and the collateral underneath Japan's entire banking system collapsed.</p>
+        <h4 class="sub">Three Policy Levers (1989–90)</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>BOJ Rate Hikes</h4><p>Discount rate raised from 2.5% (May 1989) to 6% (Aug 1990) in 5 steps. Direct hit on P = E[d+P']/(1+r): as r↑, P must fall.</p></div>
+          <div class="cbox"><h4>MoF Land Loan Quota</h4><p>March 1990: Ministry of Finance ordered banks to cap growth in real estate loans below total loan growth. Killed the supply of credit to the sector.</p></div>
+          <div class="cbox"><h4>Land Value Tax (1991)</h4><p>Capital gains tax on land appreciation introduced. Reduced incentive to hold land speculatively → sellers entered market.</p></div>
+        </div>
+        <h4 class="sub">Asset Price Formula in Reverse</h4>
+        <div class="formula">P_t = E[d + P_{t+1}] / (1 + r_t) &nbsp;→&nbsp; r↑ + E[P_{t+1}]↓ → P_t collapses non-linearly</div>
+        <ul class="kp">
+          <li>Nikkei 225: 38,915 (Dec 1989) → 15,000 (Aug 1992) — <strong>−61%</strong></li>
+          <li>Tokyo commercial land: peak 1991 → fell ~70% by 2000</li>
+          <li>Both channels hit simultaneously: r rose AND expectations reversed → double amplification</li>
+        </ul>
+        <h4 class="sub">NPL (Non-Performing Loan) Concentration</h4>
+        <table class="mtable">
+          <tr><th>Sector</th><th>Loan Share</th><th>NPL Concentration</th></tr>
+          <tr><td>Real estate</td><td>~15% of bank loans</td><td>Disproportionately large share of NPLs</td></tr>
+          <tr><td>Construction</td><td>~8%</td><td>High — many small developers failed first</td></tr>
+          <tr><td>Non-bank lenders (jūsen)</td><td>Intermediary</td><td>Concentrated worst-quality real estate loans</td></tr>
+          <tr><td>Retail + manufacturing</td><td>~50%</td><td>Relatively low NPL rate</td></tr>
+        </table>
+        <div class="callout">Banks were reluctant to recognize NPLs on their books — recognizing losses would trigger capital adequacy failures. "Evergreening" (rolling over bad loans to avoid write-offs) kept zombie firms alive and blocked resource reallocation for a decade.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5b</span>Jūsen Crisis (1995)</div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Jūsen (住専) were non-bank mortgage lenders set up by city banks in the 1970s. They became the worst NPL black hole — and their bailout turned into a political scandal about who should bear the losses.</p>
+        <h4 class="sub">Structure &amp; Loophole</h4>
+        <ul class="kp">
+          <li>Jūsen were created to handle retail housing loans (banks found them too small/costly to service directly)</li>
+          <li>In the late 1980s, after the MoF land loan quota was applied to banks, jūsen were <strong>exempt</strong> — they kept lending aggressively into real estate at the peak</li>
+          <li>Funded by borrowing from parent banks (city banks), agricultural cooperatives (JA), and the Norinchukin Bank</li>
+          <li>When land collapsed: jūsen held ¥13T in loans; ¥8.4T (64%) were classified as non-performing by 1995</li>
+        </ul>
+        <h4 class="sub">The Political Battle Over Loss Allocation</h4>
+        <table class="mtable">
+          <tr><th>Party</th><th>Share of Jūsen Funding</th><th>Share of Loss Assigned</th><th>Ratio</th></tr>
+          <tr><td>Parent banks (city/long-term)</td><td>54.6%</td><td>28.2%</td><td>Under-assigned</td></tr>
+          <tr><td>Agricultural cooperatives (JA)</td><td>8.3%</td><td>42.2%</td><td><strong>Over-assigned to public</strong></td></tr>
+          <tr><td>Government (taxpayer)</td><td>0%</td><td>10.6%</td><td>Injected ¥685B of public funds</td></tr>
+          <tr><td>Other lenders</td><td>37.1%</td><td>19.0%</td><td>Roughly proportional</td></tr>
+        </table>
+        <div class="callout"><strong>JA (Japan Agriculture) political power</strong>: JA represents ~10 million agricultural households — a key LDP electoral base. Despite being heavily implicated in the bad loans, JA cooperatives received favorable treatment in loss allocation, protecting their ¥90T+ deposit base. The public ¥685B injection was politically explosive and led to significant Diet debate.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W5c</span>1996 Financial Reforms — Partial Fix</div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">The jūsen crisis forced Japan to modernize its deposit insurance and resolution framework. The new tools were real — but a critical gap was left unfilled.</p>
+        <h4 class="sub">Deposit Insurance Corporation of Japan (DICJ) — New Tools</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>Purchase &amp; Assumption</h4><p>DICJ could arrange takeover of a failing bank by a healthy acquirer — pays acquirer to assume deposits and selected assets.</p></div>
+          <div class="cbox"><h4>Bridge Bank</h4><p>Temporary government-run bank that takes over a failed institution's operations while a buyer is found. Prevents sudden credit disruption.</p></div>
+          <div class="cbox"><h4>NPL Purchases</h4><p>Resolution and Collection Corporation (RCC) could buy bad loans at discount from failed institutions, managing workout over time.</p></div>
+        </div>
+        <h4 class="sub">The Critical Gap</h4>
+        <div class="callout"><strong>No mechanism for pre-failure recapitalization.</strong> DICJ tools only triggered <em>after</em> a bank failed — by which point panic had already spread. There was no authority to inject capital into a weakened-but-not-yet-failed bank to prevent the failure from happening. This gap was fatally exposed in 1997.</div>
+        <ul class="kp">
+          <li>"Big Bang" financial liberalization also announced in 1996: brokerage commissions deregulated, securities and banking activities to be separated, foreign competition encouraged</li>
+          <li>Well-designed in principle — but the timing (before the NPL crisis was resolved) accelerated the 1997 crisis</li>
         </ul>
       </div>
     </div>
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
-        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5–6</span>Lost Decade (1990–1998)</div>
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5d</span>1997 Double Misjudgment</div>
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <p class="wk-intro">Bubble burst in 1990–91, exposing mountains of bad loans backed by collapsed land values. Japan entered a prolonged stagnation.</p>
+        <p class="wk-intro">1997 was the year two decisions combined to push Japan over the edge: premature fiscal tightening just as the banking system was breaking down.</p>
+        <h4 class="sub">Consumption Tax Hike (April 1997): 3% → 5%</h4>
         <ul class="kp">
-          <li><strong>1989–90</strong>: BOJ raised rates to cool bubble → Nikkei collapsed (38,000 → 15,000 by 1992)</li>
-          <li><strong>Bad debt crisis</strong>: banks held collateral (land) worth far less than loans outstanding → balance sheet recession</li>
-          <li><strong>Convoy system failure</strong>: weak banks propped up by strong ones → delayed resolution, prolonged stagnation</li>
-          <li><strong>1997 Asian Financial Crisis</strong>: triggered second wave of bank failures in Japan; Yamaichi Securities collapsed</li>
-          <li><strong>Fiscal trap</strong>: government tried to stimulate (↑G) but structural deflation and balance sheet cleanup dominated</li>
+          <li>Motivated by fiscal consolidation goals set at the G7 and MOF pressure to reduce bond issuance</li>
+          <li>Timing: economy had shown signs of recovery in 1996 — MOF believed the cycle had turned</li>
+          <li>Effect: sharp Q1 1997 consumption boom (front-loading before hike) followed by <strong>severe Q2–Q3 contraction</strong></li>
+          <li>Private consumption fell 3.5% in real terms in fiscal 1997 — directly amplifying the banking crisis</li>
         </ul>
-        <div class="callout">Key lesson: Asset price bubbles built on collateral-based lending create long-lasting balance sheet recessions that monetary policy alone can't fix.</div>
+        <h4 class="sub">Big Bang Liberalization — Right Reform, Wrong Timing</h4>
+        <ul class="kp">
+          <li>Deregulation increased competition and transparency — which exposed how weak the banks actually were</li>
+          <li>International investors and counterparties began demanding higher rates from Japanese banks (Japan Premium)</li>
+          <li>Liberalization without prior resolution of the NPL stock was like performing surgery without anesthesia</li>
+        </ul>
+        <div class="callout">The combination — fiscal drag of ~2% of GDP from tax hike + banking confidence collapse — produced Japan's worst post-war recession to that point. Policymakers had mistimed both fiscal policy and structural reform sequencing.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5e</span>1997–98 Banking Crisis &amp; Resolution</div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">A cascade of bank failures in late 1997 froze the interbank market and produced the Japan Premium — a measurable signal of systemic distrust.</p>
+        <h4 class="sub">Cascade of Failures</h4>
+        <div class="cchain">
+          <span class="cnode">Sanyo Securities (Nov 1997): first post-war default on call loan market</span><span class="carr">→</span>
+          <span class="cnode">Call loan market freezes: banks stop lending overnight to each other</span><span class="carr">→</span>
+          <span class="cnode">Hokkaido Takushoku Bank fails (Nov 17)</span><span class="carr">→</span>
+          <span class="cnode">Yamaichi Securities (Nov 24): largest securities firm; self-liquidation</span><span class="carr">→</span>
+          <span class="cnode">Long-Term Credit Bank (Oct 1998) + Nippon Credit Bank (Dec 1998): nationalized</span>
+        </div>
+        <h4 class="sub">The Stigma Problem</h4>
+        <ul class="kp">
+          <li>BOJ offered emergency liquidity — but banks were afraid to borrow from it ("stigma": being seen at the BOJ window signaled distress)</li>
+          <li>Banks hoarded reserves instead of lending → <strong>credit crunch</strong>: even healthy firms couldn't get loans</li>
+          <li>GDP fell ~2% in fiscal 1998; unemployment rate hit post-war high of 4.4%</li>
+        </ul>
+        <h4 class="sub">Japan Premium (TIBOR − LIBOR)</h4>
+        <div class="formula">Japan Premium = TIBOR_JP − LIBOR_USD &nbsp;&nbsp; (peaked ~1% in late 1997)</div>
+        <ul class="kp">
+          <li>Foreign banks refused to lend to Japanese banks at normal interbank rates — demanded a premium for counterparty risk</li>
+          <li>Measurable in the spread between Tokyo Interbank Offered Rate and London equivalent</li>
+          <li>Signaled that international markets had lost confidence in the solvency of Japan's banking system</li>
+        </ul>
+        <h4 class="sub">Resolution: ¥7.45T Equity Injection (1998–99)</h4>
+        <ul class="kp">
+          <li>Financial Revitalization Law (Oct 1998) and Financial Function Early Strengthening Law created framework for public recapitalization</li>
+          <li>21 major banks received a total of <strong>¥7.45 trillion</strong> in public equity capital injections</li>
+          <li>LTCB and NCB nationalized, NPLs carved out to RCC, eventual sale to foreign investors (Ripplewood Holdings bought LTCB)</li>
+        </ul>
+        <h4 class="sub">Japan vs. Sweden: Crisis Resolution Comparison</h4>
+        <div class="comp-wrap">
+          <div class="comp-col">
+            <h5 style="color:var(--jp)">Japan (1990–1999)</h5>
+            <ul class="kp">
+              <li>Delayed recognition of NPLs for ~7 years</li>
+              <li>No pre-failure recapitalization tools until 1998</li>
+              <li>Political interference (JA, LDP) slowed resolution</li>
+              <li>Convoy system protected weak banks too long</li>
+              <li>Result: "Lost Decade" — stagnation through 2000s</li>
+            </ul>
+          </div>
+          <div class="comp-col">
+            <h5 style="color:#1A3A6B">Sweden (1991–1994)</h5>
+            <ul class="kp">
+              <li>Immediate recognition and public disclosure of bad loans</li>
+              <li>State took equity stakes (nationalization) quickly</li>
+              <li>Bad assets carved into government "bad banks"</li>
+              <li>Transparent loss allocation — no political favoritism</li>
+              <li>Result: recovery within 3 years; model for IMF playbook</li>
+            </ul>
+          </div>
+        </div>
+        <div class="callout"><strong>Core lesson:</strong> Speed and transparency of loss recognition determine the length of a financial crisis. Japan's delayed, opaque approach multiplied the eventual cost; Sweden's rapid, transparent approach compressed it.</div>
       </div>
     </div>
 
@@ -989,6 +1324,97 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </svg>
   </div>
 
+  <div class="sec-label">Labor Market S&amp;D — Worked Equilibrium</div>
+  <div class="viz-box">
+    <!--
+      Coordinate system (all values verified):
+        viewBox 0 0 800 320   preserveAspectRatio="none" → fills full viz-box width
+        Origin (axes cross): x=70, y=280
+        L axis: x=70 (L=0) to x=740 (L=100)  →  scale = 670/100 = 6.7 px per L unit
+        w axis: y=280 (w=0) to y=30  (w=100)  →  scale = 250/100 = 2.5 px per w unit
+
+        Demand  D: w=100−L  → endpoints (L=0,w=100)→(70,30)  and  (L=100,w=0)→(740,280)
+        Supply  S: L=2w−6   → at L=0: w=3→(70,272.5)  at L=100: w=53→(740,147.5)
+        Equilibrium: 100−L=2w−6, L=2w−6 → 100−(2w−6)=w → 106=3w → w*=35.33
+                     L*=2(35.33)−6=64.67
+                     x*=70+64.67×6.7=503.3≈503   y*=280−35.33×2.5=280−88.3=191.7≈192
+        Check D at x=503: t=(503−70)/670=0.6463; y=30+0.6463×250=191.6≈192 ✓
+        Check S at x=503: t=(503−70)/670=0.6463; y=272.5+0.6463×(147.5−272.5)=272.5−80.8=191.7≈192 ✓
+    -->
+    <svg viewBox="0 0 800 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+         style="width:100%;height:260px;" font-family="-apple-system,sans-serif">
+
+      <!-- Surplus shading: producer (above S, below equilibrium) -->
+      <polygon points="70,272 503,192 503,280 70,280" fill="#BFDBFE" opacity="0.45"/>
+      <!-- Consumer surplus (below D, above equilibrium) -->
+      <polygon points="70,30 503,192 70,192" fill="#FEE2E2" opacity="0.45"/>
+
+      <!-- Grid lines -->
+      <line x1="70" y1="192" x2="740" y2="192" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="503" y1="30" x2="503" y2="280" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="70" y1="130" x2="740" y2="130" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="70" y1="255" x2="740" y2="255" stroke="#E5E7EB" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <!-- Demand curve: (70,30) → (740,280)  [D: w=100−L] -->
+      <line x1="70" y1="30" x2="740" y2="280" stroke="#DC2626" stroke-width="2.5"/>
+      <text x="744" y="285" font-size="12" font-weight="700" fill="#DC2626">D</text>
+      <text x="744" y="298" font-size="9" fill="#DC2626">w=100−L</text>
+
+      <!-- Supply curve: (70,272) → (740,147)  [S: L=2w−6] -->
+      <line x1="70" y1="272" x2="740" y2="147" stroke="#2563EB" stroke-width="2.5"/>
+      <text x="744" y="152" font-size="12" font-weight="700" fill="#2563EB">S</text>
+      <text x="744" y="165" font-size="9" fill="#2563EB">L=2w−6</text>
+
+      <!-- Dashed drop lines to axes -->
+      <line x1="503" y1="192" x2="503" y2="280" stroke="#374151" stroke-width="1" stroke-dasharray="4,3"/>
+      <line x1="70" y1="192" x2="503" y2="192" stroke="#374151" stroke-width="1" stroke-dasharray="4,3"/>
+
+      <!-- Equilibrium point -->
+      <circle cx="503" cy="192" r="6" fill="#16A34A" stroke="white" stroke-width="2"/>
+      <text x="513" y="186" font-size="11" font-weight="700" fill="#16A34A">E*</text>
+
+      <!-- Axis ticks and labels -->
+      <!-- x-axis ticks: L=0,25,50,64.67,75,100 -->
+      <line x1="70"  y1="278" x2="70"  y2="282" stroke="#555" stroke-width="1"/>
+      <line x1="237" y1="278" x2="237" y2="282" stroke="#555" stroke-width="1"/>
+      <line x1="405" y1="278" x2="405" y2="282" stroke="#555" stroke-width="1"/>
+      <line x1="503" y1="278" x2="503" y2="282" stroke="#555" stroke-width="1.5"/>
+      <line x1="740" y1="278" x2="740" y2="282" stroke="#555" stroke-width="1"/>
+      <text x="70"  y="295" text-anchor="middle" font-size="9" fill="#555">0</text>
+      <text x="237" y="295" text-anchor="middle" font-size="9" fill="#555">25</text>
+      <text x="405" y="295" text-anchor="middle" font-size="9" fill="#555">50</text>
+      <text x="503" y="295" text-anchor="middle" font-size="10" font-weight="700" fill="#16A34A">L*=64.7</text>
+      <text x="740" y="295" text-anchor="middle" font-size="9" fill="#555">100</text>
+
+      <!-- y-axis ticks: w=0,25,35.33,50,75,100 -->
+      <line x1="68" y1="280" x2="72" y2="280" stroke="#555" stroke-width="1"/>
+      <line x1="68" y1="192" x2="72" y2="192" stroke="#555" stroke-width="1.5"/>
+      <line x1="68" y1="155" x2="72" y2="155" stroke="#555" stroke-width="1"/>
+      <line x1="68" y1="30"  x2="72" y2="30"  stroke="#555" stroke-width="1"/>
+      <text x="63" y="284" text-anchor="end" font-size="9" fill="#555">0</text>
+      <text x="63" y="196" text-anchor="end" font-size="10" font-weight="700" fill="#16A34A">w*≈35</text>
+      <text x="63" y="159" text-anchor="end" font-size="9" fill="#555">50</text>
+      <text x="63" y="34"  text-anchor="end" font-size="9" fill="#555">100</text>
+
+      <!-- Axes -->
+      <line x1="70" y1="280" x2="760" y2="280" stroke="#374151" stroke-width="2"/>
+      <polygon points="760,277 768,280 760,283" fill="#374151"/>
+      <line x1="70" y1="280" x2="70" y2="20" stroke="#374151" stroke-width="2"/>
+      <polygon points="67,20 70,12 73,20" fill="#374151"/>
+
+      <!-- Axis labels -->
+      <text x="765" y="284" font-size="11" fill="#374151" font-weight="600">L</text>
+      <text x="46" y="18"  font-size="11" fill="#374151" font-weight="600">w</text>
+
+      <!-- Surplus labels -->
+      <text x="220" y="140" text-anchor="middle" font-size="9" fill="#991B1B" font-weight="600">Consumer</text>
+      <text x="220" y="151" text-anchor="middle" font-size="9" fill="#991B1B" font-weight="600">Surplus</text>
+      <text x="350" y="245" text-anchor="middle" font-size="9" fill="#1D4ED8" font-weight="600">Producer</text>
+      <text x="350" y="256" text-anchor="middle" font-size="9" fill="#1D4ED8" font-weight="600">Surplus</text>
+    </svg>
+    <div class="viz-caption">D(w) = 100 − w &nbsp;&nbsp;|&nbsp;&nbsp; S(w) = 2w − 6 &nbsp;&nbsp;|&nbsp;&nbsp; Equilibrium: w* = 106/3 ≈ 35.33, &nbsp;L* = 200/3 ≈ 64.67</div>
+  </div>
+
   <div class="sec-label">Weekly Drill-Down</div>
   <div class="weeks">
 
@@ -1067,11 +1493,16 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           <li>Hire while MR from worker &gt; wage → as wage rises, fewer workers hired</li>
           <li>Minimum wage debate: Card (1992) found little effect; Meer &amp; West (2015) found firms slow hiring rather than fire</li>
         </ul>
-        <h4 class="sub">Labor Supply</h4>
+        <h4 class="sub">Labor Supply &amp; the Backward-Bending Curve</h4>
         <ul class="kp">
-          <li><strong>Slopes up</strong>: higher wage → more hours / more people enter</li>
-          <li><strong>Backward-bending</strong> at very high wages: income effect dominates (earn $100K/hr → prefer leisure)</li>
-          <li>Most jobs have fixed contracted hours → market supply is aggregate of individual threshold decisions</li>
+          <li><strong>Normal range (upward slope)</strong>: higher wage → each hour is more valuable → substitute leisure for work → supply rises</li>
+          <li><strong>Substitution effect</strong>: wage ↑ → leisure becomes more expensive relative to consumption → work more (always positive)</li>
+          <li><strong>Income effect</strong>: wage ↑ → you can afford the same consumption with fewer hours → work less (always negative)</li>
+          <li><strong>At low-to-medium wages</strong>: substitution effect &gt; income effect → curve slopes upward</li>
+          <li><strong>Backward-bending region</strong>: at very high wages, income effect dominates — you are already wealthy enough that the marginal hour of work is worth less than the marginal hour of leisure. Surgeon earning $500/hr, PhD earning $300/hr — extra income buys less additional utility than rest.</li>
+          <li><strong>Shape summary</strong>: supply curve bends backward (left) at high w — looks like a backwards "C" or fishhook when drawn with w on the y-axis</li>
+          <li>Most wage distributions sit in the upward-sloping segment; backward-bending is empirically important mainly for top earners and certain professional markets</li>
+          <li>Most jobs have fixed contracted hours → market supply is the aggregate of individual participation threshold decisions, not continuous hour adjustment</li>
         </ul>
         <h4 class="sub">Equilibrium Calculation</h4>
         <div class="formula">D(w) = 100 − w &nbsp;&nbsp; S(w) = 2w − 6 &nbsp;&nbsp; → w* = 35.33, L* = 64.66 hrs</div>
