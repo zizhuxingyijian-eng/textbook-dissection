@@ -1420,64 +1420,89 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
-        <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W1</span>What Is Labor? Definitions</div>
+        <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W1</span>What Is Labor? Definitions &amp; Measurement</div>
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <div class="callout"><strong>Labor</strong> = allocation of time by humans, either explicitly or implicitly in exchange for money, goods, or services. Time is the ultimate scarce resource.</div>
-        <h4 class="sub">Edge Cases (exam favorites)</h4>
+        <p class="wk-intro">Labor is not just "having a job." The economic definition centers on <em>time allocation in exchange for value</em> — which dictates what gets counted in GDP and unemployment statistics, and what doesn't.</p>
+
+        <div class="callout"><strong>Labor</strong> = the allocation of human time, explicitly or implicitly, in exchange for money, goods, or services. Time is the ultimate scarce resource — every hour spent working is an hour not spent on leisure, sleep, or unpaid activity.</div>
+
+        <h4 class="sub">Three-Test Framework for Identifying Labor</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>① Human</h4><p>Must be performed by a human (excludes robots, algorithms, animals).</p></div>
+          <div class="cbox"><h4>② Time-based</h4><p>Involves the allocation of time as the scarce input.</p></div>
+          <div class="cbox"><h4>③ Exchange</h4><p>Explicit (wages) or implicit (training, saved expense) value received.</p></div>
+        </div>
+
+        <h4 class="sub">Edge Cases (Exam Favorites)</h4>
         <table class="mtable">
           <tr><th>Case</th><th>Labor?</th><th>Why</th></tr>
-          <tr><td>Unpaid internship</td><td>✓ Yes</td><td>Exchange for training/experience (a service)</td></tr>
-          <tr><td>Cooking for family</td><td>✓ Yes</td><td>Implicit saving (avoided restaurant cost)</td></tr>
-          <tr><td>Volunteer work</td><td>Ambiguous</td><td>Could be training (yes) or pure leisure (no)</td></tr>
-          <tr><td>Robot in factory</td><td>✗ No</td><td>Not a human</td></tr>
-          <tr><td>Sleeping</td><td>✗ No</td><td>No exchange in marketplace</td></tr>
+          <tr><td>Unpaid internship</td><td>✓ Yes</td><td>Implicit exchange — training/experience is a service of value</td></tr>
+          <tr><td>Cooking for family</td><td>✓ Yes</td><td>Implicit saving — avoided market expense (restaurant cost)</td></tr>
+          <tr><td>Volunteer work</td><td>Ambiguous</td><td>Yes if skill-building; no if pure consumption (leisure)</td></tr>
+          <tr><td>Robot in factory</td><td>✗ No</td><td>Fails test ①: not a human</td></tr>
+          <tr><td>Sleeping</td><td>✗ No</td><td>Fails test ③: no exchange in the marketplace</td></tr>
+          <tr><td>Studying for a degree</td><td>✓ Yes (investment)</td><td>Human capital formation — exchange of time for future earnings</td></tr>
         </table>
-        <h4 class="sub">Labor Force &amp; Unemployment Rate</h4>
+
+        <h4 class="sub">Labor Force Accounting</h4>
+        <div class="formula">Unemployment Rate = Unemployed / (Employed + Unemployed) &nbsp;|&nbsp; LFPR = Labor Force / Working-age Pop.</div>
         <ul class="kp">
-          <li><strong>Labor force</strong>: over 16, either working or actively looking for work</li>
-          <li><strong>US definition</strong>: actively sought work in past <strong>4 weeks</strong></li>
-          <li><strong>Japanese definition</strong>: past <strong>1 week</strong>, or waiting for results of past activities</li>
-          <li>Unemployment rate can rise for good reasons: wages up → more people enter labor force</li>
+          <li><strong>Labor force</strong>: people aged 16+ who are either employed <em>or</em> actively seeking work — the denominator</li>
+          <li><strong>Not in labor force</strong>: students, retirees, discouraged workers, full-time homemakers — invisible in the rate</li>
+          <li><strong>US definition of "actively seeking"</strong>: applied/searched in the past <strong>4 weeks</strong></li>
+          <li><strong>Japanese definition</strong>: past <strong>1 week</strong>, <em>or</em> currently awaiting results of past job-search activities</li>
+          <li>This window matters: shorter window → fewer counted as unemployed → lower published rate</li>
         </ul>
+
+        <div class="callout"><strong>Counterintuitive point:</strong> A rising unemployment rate can be a <em>good</em> sign. When wages rise, previously discouraged workers re-enter the labor force — pushing up the denominator and (temporarily) the numerator faster than employment can absorb them. Always check the LFPR alongside the unemployment rate.</div>
       </div>
     </div>
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
-        <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W2</span>Unemployment &amp; Normative Economics</div>
+        <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W2</span>Unemployment Types &amp; Normative Economics</div>
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <h4 class="sub">Why Unemployment Rate ≠ 0</h4>
+        <p class="wk-intro">Unemployment rate is never zero — and not all unemployment is bad. Identifying which type you're dealing with determines whether policy can or should respond.</p>
+
+        <h4 class="sub">Four Sources of Persistent Unemployment</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>Frictional</h4><p>Search and matching take time. Workers and firms need to find each other. Always present in a dynamic economy.</p></div>
+          <div class="cbox"><h4>Structural</h4><p>Skills, geography, or industry mismatch. Coal miners in West Virginia can't instantly become software engineers in Austin.</p></div>
+          <div class="cbox"><h4>Wage Floor</h4><p>Minimum wage or union wage set above market-clearing → excess labor supply at the floor.</p></div>
+          <div class="cbox"><h4>Hiring Frictions</h4><p>Uncertainty, firing costs, and adjustment lags make firms hesitate to hire even when demand exists.</p></div>
+        </div>
+
+        <h4 class="sub">Timing Effects — The Recession Cohort Scar</h4>
         <ul class="kp">
-          <li><strong>Frictional</strong>: search time — workers and firms need time to find each other</li>
-          <li><strong>Structural</strong>: skills mismatch between workers and available jobs</li>
-          <li><strong>Minimum wage</strong>: government-set wage floor above market-clearing wage → excess supply of labor</li>
-          <li><strong>Incentive issues</strong>: risky to hire when future is uncertain</li>
+          <li>Graduating during a recession produces an <strong>earnings penalty that persists 10+ years</strong> for the average graduate</li>
+          <li><strong>Top-ability graduates</strong>: penalty closes by ~10 years — they can switch jobs to catch up</li>
+          <li><strong>Average-ability graduates</strong>: slower convergence, lasting wage scar</li>
+          <li><strong>Bottom-ability graduates</strong>: higher probability of long-term unemployment and labor-force exit</li>
+          <li>Mechanism: first job sets reference wage; promotions and outside offers compound; bad starting point compounds for life</li>
         </ul>
-        <h4 class="sub">Timing Effects (Key Empirical Finding)</h4>
-        <ul class="kp">
-          <li>Graduating in a recession → <strong>earnings penalty persists 10+ years</strong> for average graduates</li>
-          <li>Top-ability graduates: catch up after ~10 years</li>
-          <li>Bottom-ability graduates: persistent unemployment; more likely to exit labor force</li>
-        </ul>
-        <h4 class="sub">Positive vs. Normative</h4>
+
+        <h4 class="sub">Positive vs. Normative Economics</h4>
         <table class="mtable">
-          <tr><th>Positive</th><th>Normative</th></tr>
-          <tr><td>Observation + structural model; assumes rationality, scarcity, averageness</td><td>Moral judgement about how markets should work</td></tr>
-          <tr><td>"If wage rises, labor demand falls"</td><td>"The minimum wage should be $15"</td></tr>
-          <tr><td>Falsifiable, objective</td><td>Value-laden, not falsifiable</td></tr>
+          <tr><th></th><th>Positive Economics</th><th>Normative Economics</th></tr>
+          <tr><td><strong>What it does</strong></td><td>Describes how the world works</td><td>Prescribes how the world <em>should</em> work</td></tr>
+          <tr><td><strong>Method</strong></td><td>Observation + structural model<br>(assumes rationality, scarcity, averageness)</td><td>Moral / political judgement on outcomes</td></tr>
+          <tr><td><strong>Example</strong></td><td>"A wage increase reduces labor demand."</td><td>"The minimum wage should be $15."</td></tr>
+          <tr><td><strong>Property</strong></td><td>Falsifiable, objective</td><td>Value-laden, not falsifiable</td></tr>
         </table>
-        <h4 class="sub">Efficiency vs. Equality (Boardgame Example)</h4>
-        <ul class="kp">
-          <li>Surplus = WTP − reservation wage = 2000 − 1000 = 1000 yen</li>
-          <li>W1 (pay 1100): efficient ✓, unequal distribution</li>
-          <li>W2 (pay 1500): efficient ✓, more equal distribution</li>
-          <li>W3 (no deal): inefficient ✗ — surplus wasted</li>
-          <li><strong>Efficiency = is the pie maximized? Fairness = how is it split?</strong></li>
-        </ul>
+
+        <h4 class="sub">Efficiency vs. Equality — The Boardgame Example</h4>
+        <p class="wk-intro" style="margin-top:6px;">A buyer is willing to pay ¥2,000; a seller has a reservation wage of ¥1,000. Total surplus available = <strong>¥1,000</strong>. Three possible outcomes:</p>
+        <table class="mtable">
+          <tr><th>Wage</th><th>Buyer Surplus</th><th>Seller Surplus</th><th>Efficient?</th><th>Equal?</th></tr>
+          <tr><td>¥1,100</td><td>¥900</td><td>¥100</td><td>✓ — pie maximized</td><td>✗ — buyer captures most</td></tr>
+          <tr><td>¥1,500</td><td>¥500</td><td>¥500</td><td>✓ — pie maximized</td><td>✓ — equal split</td></tr>
+          <tr><td>No deal</td><td>¥0</td><td>¥0</td><td>✗ — pie wasted</td><td>— equal but trivially so</td></tr>
+        </table>
+        <div class="callout"><strong>Two distinct questions:</strong> <em>Efficiency</em> asks "is the pie as large as possible?" <em>Fairness</em> asks "how is the pie split?" Most policy debates conflate them — and most policy interventions trade one for the other.</div>
       </div>
     </div>
 
@@ -1487,36 +1512,87 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <h4 class="sub">Labor Demand</h4>
+        <p class="wk-intro">The competitive labor market is the workhorse model. Demand comes from firms' marginal productivity; supply from workers' time-allocation trade-off. Where they meet pins down the wage and employment level.</p>
+
+        <h4 class="sub">Labor Demand — Derived from Marginal Productivity</h4>
+        <div class="formula">Hire one more worker iff &nbsp; MR · MPL &nbsp;≥&nbsp; w &nbsp;&nbsp;⇒&nbsp;&nbsp; in competition: P · MPL = w</div>
         <ul class="kp">
-          <li><strong>Slopes down</strong> due to <strong>diminishing marginal product of labor</strong> (fixed capital → each additional worker contributes less)</li>
-          <li>Hire while MR from worker &gt; wage → as wage rises, fewer workers hired</li>
-          <li>Minimum wage debate: Card (1992) found little effect; Meer &amp; West (2015) found firms slow hiring rather than fire</li>
+          <li><strong>Slopes downward</strong> because of <strong>diminishing marginal product of labor (MPL)</strong>: with fixed capital, each additional worker adds less output than the previous one</li>
+          <li>At any wage w, the firm hires the quantity of workers where the value of the marginal worker's output just equals w</li>
+          <li>As w rises, fewer workers clear the bar → demand curve slopes down in (L, w) space</li>
+          <li><strong>Minimum wage evidence</strong>: Card &amp; Krueger (1992) found minimal employment effect in NJ fast food; Meer &amp; West (2015) found firms <em>slow hiring</em> rather than fire — adjustment shows up in flows, not the unemployment stock</li>
         </ul>
-        <h4 class="sub">Labor Supply &amp; the Backward-Bending Curve</h4>
+
+        <h4 class="sub">Labor Supply — The Substitution / Income Decomposition</h4>
+        <p class="wk-intro" style="margin-top:6px;">When the wage rises, two opposing forces act on hours worked. Their relative size determines the slope of the labor supply curve.</p>
+        <div class="concept-row">
+          <div class="cbox" style="border-left:3px solid #16A34A"><h4>Substitution Effect (+)</h4><p>Leisure becomes more expensive relative to consumption → work more hours. <em>Always positive.</em></p></div>
+          <div class="cbox" style="border-left:3px solid #DC2626"><h4>Income Effect (−)</h4><p>You can afford the same lifestyle with fewer hours → take more leisure. <em>Always negative.</em></p></div>
+          <div class="cbox" style="border-left:3px solid #2563EB"><h4>Net Effect</h4><p>Low/mid wages: substitution wins → curve slopes <strong>up</strong>. Very high wages: income wins → curve bends <strong>backward</strong>.</p></div>
+        </div>
+
+        <div class="viz-box" style="margin:12px 0;">
+          <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:200px;" preserveAspectRatio="none" font-family="-apple-system,sans-serif">
+            <!-- Axes -->
+            <line x1="50" y1="190" x2="450" y2="190" stroke="#374151" stroke-width="1.5"/>
+            <polygon points="450,187 458,190 450,193" fill="#374151"/>
+            <line x1="50" y1="190" x2="50" y2="15" stroke="#374151" stroke-width="1.5"/>
+            <polygon points="47,15 50,7 53,15" fill="#374151"/>
+            <text x="460" y="194" font-size="10" fill="#374151" font-weight="600">L (hours)</text>
+            <text x="30" y="14" font-size="10" fill="#374151" font-weight="600">w</text>
+
+            <!-- Backward-bending supply curve (drawn as bezier path, w on y-axis, L on x) -->
+            <!-- Starts at (50, 175), rises to (260, 50), then bends back to (180, 20) -->
+            <path d="M 60 175 Q 130 130, 200 90 Q 260 55, 270 40 Q 230 25, 180 20" fill="none" stroke="#7C3AED" stroke-width="2.5"/>
+
+            <!-- Substitution-dominates label -->
+            <line x1="130" y1="135" x2="170" y2="115" stroke="#16A34A" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="80" y="100" font-size="10" font-weight="700" fill="#16A34A">Substitution &gt; Income</text>
+            <text x="90" y="113" font-size="9" fill="#16A34A">(work more as w rises)</text>
+
+            <!-- Backward-bend label -->
+            <line x1="260" y1="55" x2="320" y2="60" stroke="#DC2626" stroke-width="1" stroke-dasharray="3,2"/>
+            <text x="320" y="55" font-size="10" font-weight="700" fill="#DC2626">Income &gt; Substitution</text>
+            <text x="330" y="68" font-size="9" fill="#DC2626">(leisure preferred)</text>
+
+            <!-- Turnaround point -->
+            <circle cx="270" cy="40" r="4" fill="#F59E0B"/>
+            <text x="278" y="36" font-size="9" font-weight="700" fill="#92400E">turning point</text>
+
+            <!-- Curve label -->
+            <text x="200" y="200" text-anchor="middle" font-size="10" font-style="italic" fill="#7C3AED">Individual Backward-Bending Labor Supply Curve</text>
+          </svg>
+          <div class="viz-caption">Shape: at high enough wages, an extra ¥ of income is worth less than an extra hour of leisure — the curve bends back toward fewer hours.</div>
+        </div>
+
         <ul class="kp">
-          <li><strong>Normal range (upward slope)</strong>: higher wage → each hour is more valuable → substitute leisure for work → supply rises</li>
-          <li><strong>Substitution effect</strong>: wage ↑ → leisure becomes more expensive relative to consumption → work more (always positive)</li>
-          <li><strong>Income effect</strong>: wage ↑ → you can afford the same consumption with fewer hours → work less (always negative)</li>
-          <li><strong>At low-to-medium wages</strong>: substitution effect &gt; income effect → curve slopes upward</li>
-          <li><strong>Backward-bending region</strong>: at very high wages, income effect dominates — you are already wealthy enough that the marginal hour of work is worth less than the marginal hour of leisure. Surgeon earning $500/hr, PhD earning $300/hr — extra income buys less additional utility than rest.</li>
-          <li><strong>Shape summary</strong>: supply curve bends backward (left) at high w — looks like a backwards "C" or fishhook when drawn with w on the y-axis</li>
-          <li>Most wage distributions sit in the upward-sloping segment; backward-bending is empirically important mainly for top earners and certain professional markets</li>
-          <li>Most jobs have fixed contracted hours → market supply is the aggregate of individual participation threshold decisions, not continuous hour adjustment</li>
+          <li><strong>Empirical relevance</strong>: most observed wages sit on the upward-sloping portion. The backward-bending region matters for top earners — surgeons, partners, executives</li>
+          <li><strong>Aggregation</strong>: most jobs have fixed contracted hours. Market labor supply reflects mainly the <em>extensive margin</em> (work / don't work) — the participation threshold decision — not continuous hour adjustment on the intensive margin</li>
         </ul>
-        <h4 class="sub">Equilibrium Calculation</h4>
-        <div class="formula">D(w) = 100 − w &nbsp;&nbsp; S(w) = 2w − 6 &nbsp;&nbsp; → w* = 35.33, L* = 64.66 hrs</div>
+
+        <h4 class="sub">Equilibrium — Worked Numerical Example</h4>
+        <div class="formula">D(w) = 100 − w &nbsp;&nbsp; S(w) = 2w − 6 &nbsp;&nbsp; → &nbsp; 100 − w = 2w − 6 &nbsp; → &nbsp; w* = 106/3 ≈ 35.33, &nbsp; L* = 200/3 ≈ 64.67</div>
+        <div class="concept-row">
+          <div class="cbox"><h4>Assumption 1: Competitive</h4><p>Many buyers and sellers — no individual can move the wage. Price-taking behavior on both sides.</p></div>
+          <div class="cbox"><h4>Assumption 2: Homogeneous</h4><p>Workers and firms are interchangeable within the market — no quality differences, no search frictions.</p></div>
+          <div class="cbox"><h4>Adjustment</h4><p>Excess supply (w &gt; w*) → workers undercut → w falls. Excess demand (w &lt; w*) → firms outbid → w rises. Converges to w*.</p></div>
+        </div>
         <ul class="kp">
-          <li><strong>Assumptions</strong>: (1) competitive — many buyers and sellers, (2) homogeneous — workers/firms are interchangeable</li>
-          <li><strong>Adjustment mechanism</strong>: excess supply → workers undercut → wage falls to w*; excess demand → firms outbid → wage rises</li>
-          <li>Real world violations: monopsonies (Walmart in small towns), wage collusion (tech firms)</li>
+          <li><strong>Real-world violations</strong>: <em>monopsony</em> (Walmart as the only large employer in a small town can suppress wages below MPL); <em>wage collusion</em> (the famous 2010s Silicon Valley no-poach agreements among Apple, Google, Adobe, Intel)</li>
+          <li>Under monopsony, a binding minimum wage can <em>raise</em> employment — the textbook competitive prediction reverses</li>
         </ul>
-        <h4 class="sub">Real vs. Nominal Wages</h4>
+
+        <h4 class="sub">Nominal vs. Real Wages — Why "Stagnant" US Wages Are Misleading</h4>
+        <div class="formula">Real wage &nbsp;=&nbsp; Nominal wage / Price index</div>
         <ul class="kp">
-          <li><strong>Nominal wage</strong>: dollar/yen amount. <strong>Real wage</strong>: purchasing power against a typical bundle</li>
-          <li>US real wages roughly stagnant since 1970s — but <strong>total compensation grew</strong> via health insurance, pension benefits</li>
-          <li>Healthcare expenditure ~5× since 1970s (now ~17% US GDP) → absorbs wage gains</li>
+          <li><strong>Nominal wage</strong>: the dollar/yen number on your paycheck</li>
+          <li><strong>Real wage</strong>: purchasing power of that paycheck against a typical consumption bundle</li>
+          <li>US <em>real wages</em> have been roughly stagnant since the 1970s — a politically charged statistic</li>
+          <li>But <strong>total compensation</strong> (wages + benefits) grew steadily: health insurance, pension contributions, paid leave</li>
+          <li>US healthcare expenditure ~5× since 1970s (now ~17% of GDP). Employer-paid premiums absorb a large share of what would otherwise be wage gains — so real wages look flat while real compensation rose</li>
         </ul>
+
+        <div class="callout"><strong>Exam takeaway:</strong> When asked about "wage stagnation," distinguish nominal vs. real, and wages vs. total compensation. The three measures can move in different directions, and the choice of measure often drives the policy conclusion.</div>
       </div>
     </div>
 
