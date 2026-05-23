@@ -320,6 +320,14 @@ section.active { display: block; animation: fadeIn 0.15s ease; }
 
 .wk-intro { font-size: 12.5px; color: #444; margin-bottom: 10px; line-height: 1.55; }
 h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--text); }
+.phase-sep {
+  font-size: 9.5px; font-weight: 700; letter-spacing: 0.09em;
+  text-transform: uppercase; color: var(--text-2);
+  padding: 10px 4px 3px; margin-top: 4px;
+  border-top: 1px solid var(--border);
+  display: flex; align-items: center; gap: 8px;
+}
+.phase-sep::after { content: ''; flex: 1; height: 1px; background: var(--border); }
 /* Logic chain */
 .lc-era { font-size: 10px; font-weight: 700; letter-spacing:.06em; text-transform:uppercase; color:var(--text-2); margin:12px 0 4px; }
 .lc-row { display:flex; align-items:center; gap:5px; flex-wrap:wrap; margin:4px 0; }
@@ -633,6 +641,8 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="sec-label">Weekly Drill-Down</div>
   <div class="weeks">
 
+    <div class="phase-sep">Phase 1–2 · Post-War Reconstruction &amp; High Growth</div>
+
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W2</span>Post-War Reforms (1945–1949)</div>
@@ -697,6 +707,8 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       </div>
     </div>
 
+    <div class="phase-sep">Phase 3 · External Shocks &amp; Adjustment</div>
+
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W3</span>Bretton Woods Collapse &amp; Oil Shocks (1971–1979)</div>
@@ -748,6 +760,8 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         </ul>
       </div>
     </div>
+
+    <div class="phase-sep">Phase 4 · Financial Liberalization &amp; Bubble Formation</div>
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
@@ -808,6 +822,8 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         <div class="callout">By 1989 the Nikkei implied a P/E ratio of ~60×. Tokyo land prices implied it would cost more than the entire US real estate market to buy all of metropolitan Tokyo. Both were pure bubble components in the pricing formula.</div>
       </div>
     </div>
+
+    <div class="phase-sep">Phase 5 · Bubble Collapse &amp; Crisis Build-Up (1990–1997)</div>
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
@@ -971,6 +987,163 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           </div>
         </div>
         <div class="callout"><strong>Core lesson:</strong> Speed and transparency of loss recognition determine the length of a financial crisis. Japan's delayed, opaque approach multiplied the eventual cost; Sweden's rapid, transparent approach compressed it.</div>
+      </div>
+    </div>
+
+    <div class="phase-sep">Week 6 · Banking Crisis — Detailed Notes</div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W6a</span>1997 Banking Crisis: Mechanisms &amp; Contagion</div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">The Sanyo Securities collapse in November 1997 mattered not because of its size, but because of the precedent: the government would no longer bail out failing institutions. That signal froze the call loan market and triggered a cascade of failures.</p>
+
+        <h4 class="sub">The Trigger: Sanyo Securities (Nov 3, 1997)</h4>
+        <ul class="kp">
+          <li><strong>What happened:</strong> Sanyo Securities (mid-sized securities firm) filed for bankruptcy. Its non-bank subsidiary had bad real-estate loans from the 1980s bubble</li>
+          <li>Previously, MoF used <strong>moral suasion</strong> to force healthy institutions to absorb failing ones — the convoy system handled crises quietly</li>
+          <li>This time: no law existed for government to buy securities firm shares; BoJ could not lend to an insolvent institution</li>
+          <li>Sanyo <strong>defaulted on call loans</strong> — the first major call-loan default in modern Japan</li>
+          <li>Market interpreted this as: "the government will no longer bail out failing institutions" → <strong>convoy system ended here</strong></li>
+        </ul>
+        <div class="callout"><strong>Call loan (同業拆借):</strong> short-term borrowing of central bank reserves between financial institutions to settle daily payments. Normally considered risk-free — Sanyo's default shattered this and made every bank mistrust every other bank overnight.</div>
+
+        <h4 class="sub">Contagion: Hokkaido Takushoku &amp; Yamaichi (Nov 1997)</h4>
+        <table class="mtable">
+          <tr><th>Institution</th><th>Type</th><th>Problem &amp; Resolution</th></tr>
+          <tr><td>Hokkaido Takushoku Bank</td><td>City bank</td><td>Bad commercial real-estate loans + failed merger → deposit withdrawals. DICJ gave ¥1.7T subsidy + bought ¥1.6T of NPLs. Business sold to Hokuyo Bank &amp; Chuo Trust (Nov 17)</td></tr>
+          <tr><td>Yamaichi Securities</td><td>One of top 4 securities firms</td><td>Hidden losses from illegally guaranteeing client trading losses; Fuji Bank refused to lend. Voluntary liquidation (Nov 22). BoJ lent funds for orderly repayment. Formally bankrupt 1999, liquidation completed 2005</td></tr>
+        </table>
+
+        <h4 class="sub">First Wave of Policy Responses (Dec 1997 – Feb 1998)</h4>
+        <div class="cchain">
+          <span class="cnode">Dec 5, 1997: MoF guarantees all bank deposits &amp; debentures until March 2001</span><span class="carr">→</span>
+          <span class="cnode">Feb 1998: Diet passes acts giving DICJ ¥10T of JGBs + ¥20T government guarantee</span><span class="carr">→</span>
+          <span class="cnode">DICJ can buy equity in surviving banks (up to ¥13T) and guarantee failed-bank deposits (up to ¥17T)</span><span class="carr">→</span>
+          <span class="cnode">Stigma problem: banks each take same small token injection — only ¥1.8T total absorbed</span>
+        </div>
+        <div class="callout"><strong>Stigma problem:</strong> If one bank accepted a large injection, markets would assume it was the weakest → confidence crash. So every bank took the same token amount. Result: banks remained undercapitalized and vulnerable.</div>
+
+        <h4 class="sub">LTCB &amp; NCB Collapse — Stronger Legislation (Late 1998)</h4>
+        <ul class="kp">
+          <li><strong>Summer 1998:</strong> Stock prices of Long-Term Credit Bank (LTCB) and Nippon Credit Bank (NCB) crashed — long-term credit banks were most damaged by 1980s financial disintermediation</li>
+          <li><strong>Oct 1998:</strong> Diet passed stronger acts: created <strong>RCC (Resolution and Collection Corporation)</strong> — DICJ subsidiary that absorbs and collects NPLs</li>
+          <li>DICJ could now take over troubled banks <strong>before</strong> bankruptcy, transferring NPLs to RCC — the key gap from 1996 was finally filled</li>
+          <li><strong>LTCB nationalized Oct 1998</strong> → sold to investment funds in 2000, renamed Shinsei Bank</li>
+          <li><strong>NCB nationalized Dec 1998</strong> → renamed Aozora Bank</li>
+          <li><strong>March 1999:</strong> DICJ injected <strong>¥7.45 trillion</strong> of equity into 15 large banks → no more large failures after this</li>
+        </ul>
+
+        <h4 class="sub">Main Consequence: Credit Crunch</h4>
+        <ul class="kp">
+          <li>Even with deposit insurance protecting depositors, banks needed interbank lending to function daily</li>
+          <li>Banks doubted each other's asset quality → interbank lending froze → all banks tightened lending standards to clean up balance sheets</li>
+          <li>New bank loans for fixed investment fell by ~¥10 trillion; real GDP growth turned negative</li>
+          <li><strong>Bank lending rates did NOT rise</strong> — counterintuitive but logical: banks weren't trying to extract higher returns, they were trying to survive by avoiding risky loans entirely</li>
+          <li>Small/medium-sized firms hit hardest as riskier borrowers — their share of bank loans dropped sharply</li>
+        </ul>
+
+        <h4 class="sub">Japan Premium (TIBOR − LIBOR)</h4>
+        <div class="formula">Japan Premium = TIBOR (USD loans to Japanese banks, Tokyo) − LIBOR (USD loans to global banks, London) ≈ 0.3% at peak</div>
+        <ul class="kp">
+          <li>Foreign banks charged extra interest on dollar loans to Japanese banks — suspected hidden losses in their portfolios</li>
+          <li>Originated after <strong>1995 Daiwa Bank scandal</strong>: NY branch hid trading losses from the Fed, alerting global markets to opacity in Japanese banks</li>
+          <li>Two visible spikes: post-Sanyo collapse (late 1997) and LTCB/NCB period (summer 1998 – early 1999)</li>
+        </ul>
+
+        <h4 class="sub">Aftermath &amp; Resolution (2000s)</h4>
+        <ul class="kp">
+          <li><strong>2000:</strong> LTCB and NCB sold back to private investors (Shinsei, Aozora)</li>
+          <li><strong>2001:</strong> Government launched the <strong>Financial Revitalization Program</strong> — goal: clear NPLs by 2004; RCC actively purchased NPLs and collected on them</li>
+          <li><strong>2005:</strong> Unlimited deposit guarantee ended; reverted to standard ¥10 million per depositor</li>
+          <li>NPLs returned to normal background levels by early 2000s; land prices kept falling throughout — but banks' balance sheets were finally cleaned</li>
+        </ul>
+
+        <h4 class="sub">Key Concepts Quick Reference</h4>
+        <table class="mtable">
+          <tr><th>Concept</th><th>One-line definition</th></tr>
+          <tr><td>Convoy system (護航体制)</td><td>Informal MoF practice of forcing healthy FIs to absorb failing ones — ended Nov 1997</td></tr>
+          <tr><td>Call loan (同業拆借)</td><td>Short-term interbank borrowing of central bank reserves for daily payments</td></tr>
+          <tr><td>DICJ (預金保険機構)</td><td>Deposit Insurance Corporation of Japan — central tool for handling failed banks</td></tr>
+          <tr><td>RCC (整理回収機構)</td><td>Resolution and Collection Corporation — buys and collects on NPLs; DICJ subsidiary created Oct 1998</td></tr>
+          <tr><td>Credit crunch (信用収縮)</td><td>Banks tighten lending broadly to improve asset quality, starving real economy of credit</td></tr>
+          <tr><td>Stigma problem</td><td>Banks refuse government capital because accepting it signals weakness to the market</td></tr>
+          <tr><td>Japan Premium</td><td>Extra interest foreign banks charged Japanese banks due to hidden-loss suspicions (TIBOR − LIBOR)</td></tr>
+        </table>
+
+        <div class="callout"><strong>The big-picture causal chain:</strong> Bubble-era bad loans → Sanyo default signals government won't bail out → call loan market freezes → Hokkaido Takushoku &amp; Yamaichi fall → first policy response too weak (stigma) → LTCB/NCB fall → stronger laws allow pre-bankruptcy nationalization + forced equity injection → crisis contained, but credit crunch causes recession → NPL cleanup takes until mid-2000s.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W6b</span>Japan vs. Sweden — Why Crisis Length Differed</div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Same root cause — financial liberalization + real estate bubble — radically different crisis durations. Sweden resolved its banking crisis in ~3 years; Japan took over a decade. The key variable was not the severity of losses, but the speed of government response.</p>
+
+        <h4 class="sub">1. Shared Background</h4>
+        <ul class="kp">
+          <li>Financial liberalization occurred across industrialized countries in the 1980s, increasing competition among banks in both Japan and Sweden</li>
+          <li>Both countries expanded bank lending heavily into <strong>commercial real estate</strong> (loans to property developers, not home buyers) → large losses in the 1990s</li>
+          <li><strong>Key point:</strong> Japan's crisis was not unique — it was part of a global pattern triggered by financial liberalization</li>
+        </ul>
+
+        <h4 class="sub">2. Sweden's Bubble — Identical Mechanism</h4>
+        <ul class="kp">
+          <li>Real interest rates were lowered in the second half of the 1980s; Swedish banks expanded lending into commercial real estate after liberalization in 1983–85</li>
+          <li>Commercial real estate prices rose sharply, then collapsed in the early 1990s — but <strong>began recovering after 1993</strong></li>
+          <li>Banks that expanded fastest suffered worst losses: Nordbanken lost 21.4% of total lending; Gota lost 37.3%</li>
+        </ul>
+
+        <h4 class="sub">3. Sweden's Response — Fast &amp; Decisive</h4>
+        <p class="wk-intro" style="margin-top:6px;">Swedish banks recognized loan losses in the early 1990s — unlike Japanese banks, which delayed until the late 1990s.</p>
+        <table class="mtable">
+          <tr><th>Swedish Bank</th><th>Government Action</th></tr>
+          <tr><td>SE-banken</td><td>New equity issuance to private owners</td></tr>
+          <tr><td>Handelsbanken</td><td>Survived without new equity (self-rescued)</td></tr>
+          <tr><td>Nordbanken</td><td>Government bought new equity + NPLs transferred to Securum</td></tr>
+          <tr><td>Gota</td><td>Bankrupt → merged with Nordbanken + NPLs to Securum</td></tr>
+          <tr><td>Sparbanken</td><td>Government loan + new equity to private owners</td></tr>
+          <tr><td>Föreningsbanken</td><td>Government guarantee (never actually used)</td></tr>
+        </table>
+        <div class="callout"><strong>Securum</strong> = Sweden's "bad bank" — a state company set up to buy non-performing loans from banks to stabilize them. Created 1992, dissolved 1997 after completing its mission. Japan created a similar agency (RCC) in 1998 — the same year Sweden finished cleaning up. A decade's difference.</div>
+
+        <h4 class="sub">4. Japan's Delayed Response — 4 Reasons</h4>
+        <ul class="kp">
+          <li><strong>① Jyu-sen politics (1995):</strong> the unfair distribution of losses in the Jyu-sen dissolution made it politically toxic for the government to bail out banks — the public saw it as protecting insiders at taxpayers' expense</li>
+          <li><strong>② LDP leadership change:</strong> the LDP lost power in the 1993 general election due to bribery scandals — weakening political will and capacity for bold action at the critical moment</li>
+          <li><strong>③ Legal vacuum:</strong> former senior bureaucrats confirmed there was no legal authority to recapitalize banks swiftly in the early 1990s — the legal framework simply didn't exist yet</li>
+          <li><strong>④ ERM crisis gave Sweden external cover:</strong> the 1992 ERM currency crisis pushed Sweden's government into crisis-control mode more rapidly — external pressure forced urgency that Japan's domestic politics never generated</li>
+        </ul>
+
+        <h4 class="sub">5. Currency: Another Asymmetry</h4>
+        <table class="mtable">
+          <tr><th></th><th>Sweden</th><th>Japan</th></tr>
+          <tr><td>Currency after crisis</td><td>Krona floated Nov 1992 → depreciated substantially</td><td>Yen appreciated after 1997–98 banking crisis</td></tr>
+          <tr><td>Effect on exports</td><td>Exports boosted → aggregate demand recovered</td><td>Exports suppressed → headwind to recovery</td></tr>
+        </table>
+
+        <h4 class="sub">6. The Normative Trade-off: Fairness vs. Speed</h4>
+        <div class="callout"><strong>Bailouts work economically</strong> — they stop credit crunches and restore the banking system fast. Sweden proved this. <strong>But bailouts are politically toxic</strong> — the government absorbs bank losses while ordinary people who lost jobs get nothing. There is a genuine trade-off between fairness and quick resolution. After 1995, the Japanese government was forced to prioritize fairness at the expense of speed.<br><br><strong>Modern parallel:</strong> Obama bailed out banks after the 2008 subprime crisis, having studied Japan vs. Sweden. Consequence: rise of anti-inequality sentiment → "top 1%" discourse → political conditions partly contributing to Trump's 2016 victory. The sense of fairness is not a trivial issue — which option is better is a genuine open question.</div>
+
+        <h4 class="sub">Full Comparison Table</h4>
+        <table class="mtable">
+          <tr><th>Dimension</th><th>Japan</th><th>Sweden</th></tr>
+          <tr><td>Bubble origin</td><td>Low rates + financial liberalization + real estate lending</td><td>Same</td></tr>
+          <tr><td>Bust</td><td>Early 1990s</td><td>Early 1990s</td></tr>
+          <tr><td>Loss recognition</td><td>Delayed — late 1990s/2000s</td><td>Immediate — early 1990s</td></tr>
+          <tr><td>Bad bank equivalent</td><td>RCC (created 1998)</td><td>Securum (created 1992, dissolved 1997)</td></tr>
+          <tr><td>Government equity injection</td><td>Delayed, weak (stigma problem)</td><td>Swift and decisive</td></tr>
+          <tr><td>Currency post-crisis</td><td>Yen appreciated → headwind</td><td>Krona depreciated → export boost</td></tr>
+          <tr><td>Real estate recovery</td><td>Kept falling through 2000s</td><td>Recovered from 1993</td></tr>
+          <tr><td>Economic recovery</td><td>Lost Decade</td><td>Recovered mid-1990s</td></tr>
+          <tr><td>Root cause of delay</td><td>Political unpopularity, legal vacuum, fairness concerns</td><td>ERM pressure forced urgency</td></tr>
+        </table>
+        <div class="callout"><strong>One-line takeaway:</strong> Sweden did in 3 years what Japan took 10 years to do — not because the crisis was different, but because Sweden acted fast, recognized losses immediately, and had political cover (the ERM crisis) to justify bold intervention.</div>
       </div>
     </div>
 
