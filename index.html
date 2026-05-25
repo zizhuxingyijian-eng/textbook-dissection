@@ -70,6 +70,13 @@ nav {
   transition: background 0.12s, color 0.12s;
 }
 .nav-item:hover { background: rgba(0,0,0,0.035); color: var(--text); }
+.nav-item:focus,
+.card:focus,
+.back:focus,
+.wk-hd:focus {
+  outline: 2px solid #4F8EF7;
+  outline-offset: 2px;
+}
 .nav-item.active { color: var(--text); font-weight: 600; background: rgba(0,0,0,0.05); }
 .nav-dot {
   width: 7px; height: 7px;
@@ -384,14 +391,14 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     <p>Spring Semester · 6 Courses</p>
   </div>
   <div class="nav-group-label">Navigate</div>
-  <div class="nav-item active" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
+  <div class="nav-item active" tabindex="0" role="button" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
   <div class="nav-group-label">Courses</div>
-  <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy</div>
-  <div class="nav-item" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
-  <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
-  <div class="nav-item" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
-  <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
-  <div class="nav-item" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
 </nav>
 
 <main>
@@ -401,25 +408,25 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="home-title">大三下 Study Review</div>
   <div class="home-sub">Spring Semester — Quick-access visual notes for all 6 core courses. Click a card to open.</div>
   <div class="card-grid">
-    <div class="card" onclick="show('jp')" style="--c:var(--jp)">
+    <div class="card" tabindex="0" role="button" onclick="show('jp')" style="--c:var(--jp)">
       <h3 style="color:var(--jp)">Japanese Economy</h3>
       <div class="card-prof">Prof. Hajime Tomura · Waseda</div>
       <div class="card-desc">Post-war reconstruction through the Lost Decade. Macroeconomic history driven by policy, finance, and external shocks.</div>
       <div class="card-badges"><span class="badge" style="background:#FEE2E2;color:var(--jp)">Timeline</span><span class="badge">Wk 2–6</span><span class="badge">Y=A·F(K,H)</span></div>
     </div>
-    <div class="card" onclick="show('ec2')">
+    <div class="card" tabindex="0" role="button" onclick="show('ec2')">
       <h3 style="color:var(--ec2)">Econometrics II</h3>
       <div class="card-prof">Prof. Tadao Hoshino · Waseda</div>
       <div class="card-desc">Causal inference roadmap: from RCTs to DiD and synthetic control. Identification strategies for observational data.</div>
       <div class="card-badges"><span class="badge" style="background:#DBEAFE;color:var(--ec2)">Decision Tree</span><span class="badge">Wk 1–12</span><span class="badge">ATE · IV · RDD</span></div>
     </div>
-    <div class="card" onclick="show('intl')">
+    <div class="card" tabindex="0" role="button" onclick="show('intl')">
       <h3 style="color:var(--intl)">International Economics</h3>
       <div class="card-prof">Dr. Tatyana Chesnokova · Waseda</div>
       <div class="card-desc">Why nations trade, who wins and loses, and how returns to scale change the picture. Comparative advantage to new trade theory.</div>
       <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5</span><span class="badge">Ricardo · Krugman</span></div>
     </div>
-    <div class="card" onclick="show('labor')">
+    <div class="card" tabindex="0" role="button" onclick="show('labor')">
       <h3 style="color:var(--labor)">Labor Economics I</h3>
       <div class="card-prof">Prof. DeJar · Waseda</div>
       <div class="card-desc">What is labor? Demand, supply, and equilibrium in the labor market. Real wages, unemployment, and normative debates.</div>
