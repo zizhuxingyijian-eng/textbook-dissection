@@ -70,6 +70,13 @@ nav {
   transition: background 0.12s, color 0.12s;
 }
 .nav-item:hover { background: rgba(0,0,0,0.035); color: var(--text); }
+.nav-item:focus,
+.card:focus,
+.back:focus,
+.wk-hd:focus {
+  outline: 2px solid #4F8EF7;
+  outline-offset: 2px;
+}
 .nav-item.active { color: var(--text); font-weight: 600; background: rgba(0,0,0,0.05); }
 .nav-dot {
   width: 7px; height: 7px;
@@ -356,6 +363,31 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 .comp-wrap { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0; }
 .comp-col { background:#F8F8F6; border:1px solid var(--border); border-radius:4px; padding:12px; }
 .comp-col h5 { font-size:11.5px; font-weight:700; margin-bottom:7px; padding-bottom:5px; border-bottom:2px solid var(--border); }
+
+@media (max-width: 640px) {
+  body { flex-direction: column; }
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+  .nav-group-label { display: none; }
+  .nav-item { padding: 5px 12px; font-size: 12px; }
+  main { padding: 20px 16px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .comp-wrap { grid-template-columns: 1fr; }
+  .concept-row { grid-template-columns: 1fr; }
+}
+
+@media print {
+  nav { display: none; }
+  main { padding: 0; max-width: 100%; }
+  .wk-body { display: block !important; }
+  .card:hover { box-shadow: none; transform: none; }
+}
 </style>
 </head>
 <body>
@@ -367,14 +399,14 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     <p>Spring Semester · 6 Courses</p>
   </div>
   <div class="nav-group-label">Navigate</div>
-  <div class="nav-item active" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
+  <div class="nav-item active" tabindex="0" role="button" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
   <div class="nav-group-label">Courses</div>
-  <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy</div>
-  <div class="nav-item" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
-  <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
-  <div class="nav-item" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
-  <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
-  <div class="nav-item" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
+  <div class="nav-item" tabindex="0" role="button" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
 </nav>
 
 <main>
@@ -384,44 +416,37 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="home-title">大三下 Study Review</div>
   <div class="home-sub">Spring Semester — Quick-access visual notes for all 6 core courses. Click a card to open.</div>
   <div class="card-grid">
-    <div class="card" onclick="show('jp')" style="--c:var(--jp)">
-      <div class="card::before" style="background:var(--jp)"></div>
-      <style>.card:nth-child(1)::before{background:var(--jp)}</style>
+    <div class="card" tabindex="0" role="button" onclick="show('jp')" style="--c:var(--jp)">
       <h3 style="color:var(--jp)">Japanese Economy</h3>
       <div class="card-prof">Prof. Hajime Tomura · Waseda</div>
       <div class="card-desc">Post-war reconstruction through the Lost Decade. Macroeconomic history driven by policy, finance, and external shocks.</div>
       <div class="card-badges"><span class="badge" style="background:#FEE2E2;color:var(--jp)">Timeline</span><span class="badge">Wk 2–6</span><span class="badge">Y=A·F(K,H)</span></div>
     </div>
-    <div class="card" onclick="show('ec2')">
-      <style>.card:nth-child(2)::before{background:var(--ec2)}</style>
+    <div class="card" tabindex="0" role="button" onclick="show('ec2')">
       <h3 style="color:var(--ec2)">Econometrics II</h3>
       <div class="card-prof">Prof. Tadao Hoshino · Waseda</div>
       <div class="card-desc">Causal inference roadmap: from RCTs to DiD and synthetic control. Identification strategies for observational data.</div>
       <div class="card-badges"><span class="badge" style="background:#DBEAFE;color:var(--ec2)">Decision Tree</span><span class="badge">Wk 1–12</span><span class="badge">ATE · IV · RDD</span></div>
     </div>
-    <div class="card" onclick="show('intl')">
-      <style>.card:nth-child(3)::before{background:var(--intl)}</style>
+    <div class="card" tabindex="0" role="button" onclick="show('intl')">
       <h3 style="color:var(--intl)">International Economics</h3>
       <div class="card-prof">Dr. Tatyana Chesnokova · Waseda</div>
       <div class="card-desc">Why nations trade, who wins and loses, and how returns to scale change the picture. Comparative advantage to new trade theory.</div>
       <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5</span><span class="badge">Ricardo · Krugman</span></div>
     </div>
-    <div class="card" onclick="show('labor')">
-      <style>.card:nth-child(4)::before{background:var(--labor)}</style>
+    <div class="card" tabindex="0" role="button" onclick="show('labor')">
       <h3 style="color:var(--labor)">Labor Economics I</h3>
       <div class="card-prof">Prof. DeJar · Waseda</div>
       <div class="card-desc">What is labor? Demand, supply, and equilibrium in the labor market. Real wages, unemployment, and normative debates.</div>
       <div class="card-badges"><span class="badge" style="background:#EDE9FE;color:var(--labor)">Concept Web</span><span class="badge">Wk 1–4</span><span class="badge">D&amp;S · Equilibrium</span></div>
     </div>
-    <div class="card" onclick="show('ppep')">
-      <style>.card:nth-child(5)::before{background:var(--ppep)}</style>
+    <div class="card" tabindex="0" role="button" onclick="show('ppep')">
       <h3 style="color:var(--ppep)">PPEP</h3>
       <div class="card-prof">Prof. Takashi Kurihara · Waseda</div>
       <div class="card-desc">Public Philosophy & Economic Perspectives. Social choice theory, fairness axioms, and Arrow's Impossibility Theorem.</div>
       <div class="card-badges"><span class="badge" style="background:#FEF3C7;color:var(--ppep)">Hierarchy</span><span class="badge">Wk 1–4</span><span class="badge">SCF · Arrow</span></div>
     </div>
-    <div class="card" onclick="show('gt')">
-      <style>.card:nth-child(6)::before{background:var(--gt)}</style>
+    <div class="card" tabindex="0" role="button" onclick="show('gt')">
       <h3 style="color:var(--gt)">Game Theory II</h3>
       <div class="card-prof">Waseda</div>
       <div class="card-desc">Advanced strategic analysis. Normal and extensive form games, Nash equilibrium, repeated games, and Bayesian games.</div>
@@ -432,11 +457,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ JAPANESE ECONOMY ══════════════════════════════════════════ -->
 <section id="jp">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--jp)">
     <h1 style="color:var(--jp)">Japanese Economy</h1>
     <div class="ch-meta">Prof. Hajime Tomura &nbsp;·&nbsp; Visualization: Historical Timeline</div>
-    <a class="notion-link" href="https://www.notion.so/344259861df580688157c6c27c3764cd" target="_blank">
+    <a class="notion-link" href="https://www.notion.so/344259861df580688157c6c27c3764cd" target="_blank" rel="noopener noreferrer">
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
@@ -444,7 +469,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Chronological Timeline</div>
   <div class="viz-box">
-    <svg viewBox="0 0 860 230" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 860 230" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Era bands -->
       <rect x="55" y="55" width="65"  height="28" rx="3" fill="#FCA5A5" opacity="0.7"/>
       <rect x="120" y="55" width="322" height="28" rx="3" fill="#86EFAC" opacity="0.7"/>
@@ -644,7 +669,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     <div class="phase-sep">Phase 1–2 · Post-War Reconstruction &amp; High Growth</div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W2</span>Post-War Reforms (1945–1949)</div>
         <span class="chev">▼</span>
       </div>
@@ -679,7 +704,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DCFCE7;color:var(--intl)">W2–3</span>High Growth Era (1950–1973)</div>
         <span class="chev">▼</span>
       </div>
@@ -710,7 +735,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     <div class="phase-sep">Phase 3 · External Shocks &amp; Adjustment</div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W3</span>Bretton Woods Collapse &amp; Oil Shocks (1971–1979)</div>
         <span class="chev">▼</span>
       </div>
@@ -764,7 +789,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     <div class="phase-sep">Phase 4 · Financial Liberalization &amp; Bubble Formation</div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:#4C1D95">W4</span>Financial Liberalization &amp; Bubble Formation (1980–1990)</div>
         <span class="chev">▼</span>
       </div>
@@ -826,7 +851,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     <div class="phase-sep">Phase 5 · Bubble Collapse &amp; Crisis Build-Up (1990–1997)</div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5a</span>Bubble Collapse (1989–1991)</div>
         <span class="chev">▼</span>
       </div>
@@ -858,7 +883,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5b</span>Jūsen Crisis (1995)</div>
         <span class="chev">▼</span>
       </div>
@@ -884,7 +909,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W5c</span>1996 Financial Reforms — Partial Fix</div>
         <span class="chev">▼</span>
       </div>
@@ -906,7 +931,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5d</span>1997 Double Misjudgment</div>
         <span class="chev">▼</span>
       </div>
@@ -930,7 +955,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5e</span>1997–98 Banking Crisis &amp; Resolution</div>
         <span class="chev">▼</span>
       </div>
@@ -1152,11 +1177,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ ECONOMETRICS II ══════════════════════════════════════════ -->
 <section id="ec2">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--ec2)">
     <h1 style="color:var(--ec2)">Econometrics II</h1>
     <div class="ch-meta">Prof. Tadao Hoshino &nbsp;·&nbsp; Visualization: Causal Identification Decision Tree</div>
-    <a class="notion-link" href="https://www.notion.so/341259861df580fe8682f3dc99227588" target="_blank">
+    <a class="notion-link" href="https://www.notion.so/341259861df580fe8682f3dc99227588" target="_blank" rel="noopener noreferrer">
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
@@ -1164,7 +1189,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Identification Strategy Flowchart</div>
   <div class="viz-box">
-    <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Root -->
       <rect x="290" y="10" width="240" height="34" rx="5" fill="#1E3A6E"/>
       <text x="410" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="white">Identify Causal Effect of X on Y</text>
@@ -1217,7 +1242,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W1</span>Causal Inference Fundamentals</div>
         <span class="chev">▼</span>
       </div>
@@ -1238,7 +1263,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W3</span>Potential Outcomes &amp; Rubin Causal Model</div>
         <span class="chev">▼</span>
       </div>
@@ -1253,7 +1278,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W4</span>Endogeneity &amp; Exogeneity</div>
         <span class="chev">▼</span>
       </div>
@@ -1268,7 +1293,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W5–13</span>Identification Strategies — Quick Reference</div>
         <span class="chev">▼</span>
       </div>
@@ -1292,11 +1317,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ INTERNATIONAL ECONOMICS ══════════════════════════════════════════ -->
 <section id="intl">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--intl)">
     <h1 style="color:var(--intl)">International Economics</h1>
     <div class="ch-meta">Dr. Tatyana Chesnokova &nbsp;·&nbsp; Visualization: Trade Theory Mind Map</div>
-    <a class="notion-link" href="https://www.notion.so/341259861df5802c891eda2211d5a85c" target="_blank">
+    <a class="notion-link" href="https://www.notion.so/341259861df5802c891eda2211d5a85c" target="_blank" rel="noopener noreferrer">
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
@@ -1304,7 +1329,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Trade Theory Mind Map</div>
   <div class="viz-box">
-    <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Center node -->
       <rect x="300" y="128" width="160" height="40" rx="6" fill="#145228"/>
       <text x="380" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="white">Trade Theory</text>
@@ -1350,7 +1375,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W1</span>Globalization — Two Waves</div>
         <span class="chev">▼</span>
       </div>
@@ -1366,7 +1391,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W2</span>Comparative Advantage (Ricardian Model)</div>
         <span class="chev">▼</span>
       </div>
@@ -1385,7 +1410,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W3</span>Relative Supply &amp; Demand in Trade Equilibrium</div>
         <span class="chev">▼</span>
       </div>
@@ -1401,7 +1426,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W4</span>Trade &amp; Politics — Winners and Losers</div>
         <span class="chev">▼</span>
       </div>
@@ -1417,7 +1442,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W5</span>Returns to Scale &amp; New Trade Theory</div>
         <span class="chev">▼</span>
       </div>
@@ -1437,11 +1462,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ LABOR ECONOMICS ══════════════════════════════════════════ -->
 <section id="labor">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--labor)">
     <h1 style="color:var(--labor)">Labor Economics I</h1>
     <div class="ch-meta">Prof. DeJar &nbsp;·&nbsp; Visualization: Labor Market Concept Web</div>
-    <a class="notion-link" href="https://www.notion.so/344259861df580e5adcad82cbf119be8" target="_blank">
+    <a class="notion-link" href="https://www.notion.so/344259861df580e5adcad82cbf119be8" target="_blank" rel="noopener noreferrer">
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
@@ -1449,7 +1474,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Labor Market Concept Web</div>
   <div class="viz-box">
-    <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Center -->
       <rect x="278" y="136" width="164" height="40" rx="6" fill="#3A1A6B"/>
       <text x="360" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="white">Labor Market</text>
@@ -1514,7 +1539,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         Check D at x=503: t=(503−70)/670=0.6463; y=30+0.6463×250=191.6≈192 ✓
         Check S at x=503: t=(503−70)/670=0.6463; y=272.5+0.6463×(147.5−272.5)=272.5−80.8=191.7≈192 ✓
     -->
-    <svg viewBox="0 0 800 320" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+    <svg aria-hidden="true" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"
          style="width:100%;height:260px;" font-family="-apple-system,sans-serif">
 
       <!-- Surplus shading: producer (above S, below equilibrium) -->
@@ -1592,7 +1617,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W1</span>What Is Labor? Definitions &amp; Measurement</div>
         <span class="chev">▼</span>
       </div>
@@ -1634,7 +1659,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W2</span>Unemployment Types &amp; Normative Economics</div>
         <span class="chev">▼</span>
       </div>
@@ -1680,7 +1705,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W3</span>Labor Market: Demand, Supply &amp; Equilibrium</div>
         <span class="chev">▼</span>
       </div>
@@ -1705,7 +1730,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         </div>
 
         <div class="viz-box" style="margin:12px 0;">
-          <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:200px;" preserveAspectRatio="none" font-family="-apple-system,sans-serif">
+          <svg aria-hidden="true" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:200px;" font-family="-apple-system,sans-serif">
             <!-- Axes -->
             <line x1="50" y1="190" x2="450" y2="190" stroke="#374151" stroke-width="1.5"/>
             <polygon points="450,187 458,190 450,193" fill="#374151"/>
@@ -1774,11 +1799,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ PPEP ══════════════════════════════════════════ -->
 <section id="ppep">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--ppep)">
     <h1 style="color:var(--ppep)">Public Philosophy &amp; Economic Perspectives (PPEP)</h1>
     <div class="ch-meta">Prof. Takashi Kurihara &nbsp;·&nbsp; Visualization: Social Choice Theory Hierarchy</div>
-    <a class="notion-link" href="https://www.notion.so/345259861df58076bf92e2d378a51ac8" target="_blank">
+    <a class="notion-link" href="https://www.notion.so/345259861df58076bf92e2d378a51ac8" target="_blank" rel="noopener noreferrer">
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
@@ -1786,7 +1811,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Social Choice Theory Hierarchy</div>
   <div class="viz-box">
-    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Root -->
       <rect x="230" y="8" width="300" height="34" rx="5" fill="#7C2D12"/>
       <text x="380" y="29" text-anchor="middle" font-size="12" font-weight="700" fill="white">Social Choice Theory</text>
@@ -1838,7 +1863,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W1</span>Introduction to Social Choice Theory</div>
         <span class="chev">▼</span>
       </div>
@@ -1864,7 +1889,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W3</span>SCF, SWF &amp; Plurality Rule</div>
         <span class="chev">▼</span>
       </div>
@@ -1882,7 +1907,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W4</span>Arrow's Impossibility Theorem</div>
         <span class="chev">▼</span>
       </div>
@@ -1902,11 +1927,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ GAME THEORY II ══════════════════════════════════════════ -->
 <section id="gt">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--gt)">
     <h1 style="color:var(--gt)">Game Theory II</h1>
     <div class="ch-meta">Waseda · Advanced strategic analysis &nbsp;·&nbsp; Visualization: Concept Map</div>
-    <a class="notion-link" href="https://www.notion.so/342259861df5804794a8f3ec3cac3446" target="_blank">
+    <a class="notion-link" href="https://www.notion.so/342259861df5804794a8f3ec3cac3446" target="_blank" rel="noopener noreferrer">
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
@@ -1914,7 +1939,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Concept Map</div>
   <div class="viz-box">
-    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Three pillars -->
       <!-- Pillar 1: Representations -->
       <rect x="30" y="10" width="210" height="36" rx="5" fill="#0B4558"/>
@@ -1984,7 +2009,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W1</span>Review — Game Forms &amp; Nash Equilibrium</div>
         <span class="chev">▼</span>
       </div>
@@ -1999,7 +2024,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W2</span>Classic Games &amp; Strategic Forms</div>
         <span class="chev">▼</span>
       </div>
@@ -2021,7 +2046,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W3–4</span>Sequential Games, SPNE &amp; Advanced Topics</div>
         <span class="chev">▼</span>
       </div>
@@ -2070,6 +2095,7 @@ function toggle(hd) {
   const isOpen = hd.classList.contains('open');
   hd.classList.toggle('open', !isOpen);
   body.classList.toggle('open', !isOpen);
+  hd.setAttribute('aria-expanded', String(!isOpen));
 }
 
 // Card accent bars via JS (CSS ::before workaround)
