@@ -348,6 +348,31 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 .comp-wrap { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:10px 0; }
 .comp-col { background:#F8F8F6; border:1px solid var(--border); border-radius:4px; padding:12px; }
 .comp-col h5 { font-size:11.5px; font-weight:700; margin-bottom:7px; padding-bottom:5px; border-bottom:2px solid var(--border); }
+
+@media (max-width: 640px) {
+  body { flex-direction: column; }
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 0;
+  }
+  .nav-group-label { display: none; }
+  .nav-item { padding: 5px 12px; font-size: 12px; }
+  main { padding: 20px 16px; }
+  .card-grid { grid-template-columns: 1fr; }
+  .comp-wrap { grid-template-columns: 1fr; }
+  .concept-row { grid-template-columns: 1fr; }
+}
+
+@media print {
+  nav { display: none; }
+  main { padding: 0; max-width: 100%; }
+  .wk-body { display: block !important; }
+  .card:hover { box-shadow: none; transform: none; }
+}
 </style>
 </head>
 <body>
