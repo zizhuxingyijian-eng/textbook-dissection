@@ -432,13 +432,13 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <div class="card-desc">What is labor? Demand, supply, and equilibrium in the labor market. Real wages, unemployment, and normative debates.</div>
       <div class="card-badges"><span class="badge" style="background:#EDE9FE;color:var(--labor)">Concept Web</span><span class="badge">Wk 1–4</span><span class="badge">D&amp;S · Equilibrium</span></div>
     </div>
-    <div class="card" onclick="show('ppep')">
+    <div class="card" tabindex="0" role="button" onclick="show('ppep')">
       <h3 style="color:var(--ppep)">PPEP</h3>
       <div class="card-prof">Prof. Takashi Kurihara · Waseda</div>
       <div class="card-desc">Public Philosophy & Economic Perspectives. Social choice theory, fairness axioms, and Arrow's Impossibility Theorem.</div>
       <div class="card-badges"><span class="badge" style="background:#FEF3C7;color:var(--ppep)">Hierarchy</span><span class="badge">Wk 1–4</span><span class="badge">SCF · Arrow</span></div>
     </div>
-    <div class="card" onclick="show('gt')">
+    <div class="card" tabindex="0" role="button" onclick="show('gt')">
       <h3 style="color:var(--gt)">Game Theory II</h3>
       <div class="card-prof">Waseda</div>
       <div class="card-desc">Advanced strategic analysis. Normal and extensive form games, Nash equilibrium, repeated games, and Bayesian games.</div>
@@ -449,7 +449,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ JAPANESE ECONOMY ══════════════════════════════════════════ -->
 <section id="jp">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--jp)">
     <h1 style="color:var(--jp)">Japanese Economy</h1>
     <div class="ch-meta">Prof. Hajime Tomura &nbsp;·&nbsp; Visualization: Historical Timeline</div>
@@ -461,7 +461,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Chronological Timeline</div>
   <div class="viz-box">
-    <svg viewBox="0 0 860 230" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 860 230" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Era bands -->
       <rect x="55" y="55" width="65"  height="28" rx="3" fill="#FCA5A5" opacity="0.7"/>
       <rect x="120" y="55" width="322" height="28" rx="3" fill="#86EFAC" opacity="0.7"/>
@@ -659,7 +659,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W2</span>Post-War Reforms (1945–1949)</div>
         <span class="chev">▼</span>
       </div>
@@ -694,7 +694,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DCFCE7;color:var(--intl)">W2–3</span>High Growth Era (1950–1973)</div>
         <span class="chev">▼</span>
       </div>
@@ -723,7 +723,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W3</span>Bretton Woods Collapse &amp; Oil Shocks (1971–1979)</div>
         <span class="chev">▼</span>
       </div>
@@ -775,7 +775,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:#4C1D95">W4</span>Financial Liberalization &amp; Bubble Formation (1980–1990)</div>
         <span class="chev">▼</span>
       </div>
@@ -835,7 +835,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5a</span>Bubble Collapse (1989–1991)</div>
         <span class="chev">▼</span>
       </div>
@@ -867,7 +867,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5b</span>Jūsen Crisis (1995)</div>
         <span class="chev">▼</span>
       </div>
@@ -893,7 +893,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W5c</span>1996 Financial Reforms — Partial Fix</div>
         <span class="chev">▼</span>
       </div>
@@ -915,7 +915,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5d</span>1997 Double Misjudgment</div>
         <span class="chev">▼</span>
       </div>
@@ -939,7 +939,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W5e</span>1997–98 Banking Crisis &amp; Resolution</div>
         <span class="chev">▼</span>
       </div>
@@ -1004,7 +1004,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ ECONOMETRICS II ══════════════════════════════════════════ -->
 <section id="ec2">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--ec2)">
     <h1 style="color:var(--ec2)">Econometrics II</h1>
     <div class="ch-meta">Prof. Tadao Hoshino &nbsp;·&nbsp; Visualization: Causal Identification Decision Tree</div>
@@ -1016,7 +1016,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Identification Strategy Flowchart</div>
   <div class="viz-box">
-    <svg viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 820 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Root -->
       <rect x="290" y="10" width="240" height="34" rx="5" fill="#1E3A6E"/>
       <text x="410" y="32" text-anchor="middle" font-size="12" font-weight="700" fill="white">Identify Causal Effect of X on Y</text>
@@ -1069,7 +1069,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W1</span>Causal Inference Fundamentals</div>
         <span class="chev">▼</span>
       </div>
@@ -1090,7 +1090,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W3</span>Potential Outcomes &amp; Rubin Causal Model</div>
         <span class="chev">▼</span>
       </div>
@@ -1105,7 +1105,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W4</span>Endogeneity &amp; Exogeneity</div>
         <span class="chev">▼</span>
       </div>
@@ -1120,7 +1120,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#DBEAFE;color:var(--ec2)">W5–13</span>Identification Strategies — Quick Reference</div>
         <span class="chev">▼</span>
       </div>
@@ -1144,7 +1144,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ INTERNATIONAL ECONOMICS ══════════════════════════════════════════ -->
 <section id="intl">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--intl)">
     <h1 style="color:var(--intl)">International Economics</h1>
     <div class="ch-meta">Dr. Tatyana Chesnokova &nbsp;·&nbsp; Visualization: Trade Theory Mind Map</div>
@@ -1156,7 +1156,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Trade Theory Mind Map</div>
   <div class="viz-box">
-    <svg viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 760 320" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Center node -->
       <rect x="300" y="128" width="160" height="40" rx="6" fill="#145228"/>
       <text x="380" y="151" text-anchor="middle" font-size="13" font-weight="700" fill="white">Trade Theory</text>
@@ -1202,7 +1202,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W1</span>Globalization — Two Waves</div>
         <span class="chev">▼</span>
       </div>
@@ -1218,7 +1218,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W2</span>Comparative Advantage (Ricardian Model)</div>
         <span class="chev">▼</span>
       </div>
@@ -1237,7 +1237,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W3</span>Relative Supply &amp; Demand in Trade Equilibrium</div>
         <span class="chev">▼</span>
       </div>
@@ -1253,7 +1253,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W4</span>Trade &amp; Politics — Winners and Losers</div>
         <span class="chev">▼</span>
       </div>
@@ -1269,7 +1269,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W5</span>Returns to Scale &amp; New Trade Theory</div>
         <span class="chev">▼</span>
       </div>
@@ -1289,7 +1289,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ LABOR ECONOMICS ══════════════════════════════════════════ -->
 <section id="labor">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--labor)">
     <h1 style="color:var(--labor)">Labor Economics I</h1>
     <div class="ch-meta">Prof. DeJar &nbsp;·&nbsp; Visualization: Labor Market Concept Web</div>
@@ -1301,7 +1301,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Labor Market Concept Web</div>
   <div class="viz-box">
-    <svg viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 720 340" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Center -->
       <rect x="278" y="136" width="164" height="40" rx="6" fill="#3A1A6B"/>
       <text x="360" y="160" text-anchor="middle" font-size="13" font-weight="700" fill="white">Labor Market</text>
@@ -1366,7 +1366,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         Check D at x=503: t=(503−70)/670=0.6463; y=30+0.6463×250=191.6≈192 ✓
         Check S at x=503: t=(503−70)/670=0.6463; y=272.5+0.6463×(147.5−272.5)=272.5−80.8=191.7≈192 ✓
     -->
-    <svg viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"
+    <svg aria-hidden="true" viewBox="0 0 800 320" xmlns="http://www.w3.org/2000/svg"
          style="width:100%;height:260px;" font-family="-apple-system,sans-serif">
 
       <!-- Surplus shading: producer (above S, below equilibrium) -->
@@ -1444,7 +1444,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W1</span>What Is Labor? Definitions &amp; Measurement</div>
         <span class="chev">▼</span>
       </div>
@@ -1486,7 +1486,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W2</span>Unemployment Types &amp; Normative Economics</div>
         <span class="chev">▼</span>
       </div>
@@ -1532,7 +1532,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">W3</span>Labor Market: Demand, Supply &amp; Equilibrium</div>
         <span class="chev">▼</span>
       </div>
@@ -1557,7 +1557,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
         </div>
 
         <div class="viz-box" style="margin:12px 0;">
-          <svg viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:200px;" font-family="-apple-system,sans-serif">
+          <svg aria-hidden="true" viewBox="0 0 480 220" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:200px;" font-family="-apple-system,sans-serif">
             <!-- Axes -->
             <line x1="50" y1="190" x2="450" y2="190" stroke="#374151" stroke-width="1.5"/>
             <polygon points="450,187 458,190 450,193" fill="#374151"/>
@@ -1626,7 +1626,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ PPEP ══════════════════════════════════════════ -->
 <section id="ppep">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--ppep)">
     <h1 style="color:var(--ppep)">Public Philosophy &amp; Economic Perspectives (PPEP)</h1>
     <div class="ch-meta">Prof. Takashi Kurihara &nbsp;·&nbsp; Visualization: Social Choice Theory Hierarchy</div>
@@ -1638,7 +1638,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Social Choice Theory Hierarchy</div>
   <div class="viz-box">
-    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Root -->
       <rect x="230" y="8" width="300" height="34" rx="5" fill="#7C2D12"/>
       <text x="380" y="29" text-anchor="middle" font-size="12" font-weight="700" fill="white">Social Choice Theory</text>
@@ -1690,7 +1690,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W1</span>Introduction to Social Choice Theory</div>
         <span class="chev">▼</span>
       </div>
@@ -1716,7 +1716,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W3</span>SCF, SWF &amp; Plurality Rule</div>
         <span class="chev">▼</span>
       </div>
@@ -1734,7 +1734,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W4</span>Arrow's Impossibility Theorem</div>
         <span class="chev">▼</span>
       </div>
@@ -1754,7 +1754,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
 <!-- ══════════════════════════════════════════ GAME THEORY II ══════════════════════════════════════════ -->
 <section id="gt">
-  <div class="back" onclick="show('home')">← Back</div>
+  <div class="back" tabindex="0" role="button" onclick="show('home')">← Back</div>
   <div class="course-head" style="border-color:var(--gt)">
     <h1 style="color:var(--gt)">Game Theory II</h1>
     <div class="ch-meta">Waseda · Advanced strategic analysis &nbsp;·&nbsp; Visualization: Concept Map</div>
@@ -1766,7 +1766,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Course Overview — Concept Map</div>
   <div class="viz-box">
-    <svg viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
+    <svg aria-hidden="true" viewBox="0 0 760 300" xmlns="http://www.w3.org/2000/svg" font-family="-apple-system,sans-serif">
       <!-- Three pillars -->
       <!-- Pillar 1: Representations -->
       <rect x="30" y="10" width="210" height="36" rx="5" fill="#0B4558"/>
@@ -1836,7 +1836,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="weeks">
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W1</span>Review — Game Forms &amp; Nash Equilibrium</div>
         <span class="chev">▼</span>
       </div>
@@ -1851,7 +1851,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W2</span>Classic Games &amp; Strategic Forms</div>
         <span class="chev">▼</span>
       </div>
@@ -1873,7 +1873,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
     </div>
 
     <div class="wk">
-      <div class="wk-hd" onclick="toggle(this)">
+      <div class="wk-hd" tabindex="0" role="button" aria-expanded="false" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W3–4</span>Sequential Games, SPNE &amp; Advanced Topics</div>
         <span class="chev">▼</span>
       </div>
@@ -1922,6 +1922,7 @@ function toggle(hd) {
   const isOpen = hd.classList.contains('open');
   hd.classList.toggle('open', !isOpen);
   body.classList.toggle('open', !isOpen);
+  hd.setAttribute('aria-expanded', String(!isOpen));
 }
 
 // Card accent bars via JS (CSS ::before workaround)
