@@ -19,6 +19,8 @@
   --labor: #3A1A6B;
   --ppep:  #713A0E;
   --gt:    #0B4558;
+  --debate:#6B2A76;
+  --climate:#1A5C3A;
 }
 * { box-sizing: border-box; margin: 0; padding: 0; }
 body {
@@ -81,8 +83,10 @@ nav {
 .dot-intl  { background: var(--intl); }
 .dot-labor { background: var(--labor); }
 .dot-ppep  { background: var(--ppep); }
-.dot-gt    { background: var(--gt); }
-.dot-home  { background: #888; }
+.dot-gt      { background: var(--gt); }
+.dot-debate  { background: var(--debate); }
+.dot-climate { background: var(--climate); }
+.dot-home    { background: #888; }
 
 /* ── MAIN ── */
 main {
@@ -364,7 +368,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 <nav>
   <div class="nav-brand">
     <h2>大三下 Review</h2>
-    <p>Spring Semester · 6 Courses</p>
+    <p>Spring Semester · 8 Courses</p>
   </div>
   <div class="nav-group-label">Navigate</div>
   <div class="nav-item active" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
@@ -375,6 +379,9 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="nav-item" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
   <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
   <div class="nav-item" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
+  <div class="nav-group-label">New This Week</div>
+  <div class="nav-item" onclick="show('debate')"><span class="nav-dot dot-debate"></span>Japanese Debate&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW</span></div>
+  <div class="nav-item" onclick="show('climate')"><span class="nav-dot dot-climate"></span>Climate Tech &amp; Entrepr.&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW</span></div>
 </nav>
 
 <main>
@@ -382,7 +389,35 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 <!-- ══════════════════════════════════════════ HOME ══════════════════════════════════════════ -->
 <section id="home" class="active">
   <div class="home-title">大三下 Study Review</div>
-  <div class="home-sub">Spring Semester — Quick-access visual notes for all 6 core courses. Click a card to open.</div>
+  <div class="home-sub">Spring Semester — Quick-access visual notes for all 8 courses. Click a card to open.</div>
+
+  <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:5px;padding:14px 18px;margin-bottom:22px;">
+    <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#166534;margin-bottom:8px;">↑ This Week's Updates — Jun 5, 2026</div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
+      <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('jp')">
+        <div style="font-size:10px;font-weight:700;color:#8B1A1A;text-transform:uppercase;letter-spacing:.04em;">Japanese Economy</div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">W7: Labor market, aging &amp; TFP slowdown</div>
+      </div>
+      <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('labor')">
+        <div style="font-size:10px;font-weight:700;color:#3A1A6B;text-transform:uppercase;letter-spacing:.04em;">Labor Economics I</div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">Midterm: sample questions &amp; annotated answers</div>
+      </div>
+      <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('gt')">
+        <div style="font-size:10px;font-weight:700;color:#0B4558;text-transform:uppercase;letter-spacing:.04em;">Game Theory II</div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">W5: Market efficiency &amp; matching theory</div>
+      </div>
+      <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('debate')">
+        <div style="font-size:10px;font-weight:700;color:#6B2A76;text-transform:uppercase;letter-spacing:.04em;">Japanese Debate ✦ NEW</div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">W7: 生成AIと人間の努力の価値</div>
+      </div>
+      <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('climate')">
+        <div style="font-size:10px;font-weight:700;color:#1A5C3A;text-transform:uppercase;letter-spacing:.04em;">Climate Tech ✦ NEW</div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">W7: PoliPoli CEO on policy entrepreneurship &amp; GR</div>
+      </div>
+    </div>
+  </div>
+
+  <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);margin-bottom:10px;display:flex;align-items:center;gap:10px;">Core Economics <span style="flex:1;height:1px;background:var(--border);display:inline-block;"></span></div>
   <div class="card-grid">
     <div class="card" onclick="show('jp')" style="--c:var(--jp)">
       <div class="card::before" style="background:var(--jp)"></div>
@@ -390,7 +425,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--jp)">Japanese Economy</h3>
       <div class="card-prof">Prof. Hajime Tomura · Waseda</div>
       <div class="card-desc">Post-war reconstruction through the Lost Decade. Macroeconomic history driven by policy, finance, and external shocks.</div>
-      <div class="card-badges"><span class="badge" style="background:#FEE2E2;color:var(--jp)">Timeline</span><span class="badge">Wk 2–6</span><span class="badge">Y=A·F(K,H)</span></div>
+      <div class="card-badges"><span class="badge" style="background:#FEE2E2;color:var(--jp)">Timeline</span><span class="badge">Wk 2–7</span><span class="badge">Y=A·F(K,H)</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W7 NEW</span></div>
     </div>
     <div class="card" onclick="show('ec2')">
       <style>.card:nth-child(2)::before{background:var(--ec2)}</style>
@@ -411,8 +446,12 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--labor)">Labor Economics I</h3>
       <div class="card-prof">Prof. DeJar · Waseda</div>
       <div class="card-desc">What is labor? Demand, supply, and equilibrium in the labor market. Real wages, unemployment, and normative debates.</div>
-      <div class="card-badges"><span class="badge" style="background:#EDE9FE;color:var(--labor)">Concept Web</span><span class="badge">Wk 1–4</span><span class="badge">D&amp;S · Equilibrium</span></div>
+      <div class="card-badges"><span class="badge" style="background:#EDE9FE;color:var(--labor)">Concept Web</span><span class="badge">Wk 1–3 + Midterm</span><span class="badge">D&amp;S · Equilibrium</span><span class="badge" style="background:#DCFCE7;color:#166534;">+Midterm NEW</span></div>
     </div>
+  </div>
+
+  <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);margin:18px 0 10px;display:flex;align-items:center;gap:10px;">Theory &amp; Seminar <span style="flex:1;height:1px;background:var(--border);display:inline-block;"></span></div>
+  <div class="card-grid">
     <div class="card" onclick="show('ppep')">
       <style>.card:nth-child(5)::before{background:var(--ppep)}</style>
       <h3 style="color:var(--ppep)">PPEP</h3>
@@ -425,9 +464,28 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--gt)">Game Theory II</h3>
       <div class="card-prof">Waseda</div>
       <div class="card-desc">Advanced strategic analysis. Normal and extensive form games, Nash equilibrium, repeated games, and Bayesian games.</div>
-      <div class="card-badges"><span class="badge" style="background:#CFFAFE;color:var(--gt)">Concept Map</span><span class="badge">Wk 1–4</span><span class="badge">NE · SPNE · Bayes</span></div>
+      <div class="card-badges"><span class="badge" style="background:#CFFAFE;color:var(--gt)">Concept Map</span><span class="badge">Wk 1–5</span><span class="badge">NE · SPNE · Matching</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W5 NEW</span></div>
     </div>
   </div>
+
+  <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--text-2);margin:18px 0 10px;display:flex;align-items:center;gap:10px;">Applied &amp; Language <span style="flex:1;height:1px;background:var(--border);display:inline-block;"></span></div>
+  <div class="card-grid">
+    <div class="card" onclick="show('debate')">
+      <style>.card:nth-child(7)::before{background:var(--debate)}</style>
+      <h3 style="color:var(--debate)">Japanese Debate</h3>
+      <div class="card-prof">Waseda · Academic Debate Course</div>
+      <div class="card-desc">Classroom debate preparation in Japanese. This week: 生成AIの普及により、人間の努力の価値は失われるか？</div>
+      <div class="card-badges"><span class="badge" style="background:#F3E8FF;color:var(--debate)">Debate Essay</span><span class="badge">W7 · AI論題</span><span class="badge" style="background:#DCFCE7;color:#166534;">NEW</span></div>
+    </div>
+    <div class="card" onclick="show('climate')">
+      <style>.card:nth-child(8)::before{background:var(--climate)}</style>
+      <h3 style="color:var(--climate)">Climate Tech &amp; Entrepreneurship</h3>
+      <div class="card-prof">Waseda · Endowed Course</div>
+      <div class="card-desc">Startup formation, policy engagement, and GR strategy. Guest lecture: PoliPoli CEO Ito Kazuma on rule-making and public affairs.</div>
+      <div class="card-badges"><span class="badge" style="background:#DCFCE7;color:var(--climate)">Lecture Notes</span><span class="badge">W7 · PolicyMaking</span><span class="badge" style="background:#DCFCE7;color:#166534;">NEW</span></div>
+    </div>
+  </div>
+
 </section>
 
 <!-- ══════════════════════════════════════════ JAPANESE ECONOMY ══════════════════════════════════════════ -->
@@ -1147,6 +1205,147 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       </div>
     </div>
 
+    <div class="phase-sep">Week 7 · Structural Reforms &amp; Long-Run Stagnation</div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W7a</span>Labor Market Structural Change &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 4</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">The whole W7 lecture is one argument: <em>why did Japan stagnate after 1990 even though the NPL crisis was eventually resolved?</em> The answer is overlapping structural changes — not any single cause.</p>
+        <div class="cchain">
+          <span class="cnode">Yen appreciation (early 1990s)</span><span class="carr">→</span>
+          <span class="cnode">Manufacturing relocates abroad; economy shifts → services</span><span class="carr">→</span>
+          <span class="cnode">Rise in NON-REGULAR employment</span><span class="carr">→</span>
+          <span class="cnode">WAGE DEFLATION (negative wage growth from late 1990s)</span>
+        </div>
+        <div class="cchain" style="margin-top:6px;">
+          <span class="cnode">Baby-boom retirement (late 1990s) + falling birth rate</span><span class="carr">→</span>
+          <span class="cnode">AGING → shrinking labor force</span><span class="carr">→</span>
+          <span class="cnode">Feedback: young non-regular → low income → low births → worse aging</span>
+        </div>
+        <h4 class="sub">Four Causes of Rising Non-Regular Employment</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>(a) Industrial Shift to Services</h4><p>Services use more non-regular labor by nature. As services' GDP share grew after yen appreciation (~1993), non-regular share rose mechanically.</p></div>
+          <div class="cbox"><h4>(b) Banking Crisis (1997–98)</h4><p>Regular workers' wages cannot be cut quickly → firms became cautious about hiring regulars. New entrants found it hard to land regular jobs.</p></div>
+          <div class="cbox"><h4>(c) Worker Dispatching Act Revisions</h4><p>1999: Dispatched work allowed in ANY profession. 2004: Extended to manufacturing. Increased the legal supply of non-regular labor.</p></div>
+          <div class="cbox"><h4>(d) Aging (see W7b)</h4><p>Older workers near retirement (60s) often switch to contractor / part-time status, mechanically raising the non-regular share.</p></div>
+        </div>
+        <h4 class="sub">Worker Dispatching Act — Key Dates</h4>
+        <table class="mtable">
+          <tr><th>Year</th><th>Change</th><th>Effect</th></tr>
+          <tr><td>1985</td><td>Enacted</td><td>Dispatched work allowed only in <strong>specified</strong> professions</td></tr>
+          <tr><td>1999</td><td>Revised</td><td>Allowed in <strong>any</strong> profession <em>except</em> listed exceptions (port, construction, security, medical, manufacturing, certified professionals)</td></tr>
+          <tr><td>2004</td><td>Revised</td><td>Allowed in <strong>manufacturing</strong> (limited duration)</td></tr>
+        </table>
+        <h4 class="sub">How the Dispatch System Works</h4>
+        <ul class="kp">
+          <li>Staffing company <strong>sends</strong> worker to client company; client <strong>directs</strong> the worker and pays an hourly fee to the staffing company</li>
+          <li>Worker receives hourly wage from staffing company; staffing firm profit = fee − wage</li>
+          <li>Client can simply <strong>not renew</strong> the contract → worker has no job security</li>
+          <li>Government's stated goal: raise average labor productivity by flexibly reallocating workers to where they're most needed</li>
+        </ul>
+        <h4 class="sub">Consequence: Wage Deflation</h4>
+        <ul class="kp">
+          <li><strong>Regular workers</strong>: wages <em>grow</em> with age from entry level (seniority system)</li>
+          <li><strong>Non-regular workers</strong>: almost <em>no income growth</em> above entry wage — <em>and</em> no job security. Stable across years (same pattern in 2005 and 2014 data)</li>
+          <li>Higher non-regular share → lower <em>average</em> wage growth — more workers sit on the flat profile</li>
+          <li>Nominal salary index turned to <strong>negative growth</strong> after 1997–98</li>
+        </ul>
+        <div class="formula">W_t = S_r,t · W_r,t + (1 − S_r,t) · W_p,t &nbsp; [Munakata &amp; Higashi 2016: rising part-time share = the key drag on nominal salary growth]</div>
+        <div class="callout"><strong>Manufacturing exception:</strong> Manufacturing kept higher (even positive real) wage growth — consistent with manufacturing <em>not</em> raising its non-regular share much. Only services pushed up non-regular share.</div>
+        <h4 class="sub">"Glacial Periods" in New-Graduate Job Market</h4>
+        <table class="mtable">
+          <tr><th>Glacial Period</th><th>Trigger → End</th></tr>
+          <tr><td>1993 – early 2000s</td><td>Yen appreciation → resolution of NPL problem</td></tr>
+          <tr><td>2009 – 2012</td><td>Lehman collapse → yen depreciation under Abe</td></tr>
+        </table>
+        <div class="callout">Japanese firms used <strong>new-graduate recruitment as the adjustable margin</strong> for total labor during recessions — protecting incumbents at the expense of new graduates. Unemployment rose and job openings fell faster than the unemployed count.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEE2E2;color:var(--jp)">W7b</span>The Aging Problem &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 4</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Aging is both a <em>cause</em> of more non-regular work (retiring boomers switch to part-time) and an <em>effect</em> (young non-regulars face insecure incomes → low birth rates → worse aging). Its late-1990s timing overlapping the banking crisis was <strong>coincidental</strong> — aging traces to the 1940s baby boom.</p>
+        <h4 class="sub">The Feedback Loop</h4>
+        <div class="cchain">
+          <span class="cnode">Young non-regular share ↑ (post-1993)</span><span class="carr">→</span>
+          <span class="cnode">Insecure / flat income for young workers</span><span class="carr">→</span>
+          <span class="cnode">Birth rate keeps falling (mid-1990s onward)</span><span class="carr">→</span>
+          <span class="cnode">Declining population + shrinking labor force</span><span class="carr">→</span>
+          <span class="cnode">Worsened aging</span>
+        </div>
+        <h4 class="sub">Cost of Raising a Child (White Paper on National Lifestyle, 2005)</h4>
+        <table class="mtable">
+          <tr><th>Item</th><th>Million ¥</th></tr>
+          <tr><td>Education</td><td>5.28</td></tr>
+          <tr><td>Food</td><td>3.10</td></tr>
+          <tr><td>Utility</td><td>0.85</td></tr>
+          <tr><td>Clothing</td><td>0.73</td></tr>
+          <tr><td>Entertainment</td><td>0.73</td></tr>
+          <tr><td>Communication &amp; Transport</td><td>0.67</td></tr>
+          <tr><td>Housing</td><td>0.53</td></tr>
+          <tr><td>Other</td><td>1.13</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>13.02</strong></td></tr>
+        </table>
+        <div class="callout">National Fertility Survey: persistent gap between <em>actual</em> and <em>desired</em> number of children. "Cost concerns" were the most important reason in 2002, 2005, and 2010 surveys.</div>
+        <h4 class="sub">Why Aging Is LESS Important for Wage Deflation</h4>
+        <ul class="kp">
+          <li>Regular workers take <strong>wage cuts near retirement</strong> → regular and non-regular wages <em>converge</em> around age 60</li>
+          <li>Therefore boomers switching to non-regular was <strong>unlikely</strong> to be a major driver of falling <em>average</em> wage growth</li>
+          <li>The wage-deflation story is driven more by <strong>young</strong> non-regular workers than by aging</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W7c</span>TFP Slowdown Hypothesis &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 4</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">The macroeconomists' explanation for post-1990 Japan: it is fundamentally a <strong>TFP (productivity)</strong> story. Hayashi &amp; Prescott (2002) showed that low GDP growth cannot be explained by slower capital/labor growth alone.</p>
+        <div class="formula">Y_t = A_t · K_t^(1/3) · L_t^(2/3) &nbsp;&nbsp; Solow residual: ΔA/A = ΔY/Y − (1/3)·ΔK/K − (2/3)·ΔL/L</div>
+        <h4 class="sub">Growth Accounting: Hayashi &amp; Prescott (2002)</h4>
+        <table class="mtable">
+          <tr><th>Period</th><th>Avg GDP growth</th><th>TFP growth</th><th>Capital (⅓·ΔK/K)</th></tr>
+          <tr><td>1960–1973</td><td>7.20%</td><td>6.50%</td><td>2.30%</td></tr>
+          <tr><td>1973–1983</td><td>2.20%</td><td>0.80%</td><td>2.10%</td></tr>
+          <tr><td>1983–1991</td><td>3.60%</td><td>3.70%</td><td>0.20%</td></tr>
+          <tr><td><strong>1991–2000</strong></td><td><strong>0.50%</strong></td><td><strong>0.30%</strong></td><td>1.40%</td></tr>
+        </table>
+        <div class="callout">After 1991: TFP growth collapsed to 0.30% while capital still contributed 1.40%. This points to a <strong>productivity problem</strong>, not a capital shortage.</div>
+        <h4 class="sub">Hypotheses for Why TFP Fell</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>Low within-firm productivity</h4><p>Fukao &amp; Kwon (2005/06): productivity growth slowed at the firm level, not just aggregate reallocation effects.</p></div>
+          <div class="cbox"><h4>No exit of unproductive firms</h4><p>Nishimura, Kiyota &amp; Nakajima (2005): "natural selection" stopped — zombie firms survived on evergreen loans, blocking resource reallocation.</p></div>
+          <div class="cbox"><h4>Zombie / forbearance lending</h4><p>Caballero et al. (2005): interest subsidies to "zombie" firms (measured by gap between long-term prime rate and actual interest paid). Fukuda &amp; Nakamura (2011): most "zombies" later recovered via restructuring — caveat.</p></div>
+          <div class="cbox"><h4>Under-investment in intangibles</h4><p>Miyagawa &amp; Hisa (2013): weak investment in software and knowledge capital. Hard to measure → absorbed into TFP residual.</p></div>
+        </div>
+        <h4 class="sub">Post-1999 Policy Responses</h4>
+        <table class="mtable">
+          <tr><th>Act</th><th>Period</th><th>Purpose</th></tr>
+          <tr><td>Civil Rehabilitation Act</td><td>since 1999</td><td>Let a firm go bankrupt <strong>without changing management</strong></td></tr>
+          <tr><td>Industrial Revitalization Act</td><td>1999–2014</td><td>Government debt guarantee for approved restructuring firms (replaced by Industrial Competitiveness Enhancement Act 2014)</td></tr>
+          <tr><td>Industrial Revitalization Corporation</td><td>2003–2007</td><td>Government agency to finance debt &amp; equity of productive but debt-laden firms</td></tr>
+        </table>
+        <div class="callout"><strong>TFP caveat:</strong> TFP = the part of GDP growth <em>unexplained</em> by K and L. A large TFP share could mean (a) productivity genuinely fell, OR (b) the aggregate production function is a poor approximation. Don't over-interpret a big residual.</div>
+        <h4 class="sub">W7 Exam Synthesis — Master Narrative</h4>
+        <table class="mtable">
+          <tr><th>Concept</th><th>Don't confuse</th></tr>
+          <tr><td>Aging vs. young non-regular</td><td>Aging raises non-regular <em>count</em>, but <strong>young</strong> non-regular workers drive <strong>wage deflation</strong> (regular wages converge near retirement)</td></tr>
+          <tr><td>Manufacturing vs. services</td><td>Manufacturing kept positive real wage growth; only services pushed up non-regular share</td></tr>
+          <tr><td>Banking crisis vs. aging</td><td>Their late-1990s overlap is <strong>coincidental</strong> — aging traces to the 1940s baby boom</td></tr>
+          <tr><td>TFP as cause vs. residual</td><td>A big TFP share may just be <strong>approximation error</strong>, not proof productivity is the cause</td></tr>
+        </table>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -1769,6 +1968,36 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       </div>
     </div>
 
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#EDE9FE;color:var(--labor)">Midterm</span>Sample Midterm Questions &amp; Answers &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 2</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Last year's midterm questions. Bold = correct answer(s). Use these to test your understanding of the core definitions and demand-side mechanics.</p>
+        <h4 class="sub">Q1 — Select all TRUE statements</h4>
+        <table class="mtable">
+          <tr><th>Statement</th><th>True?</th><th>Reasoning</th></tr>
+          <tr><td><strong>Rising unemployment could be a reflection of a growing economy.</strong></td><td><strong>TRUE</strong></td><td>When wages rise, discouraged workers re-enter → LFPR ↑ → unemployment rate can temporarily rise even as employment grows.</td></tr>
+          <tr><td>An employed artist using AI tools is no longer labor.</td><td>FALSE</td><td>Labor = time allocated in exchange for value. The tool used doesn't change the classification.</td></tr>
+          <tr><td>Wealthier individuals tend to work fewer hours based on empirical data.</td><td>FALSE</td><td>Empirical data shows top earners often work more hours (income effect is swamped by substitution + selection). The backward-bending curve applies on average, not universally.</td></tr>
+          <tr><td>Since most workers make binary decisions (extensive margin), theories about market S&amp;D are unable to make meaningful predictions.</td><td>FALSE</td><td>Extensive margin still generates an upward-sloping supply curve at the aggregate level — participation thresholds respond to wages.</td></tr>
+          <tr><td><strong>A decentralized labor market may react quicker to changes, but generally at the cost of reduced labor protections.</strong></td><td><strong>TRUE</strong></td><td>Speed ↔ protection trade-off: flexibility allows rapid wage adjustment but reduces job security and collective bargaining power.</td></tr>
+          <tr><td>The perfectly competitive equilibrium is called an equilibrium because when wage goes down, demand goes up, pushing wage further up.</td><td>FALSE</td><td>That describes instability, not equilibrium. In equilibrium: when w &gt; w* → excess supply → w falls back toward w* (negative feedback, not positive).</td></tr>
+        </table>
+        <h4 class="sub">Q2 — Events that increase DEMAND for labor (select all)</h4>
+        <table class="mtable">
+          <tr><th>Event</th><th>Correct?</th><th>Mechanism</th></tr>
+          <tr><td><strong>Laws reducing firm contributions to retirement plans</strong></td><td><strong>YES</strong></td><td>Lower non-wage labor cost → firm's effective wage cost falls → demand shifts right (more workers hired at any given wage)</td></tr>
+          <tr><td>Rapid population increase 18 years ago</td><td>NO</td><td>More workers enter the labor force → supply shifts right, not demand</td></tr>
+          <tr><td>Technology improvements in robotics requiring less human oversight</td><td>NO</td><td>Substitutes for human labor → demand curve shifts left</td></tr>
+          <tr><td>Women's rights increasingly restricted</td><td>NO</td><td>Reduces labor supply (participation ↓) → supply shifts left, not demand</td></tr>
+          <tr><td><strong>Improvements in education making graduates more productive</strong></td><td><strong>YES</strong></td><td>Higher MPL → firms willing to pay more at each employment level → demand curve shifts right</td></tr>
+        </table>
+        <div class="callout"><strong>Key distinction for Q2:</strong> Labor demand shifts when firm costs or worker productivity change. Labor supply shifts when the number or willingness of workers changes. A common mistake is to confuse a supply shifter (more workers available) with a demand shifter (firms want more workers).</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2022,6 +2251,41 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W5</span>Advanced Seminar: Market Efficiency &amp; Matching Theory &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 4</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">From Advanced Seminar III. Core question: can a market "clear" without being efficient? Answer: yes — because <strong>no-loss is a weaker condition than surplus-maximizing matching</strong>. Structure, not just rationality, determines outcome quality.</p>
+        <h4 class="sub">Setup</h4>
+        <table class="mtable">
+          <tr><th>Agent</th><th>Type</th><th>Value</th></tr>
+          <tr><td>Buyer 1 (B1)</td><td>WTP</td><td>80</td></tr>
+          <tr><td>Buyer 2 (B2)</td><td>WTP</td><td>40</td></tr>
+          <tr><td>Seller 1 (S1)</td><td>Cost</td><td>70</td></tr>
+          <tr><td>Seller 2 (S2)</td><td>Cost</td><td>30</td></tr>
+        </table>
+        <h4 class="sub">Matching Analysis</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>Efficient Matching (B1×S2)</h4><p>B1 buys from S2: surplus = 80−30 = <strong>50</strong>. B2 &amp; S1 don't trade (40 &lt; 70). <strong>Total surplus = 50</strong>.</p></div>
+          <div class="cbox"><h4>Inefficient Matching (B1×S1)</h4><p>B1 buys from S1: surplus = 80−70 = 10. B2 &amp; S2: surplus = 40−30 = 10 (if both transact). <strong>Total surplus = 20</strong>.</p></div>
+        </div>
+        <h4 class="sub">Core Insight: Why Can a Market Settle at an Inefficient Outcome?</h4>
+        <ul class="kp">
+          <li><strong>No-loss ≠ efficient outcome.</strong> Even if neither party transacts at a loss, the equilibrium price may fail to route buyers to the lowest-cost sellers</li>
+          <li>If B1 meets S1 first in a decentralized market, B1 may trade at P=75 (no loss for either) — S2 and B2 then may or may not match. Market "cleared" locally but destroyed 30 units of potential surplus</li>
+          <li>This is a <strong>search &amp; matching friction</strong> problem, not a failure of rationality</li>
+        </ul>
+        <h4 class="sub">Two Key Conclusions</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>1. Market Structure → Efficiency</h4><p>Allocation depends on <em>how</em> buyers and sellers are matched, not just whether mutually beneficial trades occur.<br><br>Centralized auction → efficient matching. Decentralized bilateral bargaining → path-dependent, friction-prone. Platform design → can force or prevent efficient pairing.</p></div>
+          <div class="cbox"><h4>2. Rationality → Distribution, Not Efficiency</h4><p>Rational agents avoid loss — but don't guarantee finding the <em>best</em> counterparty.<br><br><strong>Efficiency</strong> = depends on market structure / mechanism. <strong>Distribution</strong> = depends on rationality + bargaining power.</p></div>
+        </div>
+        <div class="callout"><strong>One-line summary:</strong> A market can clear without loss yet still be inefficient — because <em>no-loss</em> is a weaker condition than <em>surplus-maximizing matching</em>. Structure, not just rationality, determines outcome quality.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
         <div class="wk-label"><span class="wk-tag" style="background:#CFFAFE;color:var(--gt)">W3–4</span>Sequential Games, SPNE &amp; Advanced Topics</div>
         <span class="chev">▼</span>
       </div>
@@ -2043,6 +2307,155 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           <li>Players have private information (types) drawn from a distribution — others know the distribution but not the realized type</li>
           <li><strong>Bayesian Nash Equilibrium</strong>: strategy profile maximizing expected payoff given beliefs about others' types</li>
           <li>Applications: auctions, signaling (education as signal of ability), mechanism design</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ JAPANESE DEBATE ══════════════════════════════════════════ -->
+<section id="debate">
+  <div class="back" onclick="show('home')">← Back</div>
+  <div class="course-head" style="border-color:var(--debate)">
+    <h1 style="color:var(--debate)">Japanese Debate (Academic Debate III)</h1>
+    <div class="ch-meta">Waseda · Learning Logical Thinking &amp; Presentation Skills &nbsp;·&nbsp; Language: Japanese</div>
+    <a class="notion-link" href="https://app.notion.com/p/344259861df580caa42fc45dbd2a2301" target="_blank">
+      <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
+      Open in Notion
+    </a>
+  </div>
+
+  <div class="sec-label">Course Overview</div>
+  <div class="viz-box">
+    <p style="font-size:13px;color:#444;line-height:1.6;margin-bottom:10px;">This course develops logical argumentation and presentation skills through structured classroom debate in Japanese. Notes here capture the written position essays (発言原稿) prepared before each session.</p>
+    <div class="concept-row">
+      <div class="cbox"><h4>Format</h4><p>Students argue for or against a debate proposition (論題) with structured opening statements, rebuttals, and closing arguments.</p></div>
+      <div class="cbox"><h4>Language</h4><p>All debate conducted in Japanese (ます/です form). Notes and position essays are written in Japanese.</p></div>
+      <div class="cbox"><h4>Assessment</h4><p>Evaluated on logical structure, evidence quality, delivery, and ability to respond to opposing arguments in real time.</p></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Weekly Drill-Down</div>
+  <div class="weeks">
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#F3E8FF;color:var(--debate)">W7</span>「人間と生成AIについて考える」&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 3</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro"><strong>論題:</strong> 生成AIの普及により、人間の努力の価値は失われる。<br>Position taken: <strong>反対</strong> (Against — human effort retains and transforms in value)</p>
+        <h4 class="sub">Position Essay (発言原稿)</h4>
+        <div class="callout" style="border-color:var(--debate);background:#FAF5FF;font-size:12.5px;line-height:1.7;">
+          <p>生成AIは、未来において人間の仕事のほとんどを代わると断言できる。なぜなら、現代人の仕事の約八割は、システムの中で「歯車」としての役割を果たしている。しかしAIは、決して油断しない完璧な歯車であり、その実行力は人間をはるかに超えている。現時点でAIエージェントが及ばないのは、戦略的なビジョンを作ることだ。とはいえ、それは人間にとっても希少な能力であり、容易に身につけられるものではない。この認識を踏まえ、私は「AIの進歩は止まらないからこそ、戦略的思考を持つ人間になりたい」という立場をとる。</p>
+          <p style="margin-top:10px;">ある意味で、AIエージェントは「努力」の意味を塗り替えた。現在の私は、メールの作成からスケジュール管理まで、日常のあらゆる場面でClaudeを活用する頻度が増えており、それにより効率は大幅に向上している。同じ労力を比較すれば、人間が疲弊せずに同等のパフォーマンスを維持し続けることは不可能に近い。これは努力の次元の話ではなく、根本的にレベルが異なるのだ。</p>
+          <p style="margin-top:10px;">一方で、AIエージェントを真に使いこなすためには、ビジョナリーや起業家に求められる視点を持ち続けることが不可欠だ。「AIより上手く仕事をするにはどうすればいいか」ではなく、「自分がやりたいことをプランに落とし込み、それをAIに実行させられるか」という発想の転換が重要だ。自分の判断を信じ、AIの力を自分の理想の方向へ誘導することこそが、この新世代に求められる知性であり、能力だと思う。最も大切なのは、個人としての責任を自覚し、AIが提示する「建前」的な曖昧なアドバイスに流されず、自分の本音を成果へと昇華させることだ。</p>
+          <p style="margin-top:10px;">いずれにしても、AIが「道具」なのか「同僚」なのかは、人によって答えが異なるかもしれない。しかし、選択肢があるうちに、AIの道具としての側面を主体的に活用することが、今この時代において極めて重要だと私は考える。</p>
+        </div>
+        <h4 class="sub">Argument Structure</h4>
+        <ul class="kp">
+          <li><strong>Premise:</strong> ~80% of modern work = "gear" function (routine, systematic). AI is a perfect gear — better execution than humans in these roles</li>
+          <li><strong>Concession:</strong> Strategic vision is the one area AI currently lacks. But it is also rare among humans</li>
+          <li><strong>Core thesis:</strong> AI doesn't destroy the <em>value</em> of human effort — it <em>redefines</em> what kind of effort is valuable. The new premium skill: translating your own vision into plans that AI can execute</li>
+          <li><strong>Risk:</strong> Outsourcing thinking entirely to AI → loss of authorship and accountability. Avoid "建前" (formulaic AI advice) and stay grounded in your own 本音 (authentic goals)</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ══════════════════════════════════════════ CLIMATE TECH & ENTREPRENEURSHIP ══════════════════════════════════════════ -->
+<section id="climate">
+  <div class="back" onclick="show('home')">← Back</div>
+  <div class="course-head" style="border-color:var(--climate)">
+    <h1 style="color:var(--climate)">Climate Tech &amp; Entrepreneurship</h1>
+    <div class="ch-meta">Waseda · Endowed Course by 100 Years Fund &nbsp;·&nbsp; Guest Lectures from Founders &amp; VCs</div>
+    <a class="notion-link" href="https://app.notion.com/p/33f259861df580b58c61ed960f82cec9" target="_blank">
+      <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
+      Open in Notion
+    </a>
+  </div>
+
+  <div class="sec-label">Course Overview</div>
+  <div class="viz-box">
+    <div class="concept-row">
+      <div class="cbox"><h4>Format</h4><p>Endowed guest lecture series. Founders, VCs, and policy entrepreneurs present real cases each week.</p></div>
+      <div class="cbox"><h4>W7 Guest</h4><p>伊藤和真 (Ito Kazuma), CEO of PoliPoli — Japan's leading govtech / public affairs platform. Founded at age 19.</p></div>
+      <div class="cbox"><h4>Central Theme</h4><p>Startups at scale must engage government. Rule-making (non-market strategy) can be a 3× multiplier on business success.</p></div>
+    </div>
+  </div>
+
+  <div class="sec-label">Weekly Drill-Down</div>
+  <div class="weeks">
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#DCFCE7;color:var(--climate)">W7</span>PoliPoli CEO — Policy Entrepreneurship &amp; GR Strategy &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 5</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Ito Kazuma (PoliPoli CEO) on how startups can shape the regulatory environment. Key insight: <strong>social mission first, then approach, then logic</strong> — without all three, policy never changes, no matter how good the idea.</p>
+        <h4 class="sub">The Two Problems PoliPoli Solves</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>Government Side</h4><p>Cannot see what citizens and businesses actually think. Traditional channels (経団連, 医師会) represent too narrow a constituency in a diversifying society.</p></div>
+          <div class="cbox"><h4>Private Side</h4><p>Businesses don't know how to communicate with government, which ministry to contact, or how to navigate the policy process. Even good ideas fail without the right process knowledge.</p></div>
+        </div>
+        <h4 class="sub">The 3-Step Policy Change Framework</h4>
+        <div class="cchain">
+          <span class="cnode">(a) アジェンダセッティング<br><small>Define a social-mission problem — not "let us profit" but "society needs this"</small></span><span class="carr">→</span>
+          <span class="cnode">(b) アプローチ<br><small>Build relationships via study groups (勉強会); never "storm in" cold</small></span><span class="carr">→</span>
+          <span class="cnode">(c) ロジック<br><small>Construct the precise legal or regulatory logic — law revision vs. law re-interpretation</small></span>
+        </div>
+        <div class="callout"><strong>Core principle:</strong> Without a genuine social-mission rationale, policy engagement becomes "利益誘導" (benefit channeling) — which is legally problematic and politically unsustainable. Social mission is not PR — it must be real and defensible in front of regulators and Diet members.</div>
+        <h4 class="sub">Case Studies</h4>
+        <table class="mtable">
+          <tr><th>Case</th><th>Problem</th><th>Policy Change</th><th>Mechanism</th></tr>
+          <tr><td><strong>Timee (タイミー)</strong></td><td>"Spot work" across multiple employers violated labor time-tracking rules</td><td>Legal framework clarified: Timee responsible for aggregating cross-employer hours</td><td>Agenda: labor shortage / new work paradigm. Logic: operator-responsibility model.</td></tr>
+          <tr><td><strong>BASE / note</strong></td><td>Individual sellers legally required to disclose home address — dangerous for women</td><td>Law re-interpreted: individuals no longer need to disclose address</td><td>Agenda: "individual economy era" needs individual protection. Logic: not law revision but re-interpretation.</td></tr>
+          <tr><td><strong>年収の壁 (Income Wall)</strong></td><td>University students stop working at ¥1.03M to avoid tax/insurance thresholds — worsens labor shortage</td><td>国民民主党 adopted proposal → major 2024 election win → priority legislation</td><td>Students proposed via PoliPoli platform → Tamaki Yuichiro (DPFP leader) adopted it.</td></tr>
+        </table>
+        <h4 class="sub">The 4 Types of Policy Action</h4>
+        <div class="concept-row">
+          <div class="cbox"><h4>1. ルール変更</h4><p>Change or create a regulation directly (e.g., revise labor law to allow spot work).</p></div>
+          <div class="cbox"><h4>2. お金 (補助金)</h4><p>Channel government budget to your sector (e.g., SHElikes gets 50–70% subsidy coverage via human capital policy).</p></div>
+          <div class="cbox"><h4>3. 事業執行</h4><p>Government contracts / public works (road building, public systems). Less relevant for startups at early stage.</p></div>
+          <div class="cbox"><h4>4. 広報・注意喚起</h4><p>Government communication campaigns (e.g., drug safety warnings). Can create awareness and validate a market.</p></div>
+        </div>
+        <h4 class="sub">Policy Calendar — Why Timing Is Absolute</h4>
+        <ul class="kp">
+          <li>January–June: Ordinary Diet session; major legislation window</li>
+          <li><strong>May–June: 骨太の方針 (Honebuto no Houshin)</strong> — the PM's priority policy statement. All ministry budgets follow from this. If your issue isn't here, it won't get budget this cycle</li>
+          <li>August–September: Ministry 概算要求 (budget requests) based on 骨太</li>
+          <li>December: Cabinet approves final budget (閣議決定)</li>
+          <li>March: Diet passes budget</li>
+        </ul>
+        <div class="callout"><strong>Practical rule:</strong> If you want budget for next fiscal year, your policy proposal must be visible by May–June. A perfect proposal in October misses the cycle entirely. <em>Read 骨太の方針 every year</em> — it is the best forward-looking signal of which businesses the government will fund and regulate next.</div>
+        <h4 class="sub">Public Affairs (PA) vs. Public Relations (PR)</h4>
+        <table class="mtable">
+          <tr><th></th><th>PR (Public Relations)</th><th>PA (Public Affairs)</th></tr>
+          <tr><td>Target</td><td>Broad public / media</td><td>Government officials, Diet members, regulators</td></tr>
+          <tr><td>Goal</td><td>Brand / reputation</td><td>Shift policy, regulation, or budget in your favor</td></tr>
+          <tr><td>Timing</td><td>Continuous</td><td>Tied to legislative calendar</td></tr>
+          <tr><td>Key skill</td><td>Storytelling, media relations</td><td>Policy monitoring, stakeholder mapping, legal logic</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#DCFCE7;color:var(--climate)">W7 HW</span>Reflection — 社会課題の大義と戦略コンサルティング &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 5</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Homework reflection connecting the lecture to a personal industry interest: strategic consulting and the AI-driven asymmetry between strategy and execution.</p>
+        <ul class="kp">
+          <li><strong>Most striking point:</strong> "Without social-mission rationale, policy change is impossible." Startups that only argue self-interest get labelled as 利益誘導 — politically toxic and legally borderline</li>
+          <li><strong>Resonance:</strong> Ito's decision at 19 to tackle "the hardest problem" — choosing the lever with the most societal leverage. The same logic that draws strategic consultants to cross-industry pattern recognition</li>
+          <li><strong>Personal connection — Strategy Consulting:</strong> Gap between strategy design and execution currently creates triple inefficiency: information loss, incentive misalignment, cross-department communication cost</li>
+          <li><strong>AI amplifies this asymmetry:</strong> Strategy side can now simulate execution with AI, but execution side cannot simulate strategy. The asymmetry widens</li>
+          <li><strong>Policy proposal idea:</strong> In public-private projects, create new contract models and procurement standards that allow integrated strategy-to-execution involvement — improving overall policy implementation quality</li>
         </ul>
       </div>
     </div>
