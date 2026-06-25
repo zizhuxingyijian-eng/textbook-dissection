@@ -430,7 +430,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--intl)">International Economics</h3>
       <div class="card-prof">Dr. Tatyana Chesnokova · Waseda</div>
       <div class="card-desc">Why nations trade, who wins and loses, and how returns to scale change the picture. Comparative advantage to new trade theory.</div>
-      <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5</span><span class="badge">Ricardo · Krugman</span></div>
+      <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5, 8</span><span class="badge">Ricardo · Krugman · Tariffs</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W8 NEW</span></div>
     </div>
     <div class="card" onclick="show('labor')">
       <style>.card:nth-child(4)::before{background:var(--labor)}</style>
@@ -465,8 +465,8 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <style>.card:nth-child(7)::before{background:var(--debate)}</style>
       <h3 style="color:var(--debate)">Japanese Debate</h3>
       <div class="card-prof">Waseda · Academic Debate Course</div>
-      <div class="card-desc">Classroom debate preparation in Japanese. This week: 生成AIの普及により、人間の努力の価値は失われるか？</div>
-      <div class="card-badges"><span class="badge" style="background:#F3E8FF;color:var(--debate)">Debate Essay</span><span class="badge">W7 · AI論題</span><span class="badge" style="background:#DCFCE7;color:#166534;">NEW</span></div>
+      <div class="card-desc">Classroom debate preparation in Japanese. This week: SNSアカウントは実名性にすべきだ — 実名制の是非をめぐる立論と反駁。</div>
+      <div class="card-badges"><span class="badge" style="background:#F3E8FF;color:var(--debate)">Debate Essay</span><span class="badge">実名制 · AI論題</span><span class="badge" style="background:#DCFCE7;color:#166534;">+実名制 NEW</span></div>
     </div>
     <div class="card" onclick="show('climate')">
       <style>.card:nth-child(8)::before{background:var(--climate)}</style>
@@ -1797,6 +1797,48 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       </div>
     </div>
 
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W8</span>Trade Policy — Tariffs &amp; Welfare&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 24</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">From <em>why</em> trade happens to <em>whether</em> governments should restrict it. Build the small-country tariff model and measure who gains and loses using consumer &amp; producer surplus.</p>
+        <h4 class="sub">Why governments protect (e.g. agriculture)</h4>
+        <ul class="kp">
+          <li><strong>Terms-of-trade motive</strong>: a <em>large</em> country can use a tariff to push down the world price it pays — gaining at trading partners' expense (only works if you're big enough to move the world price)</li>
+          <li><strong>Interest-group / political-pressure motive</strong>: a concentrated group (farmers, a domestic industry) gains a lot and lobbies hard, while the diffuse loss to consumers goes unorganised → "some group ↑, country ↓"</li>
+        </ul>
+        <h4 class="sub">Small vs large country</h4>
+        <ul class="kp">
+          <li>A <strong>small country</strong> is a <strong>price-taker</strong>: the world price <code>P<sup>w</sup></code> is fixed and its trade volume doesn't move it</li>
+          <li>Equivalently, the <strong>foreign export supply is horizontal</strong> (perfectly elastic) — other countries won't demand a higher price to ship more</li>
+          <li>Markets with low-GDP participants can still be significant in aggregate, but the single small home country remains a taker</li>
+        </ul>
+        <h4 class="sub">Autarky → Free trade (small country)</h4>
+        <ul class="kp">
+          <li><strong>No trade (autarky)</strong>: domestic price <code>P<sub>A</sub></code> set where home <code>S = D</code></li>
+          <li><strong>Free trade</strong>: domestic price falls to <code>P<sup>w</sup> &lt; P<sub>A</sub></code> → quantity demanded rises, home supply falls, the gap is filled by <strong>imports M</strong></li>
+          <li>Welfare: <code>ΔCS = +(b+d)</code>, <code>ΔPS = −b</code> → <strong>net gain from trade = +d</strong></li>
+        </ul>
+        <div class="callout"><strong>Import demand curve:</strong> the relationship between the world price and the quantity of imports demanded (home <code>D − S</code> at each price). It slopes down, and hits zero at the autarky price <code>P<sub>A</sub></code> (no trade when <code>P<sup>w</sup> = P<sub>A</sub></code>).</div>
+        <h4 class="sub">Effect of a tariff t (small country)</h4>
+        <p>Domestic price rises to <code>P<sup>w</sup> + t</code> → home production ↑, consumption ↓, imports shrink <code>M<sub>1</sub> → M<sub>2</sub></code>. Splitting the welfare change into areas:</p>
+        <table class="mtable">
+          <tr><th>Group</th><th>Change</th><th>Direction</th></tr>
+          <tr><td><strong>Consumer surplus</strong></td><td><code>ΔCS = −(a+b+c+d)</code></td><td>Consumers worse off</td></tr>
+          <tr><td><strong>Producer surplus</strong></td><td><code>ΔPS = +a</code></td><td>Producers better off</td></tr>
+          <tr><td><strong>Government revenue</strong></td><td><code>+c = M<sub>2</sub> × t</code></td><td>Tariff collected on remaining imports</td></tr>
+          <tr><td><strong>Net welfare</strong></td><td><code>ΔW = −(b + d)</code></td><td><strong>Deadweight loss</strong></td></tr>
+        </table>
+        <ul class="kp">
+          <li><strong>b = production (efficiency) loss</strong>: output shifts to higher-marginal-cost domestic producers; base = the extra home supply, height = the tariff (marginal cost gap)</li>
+          <li><strong>d = consumption loss</strong>: consumers priced out of units they would have bought — quantity consumed falls from <code>D<sub>1</sub></code> to <code>D<sub>2</sub></code></li>
+        </ul>
+        <div class="callout" style="border-color:var(--intl);background:#F0FDF4;"><strong>Bottom line:</strong> for a small country a tariff <em>always</em> lowers national welfare. The producer gain (a) and government revenue (c) are pure transfers from consumers; the deadweight loss <code>b + d</code> is unrecoverable.</div>
+      </div>
+    </div>
+
   </div>
 </section>
 
@@ -2561,6 +2603,41 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
   <div class="sec-label">Weekly Drill-Down</div>
   <div class="weeks">
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#F3E8FF;color:var(--debate)">実名制</span>「SNSアカウントは実名性にすべきだ」&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 24</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro"><strong>論題:</strong> SNSアカウントは実名性にすべきだ。<br>A structured for/against debate. Notes capture both sides' 立論 (constructive arguments) plus 質疑 (cross-examination) prep.</p>
+        <div class="concept-row">
+          <div class="cbox"><h4>肯定側 — 実名にすべき</h4><p>Accountability, real-name utility (LinkedIn), and protection against impersonation.</p></div>
+          <div class="cbox"><h4>否定側 — 実名にすべきでない</h4><p>Privacy, existing phone-number verification, and uneven risk to the vulnerable.</p></div>
+        </div>
+        <h4 class="sub">肯定側立論（賛成）</h4>
+        <ul class="kp">
+          <li><strong>発言に責任を持たせる</strong> — 実名が見られることで ① いじめが減る、② ウソが話しにくくなり詐欺も防ぐ、③ 喧嘩を防ぐ</li>
+          <li><strong>実名性そのものに効用がある</strong> — LinkedIn のように、実名だからこそ信頼・機会が生まれる例</li>
+          <li><strong>SNS 身分（アカウント）の盗難を防ぐ</strong></li>
+        </ul>
+        <h4 class="sub">否定側立論（反対）</h4>
+        <ul class="kp">
+          <li>ハッキングされた場合でも、<strong>個人情報の漏えいを最小限に抑えられる</strong></li>
+          <li>登録時に携帯番号などで本人確認ができるので<strong>実名は不要</strong> — ニックネームで十分</li>
+          <li>そもそも<strong>本名を他人に見られたくない</strong></li>
+          <li><strong>悪用のリスク</strong> — 金融詐欺・ストーカーなど</li>
+          <li>アップロードした写真＋実名から<strong>居住地や身元を特定されやすい</strong></li>
+          <li><strong>安全性の確保</strong>が難しくなる</li>
+        </ul>
+        <h4 class="sub">否定側立論の発展</h4>
+        <ul class="kp">
+          <li><strong>①弱者へのリスクが不均等</strong> — 実名化の被害は立場の弱い人ほど大きい</li>
+          <li><strong>②多様な声が失われる</strong> — 匿名でなければ言えない意見が抑圧される</li>
+        </ul>
+        <div class="callout" style="border-color:var(--debate);background:#FAF5FF;"><strong>質疑への用意（安全性）:</strong> 「実名だけで個人情報が漏れるわけではない」— <em>漏洩（ろうえい）</em>と<em>流出（りゅうしゅつ）</em>を区別して反論する。</div>
+      </div>
+    </div>
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
