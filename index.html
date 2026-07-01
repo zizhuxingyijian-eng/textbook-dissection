@@ -376,7 +376,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="nav-item active" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
   <div class="nav-group-label">Core Economics</div>
   <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy<span class="nav-new">NEW</span></div>
-  <div class="nav-item" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
+  <div class="nav-item" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II<span class="nav-new">NEW</span></div>
   <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
   <div class="nav-item" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I<span class="nav-new">NEW</span></div>
   <div class="nav-group-label">Theory &amp; Seminar</div>
@@ -395,14 +395,18 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="home-sub">Spring Semester — Quick-access visual notes for all 8 courses. Click a card to open.</div>
 
   <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:5px;padding:14px 18px;margin-bottom:22px;">
-    <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#166534;margin-bottom:8px;">↑ This Week's Updates — Jun 25, 2026</div>
+    <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#166534;margin-bottom:8px;">↑ Recent Updates</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
+      <div style="background:white;border:1px solid #FDBA74;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('ec2')">
+        <div style="font-size:10px;font-weight:700;color:#1E3A6E;text-transform:uppercase;letter-spacing:.04em;">Econometrics II <span style="color:#C2410C;">· Jul 1</span></div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">Final exam instructions posted (see Notion)</div>
+      </div>
       <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('jp')">
-        <div style="font-size:10px;font-weight:700;color:#8B1A1A;text-transform:uppercase;letter-spacing:.04em;">Japanese Economy</div>
+        <div style="font-size:10px;font-weight:700;color:#8B1A1A;text-transform:uppercase;letter-spacing:.04em;">Japanese Economy <span style="color:#166534;">· Jun 25</span></div>
         <div style="font-size:12px;color:#333;margin-top:2px;">W8–9: Abenomics, COVID-19 &amp; Japan's fiscal challenge</div>
       </div>
       <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('labor')">
-        <div style="font-size:10px;font-weight:700;color:#3A1A6B;text-transform:uppercase;letter-spacing:.04em;">Labor Economics I</div>
+        <div style="font-size:10px;font-weight:700;color:#3A1A6B;text-transform:uppercase;letter-spacing:.04em;">Labor Economics I <span style="color:#166534;">· Jun 25</span></div>
         <div style="font-size:12px;color:#333;margin-top:2px;">Slides 4: Labor-leisure tradeoff &amp; supply model</div>
       </div>
     </div>
@@ -1525,6 +1529,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <svg class="notion-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M4.459 4.208c.746.606 1.026.56 2.428.466l13.215-.793c.28 0 .047-.28-.046-.326L17.86 1.968c-.42-.326-.981-.7-2.055-.607L3.01 2.295c-.466.046-.56.28-.374.466zm.793 3.08v13.904c0 .747.373 1.027 1.214.98l14.523-.84c.841-.046.935-.56.935-1.167V6.354c0-.606-.233-.933-.748-.887l-15.177.887c-.56.047-.747.327-.747.933zm14.337.745c.093.42 0 .84-.42.888l-.7.14v10.264c-.608.327-1.168.514-1.635.514-.748 0-.935-.234-1.495-.933l-4.577-7.186v6.952L12.21 19s0 .84-1.168.84l-3.222.186c-.093-.186 0-.653.327-.746l.84-.233V9.854L7.822 9.76c-.094-.42.14-1.026.793-1.073l3.456-.233 4.764 7.279v-6.44l-1.215-.139c-.093-.514.28-.887.747-.933zM1.936 1.035l13.31-.98c1.634-.14 2.055-.047 3.082.7l4.249 2.986c.7.513.934.653.934 1.213v16.378c0 1.026-.373 1.634-1.68 1.726l-15.458.934c-.98.047-1.448-.093-1.962-.747l-3.129-4.06c-.56-.747-.793-1.306-.793-1.96V2.667c0-.839.374-1.54 1.447-1.632z"/></svg>
       Open in Notion
     </a>
+  </div>
+
+  <div style="background:#FFF7ED;border:1px solid #FDBA74;border-left:3px solid #EA580C;border-radius:5px;padding:12px 16px;margin-bottom:18px;">
+    <div style="font-size:10px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:#C2410C;margin-bottom:4px;">📌 Final Exam · Instructions Posted <span style="background:#FFEDD5;color:#9A3412;padding:1px 5px;border-radius:2px;margin-left:4px;">NEW Jun 29</span></div>
+    <div style="font-size:12.5px;color:#333;line-height:1.5;">Prof. Hoshino has uploaded <strong>exam_instructions.pdf</strong> to Notion for the Econometrics II final. Check there for the exam date, format, and permitted materials. <a href="https://www.notion.so/35e259861df581a9ac65e4386aee2dc5" target="_blank" style="color:#C2410C;font-weight:600;">Open Finals info in Notion →</a></div>
   </div>
 
   <div class="sec-label">Course Overview — Identification Strategy Flowchart</div>
