@@ -375,16 +375,16 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="nav-group-label">Navigate</div>
   <div class="nav-item active" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
   <div class="nav-group-label">Core Economics</div>
-  <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy<span class="nav-new">NEW</span></div>
+  <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy</div>
   <div class="nav-item" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
-  <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
+  <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics<span class="nav-new">NEW</span></div>
   <div class="nav-item" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
   <div class="nav-group-label">Theory &amp; Seminar</div>
-  <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
-  <div class="nav-item" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II<span class="nav-new">NEW</span></div>
+  <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP<span class="nav-new">NEW</span></div>
+  <div class="nav-item" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
   <div class="nav-group-label">Applied &amp; Language</div>
   <div class="nav-item" onclick="show('debate')"><span class="nav-dot dot-debate"></span>Japanese Debate</div>
-  <div class="nav-item" onclick="show('climate')"><span class="nav-dot dot-climate"></span>Climate Tech &amp; Entrepr.<span class="nav-new">NEW</span></div>
+  <div class="nav-item" onclick="show('climate')"><span class="nav-dot dot-climate"></span>Climate Tech &amp; Entrepr.</div>
 </nav>
 
 <main>
@@ -397,6 +397,14 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div style="background:#F0FDF4;border:1px solid #86EFAC;border-radius:5px;padding:14px 18px;margin-bottom:22px;">
     <div style="font-size:10.5px;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:#166534;margin-bottom:8px;">↑ Recent Updates</div>
     <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:8px;">
+      <div style="background:white;border:1px solid #A7F3D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('intl')">
+        <div style="font-size:10px;font-weight:700;color:var(--intl);text-transform:uppercase;letter-spacing:.04em;">International Economics <span style="color:#166534;">· Jul 15</span></div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">W9: Trade wars as Prisoner's Dilemma &amp; the targeting principle</div>
+      </div>
+      <div style="background:white;border:1px solid #FDE68A;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('ppep')">
+        <div style="font-size:10px;font-weight:700;color:var(--ppep);text-transform:uppercase;letter-spacing:.04em;">PPEP <span style="color:#166534;">· Jul 15</span></div>
+        <div style="font-size:12px;color:#333;margin-top:2px;">W12: Rawls' Theory of Justice &amp; the veil of ignorance</div>
+      </div>
       <div style="background:white;border:1px solid #BBF7D0;border-radius:4px;padding:8px 10px;cursor:pointer;" onclick="show('jp')">
         <div style="font-size:10px;font-weight:700;color:#8B1A1A;text-transform:uppercase;letter-spacing:.04em;">Japanese Economy <span style="color:#166534;">· Jul 13</span></div>
         <div style="font-size:12px;color:#333;margin-top:2px;">W10: Financial intermediation — main-bank system, Keiretsu &amp; FinTech</div>
@@ -434,14 +442,14 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--intl)">International Economics</h3>
       <div class="card-prof">Dr. Tatyana Chesnokova · Waseda</div>
       <div class="card-desc">Why nations trade, who wins and loses, and how returns to scale change the picture. Comparative advantage to new trade theory.</div>
-      <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5, 8</span><span class="badge">Ricardo · Krugman · Tariffs</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W8 NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5, 8–9</span><span class="badge">Ricardo · Krugman · Tariffs</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W9 NEW</span></div>
     </div>
     <div class="card" onclick="show('labor')">
       <style>.card:nth-child(4)::before{background:var(--labor)}</style>
       <h3 style="color:var(--labor)">Labor Economics I</h3>
       <div class="card-prof">Prof. DeJar · Waseda</div>
       <div class="card-desc">What is labor? Demand, supply, and equilibrium in the labor market. Real wages, unemployment, and normative debates.</div>
-      <div class="card-badges"><span class="badge" style="background:#EDE9FE;color:var(--labor)">Concept Web</span><span class="badge">Wk 1–3 + Slides</span><span class="badge">D&amp;S · Equilibrium</span><span class="badge" style="background:#DCFCE7;color:#166534;">+Slides 4 NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#EDE9FE;color:var(--labor)">Concept Web</span><span class="badge">Wk 1–3 + Slides</span><span class="badge">D&amp;S · Equilibrium</span></div>
     </div>
   </div>
 
@@ -452,7 +460,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--ppep)">PPEP</h3>
       <div class="card-prof">Prof. Takashi Kurihara · Waseda</div>
       <div class="card-desc">Public Philosophy & Economic Perspectives. Social choice theory, fairness axioms, and Arrow's Impossibility Theorem.</div>
-      <div class="card-badges"><span class="badge" style="background:#FEF3C7;color:var(--ppep)">Hierarchy</span><span class="badge">Wk 1–4</span><span class="badge">SCF · Arrow</span></div>
+      <div class="card-badges"><span class="badge" style="background:#FEF3C7;color:var(--ppep)">Hierarchy</span><span class="badge">Wk 1–4, 12</span><span class="badge">SCF · Arrow · Rawls</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W12 NEW</span></div>
     </div>
     <div class="card" onclick="show('gt')">
       <style>.card:nth-child(6)::before{background:var(--gt)}</style>
@@ -1975,7 +1983,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
-        <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W8</span>Trade Policy — Tariffs &amp; Welfare&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 24</span></div>
+        <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W8</span>Trade Policy — Tariffs &amp; Welfare</div>
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
@@ -2012,6 +2020,51 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           <li><strong>d = consumption loss</strong>: consumers priced out of units they would have bought — quantity consumed falls from <code>D<sub>1</sub></code> to <code>D<sub>2</sub></code></li>
         </ul>
         <div class="callout" style="border-color:var(--intl);background:#F0FDF4;"><strong>Bottom line:</strong> for a small country a tariff <em>always</em> lowers national welfare. The producer gain (a) and government revenue (c) are pure transfers from consumers; the deadweight loss <code>b + d</code> is unrecoverable.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#D1FAE5;color:var(--intl)">W9</span>Trade Wars &amp; Export Subsidies&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jul 15</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Extends the single-country tariff model to <em>strategic</em> policy: what happens when both countries retaliate, and why subsidising exports differs from subsidising production. Everything hinges on which of two welfare channels a policy triggers.</p>
+        <h4 class="sub">The two welfare channels</h4>
+        <ul class="kp">
+          <li><strong>Domestic distortion</strong> — the <code>ΔCS / ΔPS / </code>government-spending accounting inside one country. Always present.</li>
+          <li><strong>Terms-of-trade externality</strong> — only a <strong>large</strong> country triggers it, because only it can move the world price. This is the channel that turns policy into a strategic game between countries.</li>
+        </ul>
+        <h4 class="sub">Tariff war = Prisoner's Dilemma</h4>
+        <p>Each country's optimal tariff gains via the terms-of-trade effect <code>E</code> — but <code>E</code> is exactly the partner's loss <code>C'</code>. When both impose tariffs, the <code>E</code> and <code>C'</code> transfers cancel and only deadweight loss remains. The same logic covers environmental embargoes (the dolphin–tuna case): with <code>H</code> = environmental harm cost, the equilibrium depends on <code>H</code> vs. DWL, and even a <em>sham</em> motive (<code>H = 0</code>) yields the same structure. Escape route: GATT → WTO coordination.</p>
+        <table class="mtable">
+          <tr><th></th><th>Japan: Free trade</th><th>Japan: Embargo/tariff</th></tr>
+          <tr><td><strong>US: Free trade</strong></td><td>0 , 0</td><td>−67 , +40</td></tr>
+          <tr><td><strong>US: Embargo/tariff</strong></td><td>+40 , −67</td><td>−27 , −27</td></tr>
+        </table>
+        <p style="font-size:12px;color:var(--text-2)">Net welfare vs. mutual free trade (<code>H = 140</code> case). Embargo strictly dominates for each side (0→+40 if partner is free; −67→−27 if partner retaliates), so the Nash equilibrium is <code>(embargo, embargo) = (−27, −27)</code> — Pareto-dominated by <code>(0, 0)</code>. Textbook Prisoner's Dilemma.</p>
+        <h4 class="sub">Export subsidies: small vs. large country</h4>
+        <ul class="kp">
+          <li><strong>Small country</strong> (price-taker): net welfare <code>= −(b + d)</code> — pure domestic distortion.</li>
+          <li><strong>Large country</strong>: extra exports depress the world price, adding a <em>negative</em> terms-of-trade effect → net welfare <code>= −(b + d + e)</code>, strictly worse. The mirror image of the tariff war, where the terms-of-trade channel <em>helped</em>.</li>
+        </ul>
+        <h4 class="sub">Targeting principle: production vs. export subsidy</h4>
+        <ul class="kp">
+          <li>An <strong>export subsidy</strong> drags the domestic price up to <code>P<sup>W</sup> + s</code>, adding a consumer distortion <code>(a + b)</code> → net loss <code>−(b + d)</code>.</li>
+          <li>A <strong>production subsidy</strong> leaves consumers paying <code>P<sup>W</sup></code> (CS unchanged), so net loss is only <code>−(c)</code> &lt; the export-subsidy loss.</li>
+        </ul>
+        <div class="callout" style="border-color:var(--intl);background:#F0FDF4;"><strong>Targeting principle:</strong> to help producers, subsidise <em>production</em> directly rather than exports — aim the instrument at the target itself and you avoid the collateral consumer distortion.</div>
+        <h4 class="sub">HW9 — the numbers behind the principle ($40/unit subsidy)</h4>
+        <table class="mtable">
+          <tr><th></th><th>Q1 small · export</th><th>Q2 large · export</th><th>Q3 small · production</th></tr>
+          <tr><td>World price</td><td>$100→$100</td><td>$100→$80</td><td>$100→$100</td></tr>
+          <tr><td>Domestic price</td><td>$100→$140</td><td>$100→$120</td><td>$100→$140</td></tr>
+          <tr><td>ΔCS</td><td>−600</td><td>−350</td><td><strong>0</strong></td></tr>
+          <tr><td>ΔPS</td><td>+1800</td><td>+850</td><td>+1800</td></tr>
+          <tr><td>Gov. spending</td><td>−1600</td><td>−1200</td><td>−2000</td></tr>
+          <tr><td><strong>Net welfare</strong></td><td><strong>−400</strong></td><td><strong>−700</strong></td><td><strong>−200</strong></td></tr>
+        </table>
+        <p style="font-size:12px;color:var(--text-2)">Q1 vs. Q3: identical <code>ΔPS = +1800</code>, but the production subsidy leaves <code>ΔCS = 0</code> → smaller net loss. That's the targeting principle in numbers. Q2 is the only case where the world price itself moves (terms-of-trade channel), making it both the worst outcome and the easiest to mis-calculate.</p>
       </div>
     </div>
 
@@ -2564,6 +2617,43 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           <li><strong>Implication</strong>: any "reasonable" aggregation rule must violate at least one of these axioms</li>
           <li>Escape routes: restrict domain (single-peaked preferences), allow cardinal utility (utilitarian SWF), use randomized rules</li>
         </ul>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:var(--ppep)">W12</span>Theory of Justice &amp; Welfare Economics&nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jul 15</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Shifts from <em>how</em> to aggregate preferences (W1–6) to <em>what makes a society just</em>. Centres on John Rawls, read against the social-contract tradition he builds on and criticises.</p>
+        <div class="callout"><strong>Rawls' project:</strong> society-focused and normative — a just society is a self-sufficient confederation whose members obey rules they would themselves approve. He rejects <strong>utilitarianism</strong> for being purely consequentialist (individuals are forced to comply regardless of consent) and grounds justice in <strong>deontology</strong> — whether an act can be justified in itself.</p>
+        <h4 class="sub">The social-contract tradition</h4>
+        <p style="font-size:12px;color:var(--text-2);margin:-2px 0 8px">Each thinker pairs a view of the <em>state of nature</em> with the <em>state</em> the contract produces. <strong>Natural law</strong> = norms derived from human nature (Aquinas grounds it in God; Grotius argues it needs no God).</p>
+        <div class="concept-row">
+          <div class="cbox"><h4>Hobbes</h4><p>Nature = selfish distrust → war of all against all (pessimistic). Contract transfers rights to a sovereign for security. State: <strong>absolute monarchy</strong>.</p></div>
+          <div class="cbox"><h4>Locke</h4><p>People rational, free, equal — but nature lacks secure property &amp; fair trials. Government formed to resolve this; <strong>revolution justified</strong> if it violates rights. State: constitutional/parliamentary.</p></div>
+          <div class="cbox"><h4>Rousseau</h4><p>Isolated peace spoiled by private property. Contract pursues the <strong>General Will</strong> (public benefit) over particular will. State: popular sovereignty.</p></div>
+          <div class="cbox"><h4>Kant</h4><p>Everyone has innate natural rights but no system of interaction. Leaving nature reconciles external freedom under law <strong>everyone authors</strong> — each is a lawmaker.</p></div>
+        </div>
+        <h4 class="sub">Rawls' contractualism: the Original Position</h4>
+        <div class="callout" style="border-color:var(--ppep);background:#FFFBEB;"><strong>Veil of ignorance:</strong> parties choose principles of justice without knowing their own talent, race, status, or psychology → no envy, no self-serving bias. They <em>do</em> keep general knowledge (social primary goods, a sense of justice) and, uncertain of their fate, choose <strong>risk-aversely</strong>.</div>
+        <h4 class="sub">Two Principles of Justice</h4>
+        <ul class="kp">
+          <li><strong>1 · Equal basic liberty</strong> — secure equal liberties for all (lexically prior).</li>
+          <li><strong>2 · Social &amp; economic inequality is permissible only if</strong> it satisfies (a) <strong>fair equality of opportunity</strong>, and (b) the <strong>difference principle</strong> — it benefits the <em>poorest</em> person.</li>
+          <li>The difference principle maximises the position of the worst-off; it is <em>not</em> maximin over the utility of the poorest in every social state.</li>
+        </ul>
+        <div class="comp-wrap">
+          <div class="comp-col"><h5 style="color:var(--ppep)">Market-oriented reading</h5><p style="font-size:12px">No unnecessary intervention; inequality tolerated where it lifts the worst-off.</p></div>
+          <div class="comp-col"><h5 style="color:var(--ppep)">Socialist reading</h5><p style="font-size:12px">Justify (and constrain) market-generated inequality against the same difference-principle test.</p></div>
+        </div>
+        <h4 class="sub">Political Liberalism</h4>
+        <ul class="kp">
+          <li>Justice = fairness should <strong>not</strong> be a comprehensive moral doctrine, but a <strong>political conception</strong> supporting a liberal-democratic society.</li>
+          <li>Three features: a closed system, no dependence on any single doctrine, and embedding in the shared public political culture.</li>
+        </ul>
+        <div class="callout"><strong>Bottom line:</strong> Rawls asks what rules free and equal people would <em>all</em> approve from behind a veil of ignorance — arriving at equal liberty plus inequality only where it lifts the poorest — and reframes justice as a public political conception rather than one contested moral worldview.</div>
       </div>
     </div>
 
