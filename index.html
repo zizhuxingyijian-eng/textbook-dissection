@@ -375,16 +375,16 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
   <div class="nav-group-label">Navigate</div>
   <div class="nav-item active" onclick="show('home')"><span class="nav-dot dot-home"></span>Home</div>
   <div class="nav-group-label">Core Economics</div>
-  <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy</div>
+  <div class="nav-item" onclick="show('jp')"><span class="nav-dot dot-jp"></span>Japanese Economy<span class="nav-new">NEW</span></div>
   <div class="nav-item" onclick="show('ec2')"><span class="nav-dot dot-ec2"></span>Econometrics II</div>
-  <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics<span class="nav-new">NEW</span></div>
+  <div class="nav-item" onclick="show('intl')"><span class="nav-dot dot-intl"></span>International Economics</div>
   <div class="nav-item" onclick="show('labor')"><span class="nav-dot dot-labor"></span>Labor Economics I</div>
   <div class="nav-group-label">Theory &amp; Seminar</div>
-  <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP<span class="nav-new">NEW</span></div>
+  <div class="nav-item" onclick="show('ppep')"><span class="nav-dot dot-ppep"></span>PPEP</div>
   <div class="nav-item" onclick="show('gt')"><span class="nav-dot dot-gt"></span>Game Theory II</div>
   <div class="nav-group-label">Applied &amp; Language</div>
   <div class="nav-item" onclick="show('debate')"><span class="nav-dot dot-debate"></span>Japanese Debate</div>
-  <div class="nav-item" onclick="show('climate')"><span class="nav-dot dot-climate"></span>Climate Tech &amp; Entrepr.</div>
+  <div class="nav-item" onclick="show('climate')"><span class="nav-dot dot-climate"></span>Climate Tech &amp; Entrepr.<span class="nav-new">NEW</span></div>
 </nav>
 
 <main>
@@ -428,7 +428,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--jp)">Japanese Economy</h3>
       <div class="card-prof">Prof. Hajime Tomura · Waseda</div>
       <div class="card-desc">Post-war reconstruction through the Lost Decade. Macroeconomic history driven by policy, finance, and external shocks.</div>
-      <div class="card-badges"><span class="badge" style="background:#FEE2E2;color:var(--jp)">Timeline</span><span class="badge">Wk 2–10</span><span class="badge">Y=A·F(K,H)</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W10 NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#FEE2E2;color:var(--jp)">Timeline</span><span class="badge">Wk 2–10</span><span class="badge">Y=A·F(K,H)</span><span class="badge" style="background:#DCFCE7;color:#166534;">W8 EXPANDED</span></div>
     </div>
     <div class="card" onclick="show('ec2')">
       <style>.card:nth-child(2)::before{background:var(--ec2)}</style>
@@ -442,7 +442,7 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--intl)">International Economics</h3>
       <div class="card-prof">Dr. Tatyana Chesnokova · Waseda</div>
       <div class="card-desc">Why nations trade, who wins and loses, and how returns to scale change the picture. Comparative advantage to new trade theory.</div>
-      <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5, 8–9</span><span class="badge">Ricardo · Krugman · Tariffs</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W9 NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#D1FAE5;color:var(--intl)">Mind Map</span><span class="badge">Wk 1–5, 8–9</span><span class="badge">Ricardo · Krugman · Tariffs</span></div>
     </div>
     <div class="card" onclick="show('labor')">
       <style>.card:nth-child(4)::before{background:var(--labor)}</style>
@@ -460,14 +460,14 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--ppep)">PPEP</h3>
       <div class="card-prof">Prof. Takashi Kurihara · Waseda</div>
       <div class="card-desc">Public Philosophy & Economic Perspectives. Social choice theory, fairness axioms, and Arrow's Impossibility Theorem.</div>
-      <div class="card-badges"><span class="badge" style="background:#FEF3C7;color:var(--ppep)">Hierarchy</span><span class="badge">Wk 1–4, 12</span><span class="badge">SCF · Arrow · Rawls</span><span class="badge" style="background:#DCFCE7;color:#166534;">+W12 NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#FEF3C7;color:var(--ppep)">Hierarchy</span><span class="badge">Wk 1–4, 12</span><span class="badge">SCF · Arrow · Rawls</span></div>
     </div>
     <div class="card" onclick="show('gt')">
       <style>.card:nth-child(6)::before{background:var(--gt)}</style>
       <h3 style="color:var(--gt)">Game Theory II</h3>
       <div class="card-prof">Waseda</div>
       <div class="card-desc">Advanced strategic analysis. Normal and extensive form games, Nash equilibrium, repeated games, and Bayesian games. Plus cross-listed Advanced Seminar III sessions on market efficiency &amp; matching and the Condorcet Jury Theorem &amp; prediction markets.</div>
-      <div class="card-badges"><span class="badge" style="background:#CFFAFE;color:var(--gt)">Concept Map</span><span class="badge">Wk 1–4 + Seminar</span><span class="badge">NE · SPNE · CJT</span><span class="badge" style="background:#DCFCE7;color:#166534;">+Seminar NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#CFFAFE;color:var(--gt)">Concept Map</span><span class="badge">Wk 1–4 + Seminar</span><span class="badge">NE · SPNE · CJT</span></div>
     </div>
   </div>
 
@@ -478,14 +478,14 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
       <h3 style="color:var(--debate)">Japanese Debate</h3>
       <div class="card-prof">Waseda · Academic Debate Course</div>
       <div class="card-desc">Classroom debate preparation in Japanese. This week: SNSアカウントは実名性にすべきだ — 実名制の是非をめぐる立論と反駁。</div>
-      <div class="card-badges"><span class="badge" style="background:#F3E8FF;color:var(--debate)">Debate Essay</span><span class="badge">実名制 · AI論題</span><span class="badge" style="background:#DCFCE7;color:#166534;">+実名制 NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#F3E8FF;color:var(--debate)">Debate Essay</span><span class="badge">実名制 · AI論題</span></div>
     </div>
     <div class="card" onclick="show('climate')">
       <style>.card:nth-child(8)::before{background:var(--climate)}</style>
       <h3 style="color:var(--climate)">Climate Tech &amp; Entrepreneurship</h3>
       <div class="card-prof">Waseda · Endowed Course</div>
       <div class="card-desc">Startup formation, policy engagement, and GR strategy. Guest lecture: PoliPoli CEO Ito Kazuma on rule-making; capstone final pitch for a J-Credit carbon marketplace.</div>
-      <div class="card-badges"><span class="badge" style="background:#DCFCE7;color:var(--climate)">Lecture Notes</span><span class="badge">W7 · Final Pitch</span><span class="badge" style="background:#DCFCE7;color:#166534;">+Final NEW</span></div>
+      <div class="card-badges"><span class="badge" style="background:#DCFCE7;color:var(--climate)">Lecture Notes</span><span class="badge">W7 · Final Pitch</span><span class="badge" style="background:#DCFCE7;color:#166534;">+保証スキーム NEW</span></div>
     </div>
   </div>
 
@@ -1353,11 +1353,11 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
 
     <div class="wk">
       <div class="wk-hd" onclick="toggle(this)">
-        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W8</span>Abenomics: Trade Channels, Work Style Reform &amp; COVID-19 &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jun 25</span></div>
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W8a</span>Abenomics — Trade Channels, Labor Market &amp; Work Style Reform &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">UPDATED Jul 15</span></div>
         <span class="chev">▼</span>
       </div>
       <div class="wk-body">
-        <p class="wk-intro">Abenomics (2013 onward) is the textbook exam of the yen–export–employment transmission chain. The key question: did it actually raise wages, and why was real wage recovery so muted despite nominal improvements?</p>
+        <p class="wk-intro">Abenomics (2013–2019) is the textbook exam of the yen–export–employment transmission chain. The key question: did it actually raise wages, and why did real wage recovery lag employment tightening by roughly six years?</p>
 
         <h4 class="sub">Abenomics Transmission Mechanism</h4>
         <div class="lc-era">Monetary Easing → Exchange Rate → Export Sector → Labor Market</div>
@@ -1378,35 +1378,165 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           <span class="lc-arr">→</span>
           <div class="lc-box green">Nominal wages recover (2016–2019)</div>
         </div>
-        <div class="callout"><strong>Real wages vs. nominal wages:</strong> Nominal wages rose, but real wages lagged. The weaker yen raised import costs (energy, food) → CPI ↑ → purchasing power partly offset. Households didn't feel the recovery as strongly as the numbers suggested.</div>
+        <div class="callout"><strong>One-line chain:</strong> yen ↓ → exports ↑ + inbound tourism ↑ → labor demand ↑ → worker shortage → non-regular share plateaus + real wages stop falling. <strong>Real vs. nominal:</strong> nominal wages rose first; the weaker yen also raised import costs (energy, food) → CPI ↑ → purchasing power partly offset, so households felt less than the headline numbers suggested.</div>
 
-        <h4 class="sub">Work Style Reform Act (2017 → 2019)</h4>
+        <h4 class="sub">Trade Side — Goods, Tourism &amp; the Current Account</h4>
+        <ul class="kp">
+          <li><strong>Goods exports:</strong> post-GFC (2008–12) the yen appreciated sharply → exports fell. After 2012 the yen depreciated → <strong>real exports recovered</strong> and real GDP growth returned to its pre-crisis level.</li>
+          <li><strong>Tourism (services exports):</strong> a cheaper yen made Japan cheap for foreigners → inbound visitors surged after 2012; the <strong>services share of nominal exports rose after 2013</strong>.</li>
+          <li><strong>Current account structure shift:</strong> the services balance is a <em>net deficit narrowing toward zero</em>; the goods balance stays positive but is no longer dominant; the <strong>income balance is now the main driver</strong> of the current-account surplus.</li>
+          <li><strong>Where the income balance comes from:</strong> accumulated foreign assets (FDI subsidiaries, financial assets) built up over decades of post-WWII net export surpluses — a stock, not a current flow.</li>
+        </ul>
+
+        <h4 class="sub">Labor Market Side — Four Series That Turned</h4>
         <table class="mtable">
-          <tr><th>Measure</th><th>Content</th><th>Effect</th></tr>
-          <tr><td>Overtime cap</td><td>Max 100 hrs/month; 720 hrs/year; 5 days annual leave mandatory</td><td>Formal reduction in overwork; firms adjusted by hiring part-time</td></tr>
-          <tr><td>Equal pay for equal work</td><td>Non-regular workers must receive same pay for identical tasks</td><td>Narrowed regular/non-regular wage gap; raised cost of non-regular labor</td></tr>
-          <tr><td>Karōshi response</td><td>Overwork-death incidents prompted political action</td><td>Cultural shift partially; enforcement uneven across sectors</td></tr>
+          <tr><th>Series</th><th>Prior trend</th><th>What changed under Abenomics</th></tr>
+          <tr><td>Unemployment</td><td>Falling since the end of the GFC (2009)</td><td>Continued falling through the 2010s <strong>across all age groups</strong></td></tr>
+          <tr><td>Regular job market</td><td>Weak since the 1990s</td><td>Offer-to-seeker ratio for regular jobs <strong>exceeded pre-GFC levels</strong> in the late 2010s; regular-job offer growth &gt; part-time offer growth → structural tightening</td></tr>
+          <tr><td>Non-regular share</td><td>Rising since ~2002</td><td><strong>Halted in 2014</strong>, across all industries</td></tr>
+          <tr><td>Real wages</td><td>Declining since the 1997–98 banking crisis</td><td><strong>Decline stopped in 2015</strong>, driven by the worker shortage</td></tr>
+        </table>
+        <div class="callout"><strong>Exam traps (W8a):</strong> ① The <strong>non-regularization halt was demand-side</strong>, not a fall in senior workers — seniors (who skew non-regular) kept <em>increasing</em> in the labor force after 2013; strong labor demand pulled workers into regular employment. ② The <strong>services trade surplus was not growing</strong> — the net services balance was <em>shrinking toward zero</em> despite the tourism boom, because services imports rose too. ③ The <strong>income balance ≠ trade surplus</strong> — it is driven by foreign asset holdings, not current goods/services flows. ④ <strong>Real wage recovery (2015) lagged employment tightening</strong> — unemployment fell from ~2009 but wages only responded ~6 years later.</div>
+
+        <h4 class="sub">Policy Response — Work Style Reform (2017 → 2019)</h4>
+        <p class="wk-intro">Introduced by the Abe administration to address the labor shortage and the productivity gap.</p>
+        <table class="mtable">
+          <tr><th>Measure</th><th>Content</th><th>Intent / effect</th></tr>
+          <tr><td>Cap on monthly overtime hours</td><td>Max 100 hrs/month; 720 hrs/year; 5 days annual leave mandatory</td><td>↑ labor productivity + leisure time; firms adjusted by hiring part-time</td></tr>
+          <tr><td>Equal pay for equal work</td><td>Non-regular workers must receive the same pay for identical tasks</td><td>Narrow the regular/non-regular wage gap; raised the cost of non-regular labor</td></tr>
+          <tr><td>Expanded overtime-exempt job categories</td><td>More roles excluded from hour-based rules</td><td>Shift the focus from hours worked → performance delivered</td></tr>
+          <tr><td>Karōshi response</td><td>Overwork-death incidents prompted political action</td><td>Partial cultural shift; enforcement uneven across sectors</td></tr>
+        </table>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W8b</span>COVID-19 Economic Crisis (2020) — Why No Financial Crisis &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jul 15</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">The exam framing is not "how bad was the recession" but <strong>why a deep real-sector shock did not become a financial crisis</strong>. Three stabilizers did the work: fiscal transfers, publicly guaranteed bank credit, and the Fed's dollar supply.</p>
+
+        <div class="concept-row">
+          <div class="cbox" style="border-left:3px solid #DC2626"><h4>GDP Impact</h4><p>The GDP <strong>level</strong> (not just the growth rate) fell substantially in 2020, though the recession was <strong>smaller than in the U.S. and Europe</strong>. <strong>Export collapse</strong> was the primary driver of the Apr–Sep 2020 decline.</p></div>
+          <div class="cbox" style="border-left:3px solid #2563EB"><h4>Fiscal Response</h4><p>Subsidies to individuals and firms with lost income. General Account total expenditure spiked to <strong>~¥175.7 trillion in FY2020</strong>, financed by <strong>bond issuance</strong> (construction + special deficit-financing bonds).</p></div>
+          <div class="cbox" style="border-left:3px solid #7C3AED"><h4>Asset Markets Decoupled</h4><p>Stocks dropped briefly in Q1 2020 then <strong>kept rising</strong> (Nikkei 225 recovered and continued up). Real estate dipped in H1, recovered in H2. The 10-year JGB yield stayed <strong>stable near 0%</strong>.</p></div>
+        </div>
+
+        <h4 class="sub">Bank Credit — The Key Stabilizer</h4>
+        <ul class="kp">
+          <li><strong>Scale:</strong> commercial banks expanded loans significantly to both large and small firms, spread across all major industries (manufacturing, real estate, food services).</li>
+          <li><strong>Loan type:</strong> the majority were <strong>working capital loans</strong> — covering wages and supplier payments before revenue arrives — not fixed investment loans.</li>
+          <li><strong>Guarantees:</strong> a large portion was <strong>guaranteed by credit guarantee corporations</strong> (non-profit public institutions), cutting bank risk and enabling aggressive lending.</li>
+          <li><strong>Policy rate:</strong> the BOJ held the overnight interbank rate at <strong>−0.1%</strong> throughout.</li>
+          <li><strong>Outcome:</strong> corporate <strong>default rates stayed low</strong>; bankruptcies did not spike. Exception: face-to-face services (food, accommodation, consumer services) showed significantly tighter financial conditions (deeply negative Tankan DI).</li>
+        </ul>
+        <table class="mtable">
+          <tr><th>Rate</th><th>Direction</th><th>Reason</th></tr>
+          <tr><td>Short-term</td><td>↓ Fell</td><td>Large firms took new short-term bank loans</td></tr>
+          <tr><td>Long-term</td><td>↑ Rose</td><td>Large firms took <strong>subordinated loans</strong> (repaid after regular loans → higher risk premium)</td></tr>
         </table>
 
-        <h4 class="sub">COVID-19 Economic Crisis (2020)</h4>
-        <div class="concept-row">
-          <div class="cbox" style="border-left:3px solid #DC2626"><h4>Export Collapse</h4><p>Global demand fell sharply in Q1–Q2 2020. Japanese manufacturers (autos, electronics) saw export volumes drop 20–30% YoY.</p></div>
-          <div class="cbox" style="border-left:3px solid #2563EB"><h4>Fiscal Expansion</h4><p>Government issued ¥117T supplementary budget in FY2020 — largest peacetime fiscal intervention. Cash handouts (¥100,000/person), business support, employment subsidies.</p></div>
-          <div class="cbox" style="border-left:3px solid #14532D"><h4>Bank Credit &amp; Fed Swap Lines</h4><p>BOJ expanded asset purchases; Fed opened USD swap lines with BOJ to prevent dollar shortage (dollar-funding crunch is a recurring crisis feature — echoes of 2008). Prevented credit freeze.</p></div>
-        </div>
+        <h4 class="sub">Exchange Rate Stability — "What Was Different This Time"</h4>
+        <p class="wk-intro">The yen did <strong>not</strong> sharply appreciate — a clear contrast with the late-1990s and 2000s crises. Only a brief spike in early March 2020, contained by the Fed's ample global USD supply.</p>
+        <table class="mtable">
+          <tr><th>Date (2020)</th><th>Action</th></tr>
+          <tr><td>Mar 15</td><td>Fed + BoC + ECB + BoE + BoJ + SNB jointly enhanced USD lending to domestic banks</td></tr>
+          <tr><td>Mar 19</td><td>Fed extended temporary <strong>currency swap lines</strong> to additional central banks</td></tr>
+          <tr><td>Mar 23</td><td>Fed announced corporate bond purchases to stabilize U.S. credit markets</td></tr>
+        </table>
+        <div class="callout"><strong>Basis swap note:</strong> a more negative USD funding premium = a higher cost to borrow USD versus other currencies. It spiked sharply in March 2020 and reversed rapidly after the Fed's action — the global dollar shortage resolved, so yen appreciation was contained and export competitiveness preserved.</div>
 
-        <h4 class="sub">Employment Adjustment: Pre-1990 vs. Post-1990</h4>
-        <div class="concept-row">
-          <div class="cbox" style="border-left:3px solid #8B1A1A">
-            <h4>1970s Oil Shock Era</h4>
-            <p>Firms adjusted via <strong>wage cuts and work-sharing</strong>. Lifetime employment system intact. Flexibility came through pay, not headcount.</p>
+        <div class="lc-era">Summary chain</div>
+        <div class="lc-row">
+          <div class="lc-box red">COVID shock<small>export collapse + consumption drop</small></div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box">GDP falls</div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box blue">Fiscal expansion<small>subsidies, bond issuance</small></div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box blue">Guaranteed working-capital loans<small>firms survive; defaults low</small></div>
+        </div>
+        <span class="lc-down">↓</span>
+        <div class="lc-row">
+          <div class="lc-box gold">Fed USD swap lines<small>no yen appreciation</small></div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box green">Financial crisis avoided</div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box green">Asset markets decouple upward</div>
+        </div>
+        <p class="viz-caption">Source: Tomura (Waseda); BOJ Financial System Report; MoF Japanese Public Finance Fact Sheet</p>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#FEF3C7;color:#B45309">W8c</span>Employment Adjustment — 1970s vs. Post-1990 &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">CORRECTED Jul 15</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Two shocks, two completely different adjustment mechanisms. The core question: how did Japanese firms adjust labor in each period, and <em>why</em> differently?</p>
+
+        <h4 class="sub">Context — The Post-1990 Composition Shift</h4>
+        <ul class="kp">
+          <li>Regular employee count began <strong>declining after the 1997–98 banking crisis</strong>; the part-time / non-regular share rose steadily from the 1990s onward.</li>
+          <li>The non-regular share is especially high in <strong>services</strong> relative to manufacturing.</li>
+        </ul>
+        <table class="mtable">
+          <tr><th>Cause of the non-regular shift</th><th>Mechanism</th></tr>
+          <tr><td>Industrial shift</td><td>Economy moved manufacturing → services; services inherently use more non-regular workers</td></tr>
+          <tr><td>High unemployment post-1997</td><td>Banking crisis raised unemployment → new entrants couldn't find regular jobs → settled for non-regular</td></tr>
+        </table>
+
+        <div class="comp-wrap">
+          <div class="comp-col">
+            <h5>1970s — Oil Shock Era</h5>
+            <p>Shock: the first oil shock (1973) → severe recession → <strong>mass dismissal</strong> of workers. Yet unemployment stayed relatively low, because other industries (services, trade) <strong>absorbed dismissed manufacturing workers</strong> as manufacturing's employment share fell.</p>
+            <p style="margin-top:7px;">Large firms also ran an <strong>internal reallocation</strong> channel: 100%-owned subsidiaries absorbed senior employees on subsidized or guaranteed salaries (<strong>75%</strong> of surveyed firms guaranteed pre-relocation salaries), redeploying <strong>~25% of separated workers</strong> inside the same corporate group.</p>
           </div>
-          <div class="cbox" style="border-left:3px solid #1A3A6B">
-            <h4>Post-1990 (Bubble Burst onward)</h4>
-            <p>Firms adjusted via <strong>non-regular hiring and frozen regular slots</strong>. Employment Protection Legislation made regular-worker dismissal costly. Adjustment happened at the margin — new cohorts hired non-regular.</p>
+          <div class="comp-col">
+            <h5>Post-1990 — Banking Crisis Era</h5>
+            <p>Firms <strong>protected existing workers</strong> instead of dismissing them, and responded by <strong>cutting new-graduate hiring</strong> for regular positions. There was far less internal reallocation to subsidiaries than in the 1970s.</p>
+            <p style="margin-top:7px;">Why: baby boomers were in their <strong>late 40s–early 50s</strong> by the early 1990s and mandatory retirement had been extended <strong>55 → 60</strong> (~1985, government guidance). Firms were loaded with high-seniority, high-salary workers → inflated total labor cost → no room for new regular hires. That burden simply did not exist in the 1970s, when the boomers were young.</p>
           </div>
         </div>
-        <div class="callout"><strong>Exam trap:</strong> Why didn't firms fire regular workers post-1990? Employment Protection Legislation (high severance, court precedents for unfair dismissal). Instead, firms stopped creating regular positions for new graduates — adjustment was in <em>flows</em> (who gets hired going forward), not <em>stocks</em> (who gets fired today).</div>
+        <div class="callout"><strong>Correction vs. the earlier version of this page:</strong> the 1970s adjustment was <em>not</em> primarily wage cuts and work-sharing with headcount untouched — firms did dismiss at scale (see the table below); what kept measured unemployment low was <strong>cross-industry absorption plus intra-group redeployment</strong>, not the absence of dismissal.</div>
+
+        <table class="mtable">
+          <tr><th>Firm size (employees)</th><th>% that reduced employment, 1975–78</th></tr>
+          <tr><td>5–29</td><td>17%</td></tr>
+          <tr><td>30–99</td><td>26%</td></tr>
+          <tr><td>100–299</td><td>30%</td></tr>
+          <tr><td>300–999</td><td>31%</td></tr>
+          <tr><td>1,000+</td><td>20%</td></tr>
+        </table>
+        <p class="viz-caption">Result of the post-1990 path: young cohorts (15–24, 25–34) saw their non-regular share rise sharply, while older cohorts were largely protected.</p>
+
+        <h4 class="sub">Legal Framework — Employment Protection</h4>
+        <p class="wk-intro"><strong>1975 Supreme Court ruling:</strong> employers cannot abuse the contractual right to dismiss. Two conditions must both hold:</p>
+        <ul class="kp">
+          <li><strong>Objectively reasonable grounds</strong> — e.g. worker inability, or a firm-level restructuring need.</li>
+          <li><strong>Appropriate in general societal terms</strong> — not cruel given the circumstances.</li>
+        </ul>
+        <table class="mtable">
+          <tr><th>Year</th><th>Development</th></tr>
+          <tr><td>1975</td><td>Supreme Court establishes the doctrine</td></tr>
+          <tr><td>2003</td><td>Principles formally codified in the <strong>Labor Contract Act</strong> revision</td></tr>
+          <tr><td>2019</td><td>Deregulation discussed by a government committee → <strong>not implemented</strong></td></tr>
+        </table>
+        <div class="callout"><strong>Exam trap:</strong> high firing costs make firms reluctant to hire regular workers in the first place — a contributing factor to elevated post-1990 unemployment. Adjustment happened in <em>flows</em> (who gets hired going forward), not <em>stocks</em> (who gets fired today).</div>
+
+        <h4 class="sub">Key Terms</h4>
+        <table class="mtable">
+          <tr><th>Term</th><th>Definition</th></tr>
+          <tr><td>Non-regular worker</td><td>Part-time, dispatched, or fixed-term; contrast with <em>seishain</em> (正社員)</td></tr>
+          <tr><td>Subsidiary reallocation</td><td>Internal labor-market mechanism used pre-1990 to avoid open unemployment</td></tr>
+          <tr><td>Diffusion Index (DI)</td><td>% "easy" minus % "tight" in BOJ Tankan surveys</td></tr>
+          <tr><td>Subordinated loan</td><td>Repaid only after regular loans; higher risk premium → pushes up the average long-term rate</td></tr>
+          <tr><td>Employment protection legislation (EPL)</td><td>Legal constraints on dismissal; raises hiring risk</td></tr>
+        </table>
+        <p class="viz-caption">Source: Tomura (Waseda); BOJ; Ministry of Labor surveys</p>
       </div>
     </div>
 
@@ -3095,6 +3225,58 @@ h4.sub { font-size: 12.5px; font-weight: 700; margin: 14px 0 6px; color: var(--t
           <div class="comp-col"><h5>Plan B — Partial Borrow ✓</h5><p>Supply stays &lt;100t small emitters (SME manufacturers, farming/forestry co-ops). Value = software cost-cut + a price floor that removes the entry barrier; supply side stays self-serve SaaS with low CAC via 商工会 / 農協 / 森林組合 channels. Large firms pay (RFQ + forward contracts + bundling consult). Differentiation intact, platform scalability preserved.</p></div>
         </div>
         <div class="callout"><strong>Recommendation:</strong> leave the supply-side positioning untouched; adopt only Muramatsu's payment logic (large firms fund it). This answers the "small emitters have no money or incentive" critique without diluting the niche differentiation or turning the platform into a consultancy.</div>
+      </div>
+    </div>
+
+    <div class="wk">
+      <div class="wk-hd" onclick="toggle(this)">
+        <div class="wk-label"><span class="wk-tag" style="background:#DCFCE7;color:var(--climate)">FINAL</span>Credit-Risk Design — 保証スキーム for the J-Credit Marketplace &nbsp;<span style="font-size:9px;background:#DCFCE7;color:#166534;padding:1px 5px;border-radius:2px;font-weight:700;">NEW Jul 11</span></div>
+        <span class="chev">▼</span>
+      </div>
+      <div class="wk-body">
+        <p class="wk-intro">Working notes for the contract and risk layer under the pitch: a <strong>Memorandum of Understanding</strong> plus a private <strong>pilot contract (パイロット契約)</strong>, backed by a five-part guarantee scheme. The design goal is to make the guarantee <em>credible</em> to a buyer who has no way to verify a small emitter's reduction claim.</p>
+
+        <h4 class="sub">The Five Mechanisms</h4>
+        <table class="mtable">
+          <tr><th>#</th><th>Mechanism</th><th>Concrete design (worked example)</th></tr>
+          <tr>
+            <td>①</td>
+            <td><strong>事前審査</strong><br>Pre-screening</td>
+            <td>Score on three points: methodology fit (does it map to one of the ~75 categories), a conservative reduction estimate (modelled within ±20% of the actual figure), and registration/tax verification of the operator. First-time projects start unconditionally at rating C or below.</td>
+          </tr>
+          <tr>
+            <td>②</td>
+            <td><strong>格付け (A/B/C)</strong><br>Rating tiers</td>
+            <td><strong>A</strong> = existing-equipment upgrade, track-record operator → guarantee cap 80%, fee 1.5%.<br><strong>B</strong> = new equipment, limited track record → cap 50%, fee 3%.<br><strong>C</strong> = demonstration stage, new operator → cap 20%, fee 6%.</td>
+          </tr>
+          <tr>
+            <td>③</td>
+            <td><strong>プール型保証</strong><br>Pooled guarantee</td>
+            <td>Composition caps across uncorrelated risk drivers: energy-saving (manufacturing, tracks utilization) 40% + agriculture (tracks weather risk) 30% + forestry (tracks policy &amp; timber prices) 30%. Guarantee exposure to any single industry stays under 40%.</td>
+          </tr>
+          <tr>
+            <td>④</td>
+            <td><strong>三層防御</strong><br>Three-layer loss absorption</td>
+            <td>First <strong>5%</strong> of losses → own capital (or a public first-loss tranche). Next <strong>20%</strong> → the pool (guarantee fees accumulated from participating projects). Beyond that → reinsurance / a financial partner's subordinated tranche.</td>
+          </tr>
+          <tr>
+            <td>⑤</td>
+            <td><strong>情報公開</strong><br>Disclosure</td>
+            <td>Quarterly dashboard publishing per-project rating, outstanding guarantee balance, and impairment (default) rate. An external audit firm reviews the whole portfolio once a year.</td>
+          </tr>
+        </table>
+
+        <div class="lc-era">Loss waterfall (④)</div>
+        <div class="lc-row">
+          <div class="lc-box green">First 5%<small>own capital / public first-loss</small></div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box gold">Next 20%<small>pool of accumulated guarantee fees</small></div>
+          <span class="lc-arr">→</span>
+          <div class="lc-box red">Remainder<small>reinsurance / subordinated tranche</small></div>
+        </div>
+
+        <div class="callout"><strong>Why this framing reads as credible:</strong> each layer answers a different skeptical question — ① and ② say <em>we do not take the claim at face value</em>, ③ says <em>we are not concentrating one correlated bet</em>, ④ says <em>we lose money before you do</em>, and ⑤ says <em>you can check all of it quarterly</em>. Ratings are also deliberately conservative on entry (everyone starts at C), so the scheme cannot be gamed by a new operator with an optimistic estimate.</div>
+        <p class="viz-caption">Notion source page is untitled (新页面) and its final rationale section was left unfinished — the three-reason justification above is reconstructed from the mechanisms as written.</p>
       </div>
     </div>
 
